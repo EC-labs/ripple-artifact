@@ -1,0 +1,14 @@
+{
+    "k8s-master": {
+        "privateIP": "10.0.1.219",
+        "publicIP": "3.255.255.127"
+    },
+    "k8s-worker1": {
+        "privateIP": "10.0.1.64",
+        "publicIP": "54.229.53.182"
+    },
+    "k8s-worker2": {
+        "privateIP": "10.0.1.184",
+        "publicIP": "34.243.246.148"
+    }
+}
