@@ -1,5 +1,6 @@
 { pkgs, lib, config, kubeletHostName, ... }:
 let
+    masterPublicIP = (builtins.fromJSON (builtins.readFile ../vars.json))."k8s-master".publicIP;
     localPathManifest = pkgs.stdenv.mkDerivation {
         name = "local-path-manifest";
 
@@ -62,7 +63,9 @@ in
             enable = true;
             genCfsslCACert = false;
             genCfsslAPIToken = false;
-            cfsslAPIExtraSANs = [ "k8s-master" ];
+            cfsslAPIExtraSANs = [
+                "k8s-master"
+            ];
         };
 
         clusterCidr = "10.42.0.0/16";
@@ -71,6 +74,7 @@ in
         apiserver.extraSANs = [ 
             "k8s-master"
             "k8s-master.cec.dlandau.nl"
+            masterPublicIP
         ];
         apiserver.allowPrivileged = true;
 

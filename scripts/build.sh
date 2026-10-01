@@ -6,7 +6,7 @@ if [[ $# -ne 1 ]]; then
 fi
 
 node="$1"
-nodeIP="$(jq -r '."'"$node"'".publicIP' < vars.json)"
+nodeIP="$(jq -r '."'"$node"'".publicIP' < nixos/vars.json)"
 
 if [[ "$nodeIP" =~ "null" ]]; then
     echo "$node does not exist in vars.json"
