@@ -1,0 +1,77 @@
+services:
+  checkoutservice:
+    environment:
+    - AD_SERVICE_ADDR=adservice:9555
+    - CART_SERVICE_ADDR=cartservice:7070
+    - CHECKOUT_SERVICE_ADDR=checkoutservice:5050
+    - CURRENCY_SERVICE_ADDR=currencyservice:7000
+    - EMAIL_SERVICE_ADDR=emailservice:5000
+    - FRONTEND_ADDR=frontend:80
+    - PAYMENT_SERVICE_ADDR=paymentservice:50051
+    - PORT=5050
+    - PRODUCT_CATALOG_SERVICE_ADDR=productcatalogservice:3550
+    - RECOMMENDATION_SERVICE_ADDR=recommendationservice:8081
+    - REDIS_ADDR=redis-cart:6379
+    - SHIPPING_SERVICE_ADDR=shippingservice:50051
+    image: us-central1-docker.pkg.dev/google-samples/microservices-demo/checkoutservice:v0.10.3
+    ports:
+    - 5050:5050
+  dns-media:
+    image: defreitas/dns-proxy-server
+    volumes:
+    - $DNS_CONFIG_PATH:/app/conf/config.json
+  emailservice:
+    environment:
+    - AD_SERVICE_ADDR=adservice:9555
+    - CART_SERVICE_ADDR=cartservice:7070
+    - CHECKOUT_SERVICE_ADDR=checkoutservice:5050
+    - CURRENCY_SERVICE_ADDR=currencyservice:7000
+    - DISABLE_PROFILER=1
+    - EMAIL_SERVICE_ADDR=emailservice:5000
+    - FRONTEND_ADDR=frontend:80
+    - PAYMENT_SERVICE_ADDR=paymentservice:50051
+    - PORT=8080
+    - PRODUCT_CATALOG_SERVICE_ADDR=productcatalogservice:3550
+    - RECOMMENDATION_SERVICE_ADDR=recommendationservice:8081
+    - REDIS_ADDR=redis-cart:6379
+    - SHIPPING_SERVICE_ADDR=shippingservice:50051
+    image: us-central1-docker.pkg.dev/google-samples/microservices-demo/emailservice:v0.10.3
+    ports:
+    - 5000:8080
+  frontend:
+    environment:
+    - AD_SERVICE_ADDR=adservice:9555
+    - CART_SERVICE_ADDR=cartservice:7070
+    - CHECKOUT_SERVICE_ADDR=checkoutservice:5050
+    - CURRENCY_SERVICE_ADDR=currencyservice:7000
+    - EMAIL_SERVICE_ADDR=emailservice:5000
+    - ENABLE_PROFILER=0
+    - FRONTEND_ADDR=frontend:80
+    - PAYMENT_SERVICE_ADDR=paymentservice:50051
+    - PORT=8080
+    - PRODUCT_CATALOG_SERVICE_ADDR=productcatalogservice:3550
+    - RECOMMENDATION_SERVICE_ADDR=recommendationservice:8081
+    - REDIS_ADDR=redis-cart:6379
+    - SHIPPING_SERVICE_ADDR=shippingservice:50051
+    - SHOPPING_ASSISTANT_SERVICE_ADDR=shoppingassistantservice:80
+    image: us-central1-docker.pkg.dev/google-samples/microservices-demo/frontend:v0.10.3
+    ports:
+    - 80:8080
+  recommendationservice:
+    environment:
+    - AD_SERVICE_ADDR=adservice:9555
+    - CART_SERVICE_ADDR=cartservice:7070
+    - CHECKOUT_SERVICE_ADDR=checkoutservice:5050
+    - CURRENCY_SERVICE_ADDR=currencyservice:7000
+    - DISABLE_PROFILER=1
+    - EMAIL_SERVICE_ADDR=emailservice:5000
+    - FRONTEND_ADDR=frontend:80
+    - PAYMENT_SERVICE_ADDR=paymentservice:50051
+    - PORT=8080
+    - PRODUCT_CATALOG_SERVICE_ADDR=productcatalogservice:3550
+    - RECOMMENDATION_SERVICE_ADDR=recommendationservice:8081
+    - REDIS_ADDR=redis-cart:6379
+    - SHIPPING_SERVICE_ADDR=shippingservice:50051
+    image: us-central1-docker.pkg.dev/google-samples/microservices-demo/recommendationservice:v0.10.3
+    ports:
+    - 8081:8080

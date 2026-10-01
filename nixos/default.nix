@@ -9,6 +9,7 @@
         };
         modules = [
             ./modules/k8s-master.nix
+            ({ ... }: { nixpkgs.config.permittedInsecurePackages = [ "docker-28.5.2" ];})
         ];
     }; 
     k8s-worker1 = nixpkgs.lib.nixosSystem {
@@ -20,6 +21,7 @@
         };
         modules = [
             ./modules/k8s-worker.nix
+            ({ ... }: { nixpkgs.config.permittedInsecurePackages = [ "docker-28.5.2" ];})
         ];
     }; 
     k8s-worker2 = nixpkgs.lib.nixosSystem {
@@ -31,6 +33,7 @@
         };
         modules = [
             ./modules/k8s-worker.nix
+            ({ ... }: { nixpkgs.config.permittedInsecurePackages = [ "docker-28.5.2" ];})
         ];
     }; 
 }

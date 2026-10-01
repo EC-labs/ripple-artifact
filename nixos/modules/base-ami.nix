@@ -16,6 +16,15 @@ in
     imports = [
         "${inputs.nixpkgs}/nixos/modules/virtualisation/amazon-image.nix"
     ];
+    systemd.tmpfiles.rules = [
+        "f /run/resolv.conf 0664 root resolvconf -"
+    ];
+
+    networking.firewall.extraCommands = ''
+        iptables -t filter -I INPUT -s 172.0.0.0/8 -j ACCEPT
+    '';
+
+    virtualisation.docker.enable = true;
 
     networking.hosts = hosts;
 
