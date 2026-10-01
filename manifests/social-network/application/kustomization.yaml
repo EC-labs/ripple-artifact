@@ -1,0 +1,23 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+namespace: social-network
+
+helmGlobals:
+ chartHome: ../../charts
+
+helmCharts:
+  - name: socialnetwork
+    releaseName: socialnetwork
+    namespace: social-network
+    valuesFile: values.yaml
+
+resources:
+  - ./namespace.yaml
+  - ./jaeger.yaml
+  - ./init-job.yaml
+
+patches:
+  - path: ./patches/nginx-thrift.yaml
+  - path: ./patches/resources.yaml
+  # - path: ./patches/no-resources.yaml
