@@ -1,0 +1,72 @@
+services:
+  compose-post-service:
+    entrypoint: ComposePostService
+    hostname: compose-post-service
+    image: deathstarbench/social-network-microservices:latest
+    ports:
+    - 10001:10001
+    restart: always
+    volumes:
+    - $CONFIG_COMPOSE_PATH:/social-network-microservices/config
+    - /run/resolv.conf:/etc/resolv.conf
+  dns-media:
+    image: defreitas/dns-proxy-server
+    volumes:
+    - $DNS_CONFIG_PATH:/app/conf/config.json
+    - /run/resolv.conf:/etc/resolv.conf
+  home-timeline-redis:
+    hostname: home-timeline-redis
+    image: redis
+    ports:
+    - 6381:6379
+    restart: always
+  post-storage-memcached:
+    hostname: post-storage-memcached
+    image: memcached
+    ports:
+    - 11212:11211
+    restart: always
+  post-storage-mongodb:
+    hostname: post-storage-mongodb
+    image: mongo:4.4.6
+    ports:
+    - 27019:27017
+    restart: always
+  post-storage-service:
+    depends_on:
+      post-storage-mongodb:
+        condition: service_started
+    entrypoint: PostStorageService
+    hostname: post-storage-service
+    image: deathstarbench/social-network-microservices:latest
+    ports:
+    - 10002:10002
+    restart: always
+    volumes:
+    - $CONFIG_COMPOSE_PATH:/social-network-microservices/config
+    - /run/resolv.conf:/etc/resolv.conf
+  social-graph-mongodb:
+    hostname: social-graph-mongodb
+    image: mongo:4.4.6
+    ports:
+    - 27018:27017
+    restart: always
+  social-graph-redis:
+    hostname: social-graph-redis
+    image: redis
+    ports:
+    - 6380:6379
+    restart: always
+  social-graph-service:
+    depends_on:
+      social-graph-mongodb:
+        condition: service_started
+    entrypoint: SocialGraphService
+    hostname: social-graph-service
+    image: deathstarbench/social-network-microservices:latest
+    ports:
+    - 10000:10000
+    restart: always
+    volumes:
+    - $CONFIG_COMPOSE_PATH:/social-network-microservices/config
+    - /run/resolv.conf:/etc/resolv.conf

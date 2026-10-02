@@ -1,0 +1,81 @@
+services:
+  dns-media:
+    image: defreitas/dns-proxy-server
+    volumes:
+    - $DNS_CONFIG_PATH:/app/conf/config.json
+    - /run/resolv.conf:/etc/resolv.conf
+  url-shorten-memcached:
+    hostname: url-shorten-memcached
+    image: memcached
+    ports:
+    - 11213:11211
+    restart: always
+  url-shorten-mongodb:
+    hostname: url-shorten-mongodb
+    image: mongo:4.4.6
+    ports:
+    - 27021:27017
+    restart: always
+  url-shorten-service:
+    depends_on:
+      url-shorten-mongodb:
+        condition: service_started
+    entrypoint: UrlShortenService
+    hostname: url-shorten-service
+    image: deathstarbench/social-network-microservices:latest
+    ports:
+    - 10004:10004
+    restart: always
+    volumes:
+    - $CONFIG_COMPOSE_PATH:/social-network-microservices/config
+    - /run/resolv.conf:/etc/resolv.conf
+  user-memcached:
+    hostname: user-memcached
+    image: memcached
+    ports:
+    - 11214:11211
+    restart: always
+  user-mongodb:
+    hostname: user-mongodb
+    image: mongo:4.4.6
+    ports:
+    - 27023:27017
+    restart: always
+  user-service:
+    depends_on:
+      user-mongodb:
+        condition: service_started
+    entrypoint: UserService
+    hostname: user-service
+    image: deathstarbench/social-network-microservices:latest
+    ports:
+    - 10005:10005
+    restart: always
+    volumes:
+    - $CONFIG_COMPOSE_PATH:/social-network-microservices/config
+    - /run/resolv.conf:/etc/resolv.conf
+  user-timeline-mongodb:
+    hostname: user-timeline-mongodb
+    image: mongo:4.4.6
+    ports:
+    - 27020:27017
+    restart: always
+  user-timeline-redis:
+    hostname: user-timeline-redis
+    image: redis
+    ports:
+    - 6383:6379
+    restart: always
+  user-timeline-service:
+    depends_on:
+      user-timeline-mongodb:
+        condition: service_started
+    entrypoint: UserTimelineService
+    hostname: user-timeline-service
+    image: deathstarbench/social-network-microservices:latest
+    ports:
+    - 10003:10003
+    restart: always
+    volumes:
+    - $CONFIG_COMPOSE_PATH:/social-network-microservices/config
+    - /run/resolv.conf:/etc/resolv.conf

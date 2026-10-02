@@ -1,0 +1,122 @@
+services:
+  dns-media:
+    image: defreitas/dns-proxy-server
+    volumes:
+    - $DNS_CONFIG_PATH:/app/conf/config.json
+    - /run/resolv.conf:/etc/resolv.conf
+  home-timeline-service:
+    depends_on:
+      jaeger-agent:
+        condition: service_started
+    entrypoint: HomeTimelineService
+    hostname: home-timeline-service
+    image: deathstarbench/social-network-microservices:latest
+    ports:
+    - 10010:10010
+    restart: always
+    volumes:
+    - $CONFIG_COMPOSE_PATH:/social-network-microservices/config
+    - /run/resolv.conf:/etc/resolv.conf
+  jaeger-agent:
+    environment:
+    - COLLECTOR_ZIPKIN_HTTP_PORT=9411
+    hostname: jaeger-agent
+    image: jaegertracing/all-in-one:latest
+    ports:
+    - 16686:16686
+    restart: always
+  media-frontend:
+    depends_on:
+      jaeger-agent:
+        condition: service_started
+    hostname: media-frontend
+    image: yg397/media-frontend:xenial
+    ports:
+    - 8081:8080
+    restart: always
+    volumes:
+    - $MEDIA_FRONTEND_PATH/lua-scripts:/usr/local/openresty/nginx/lua-scripts
+    - $MEDIA_FRONTEND_PATH/conf/nginx.conf:/usr/local/openresty/nginx/conf/nginx.conf
+  media-memcached:
+    hostname: media-memcached
+    image: memcached
+    ports:
+    - 11215:11211
+    restart: always
+  media-mongodb:
+    hostname: media-mongodb
+    image: mongo:4.4.6
+    ports:
+    - 27024:27017
+    restart: always
+  media-service:
+    depends_on:
+      jaeger-agent:
+        condition: service_started
+      media-mongodb:
+        condition: service_started
+    entrypoint: MediaService
+    hostname: media-service
+    image: deathstarbench/social-network-microservices:latest
+    ports:
+    - 10006:10006
+    restart: always
+    volumes:
+    - $CONFIG_COMPOSE_PATH:/social-network-microservices/config
+    - /run/resolv.conf:/etc/resolv.conf
+  nginx-thrift:
+    depends_on:
+      jaeger-agent:
+        condition: service_started
+    hostname: nginx-thrift
+    image: yg397/openresty-thrift:xenial
+    ports:
+    - 3009:8080
+    restart: always
+    volumes:
+    - $NGINX_WEB_SERVER_COMPOSE_PATH/lua-scripts:/usr/local/openresty/nginx/lua-scripts
+    - $NGINX_WEB_SERVER_COMPOSE_PATH/pages:/usr/local/openresty/nginx/pages
+    - $NGINX_WEB_SERVER_COMPOSE_PATH/conf/nginx.conf:/usr/local/openresty/nginx/conf/nginx.conf
+    - $NGINX_WEB_SERVER_COMPOSE_PATH/jaeger-config.json:/usr/local/openresty/nginx/jaeger-config.json
+    - $GEN_LUA_PATH:/gen-lua
+    - $LUA_THRIFT_PATH:/usr/local/openresty/lualib/thrift
+    - /run/resolv.conf:/etc/resolv.conf
+  text-service:
+    depends_on:
+      jaeger-agent:
+        condition: service_started
+    entrypoint: TextService
+    hostname: text-service
+    image: deathstarbench/social-network-microservices:latest
+    ports:
+    - 10007:10007
+    restart: always
+    volumes:
+    - $CONFIG_COMPOSE_PATH:/social-network-microservices/config
+    - /run/resolv.conf:/etc/resolv.conf
+  unique-id-service:
+    depends_on:
+      jaeger-agent:
+        condition: service_started
+    entrypoint: UniqueIdService
+    hostname: unique-id-service
+    image: deathstarbench/social-network-microservices:latest
+    ports:
+    - 10008:10008
+    restart: always
+    volumes:
+    - $CONFIG_COMPOSE_PATH:/social-network-microservices/config
+    - /run/resolv.conf:/etc/resolv.conf
+  user-mention-service:
+    depends_on:
+      jaeger-agent:
+        condition: service_started
+    entrypoint: UserMentionService
+    hostname: user-mention-service
+    image: deathstarbench/social-network-microservices:latest
+    ports:
+    - 10009:10009
+    restart: always
+    volumes:
+    - $CONFIG_COMPOSE_PATH:/social-network-microservices/config
+    - /run/resolv.conf:/etc/resolv.conf
