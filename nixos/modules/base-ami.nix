@@ -1,4 +1,4 @@
-{ pkgs, inputs, lib, ... }:
+{ config, pkgs, inputs, lib, ... }:
 with builtins; with lib;
 let
     # hosts = map () (attrNames (import ../vars.nix));
@@ -11,6 +11,9 @@ let
         })
         vars
     );
+
+    dockerSocialNetwork = pkgs.callPackage ../../execution/microservice-benchmarks/social-network {};
+    dockerOnlineBoutique = pkgs.callPackage ../../execution/microservice-benchmarks/online-boutique {};
 in
 {
     imports = [
@@ -41,5 +44,11 @@ in
     system.stateVersion = "25.11";
 
     nix.settings.experimental-features = [ "flakes" "nix-command" ];
+
+    # Add docker compose experiment files
+    environment.etc."social-network/internal.yaml".source = "${dockerSocialNetwork.internal}/compose-${config.services.kubernetes.kubelet.hostname}.yaml";
+    environment.etc."social-network/external.yaml".source = "${dockerSocialNetwork.external}/compose-${config.services.kubernetes.kubelet.hostname}.yaml";
+    environment.etc."online-boutique/internal.yaml".source = "${dockerOnlineBoutique.internal}/compose-${config.services.kubernetes.kubelet.hostname}.yaml";
+    environment.etc."online-boutique/external.yaml".source = "${dockerOnlineBoutique.external}/compose-${config.services.kubernetes.kubelet.hostname}.yaml";
 
 }

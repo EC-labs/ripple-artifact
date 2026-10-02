@@ -1,7 +1,7 @@
 { pkgs ? import <nixpkgs> {}}:
 with builtins;
 let
-    vars = fromJSON (readFile ../../../nixos/vars.json);
+    vars = fromJSON (readFile ../../../../nixos/vars.json);
     mkDockerOnlineBoutique = (ipSelector:
         pkgs.stdenv.mkDerivation {
             name = "online-boutique-docker-${ipSelector}";
@@ -11,7 +11,6 @@ let
             ];
 
             src = ./.;
-
             buildPhase = ''
                 python configs-generate.py ${vars."k8s-master"."${ipSelector}"} ${vars."k8s-worker1"."${ipSelector}"} ${vars.k8s-worker2."${ipSelector}"}
                 for vm in k8s-master k8s-worker1 k8s-worker2; do
@@ -31,8 +30,6 @@ let
     );
 in
 {
-    package = {
-        internal = mkDockerOnlineBoutique "privateIP";
-        external = mkDockerOnlineBoutique "publicIP";
-    };
+    internal = mkDockerOnlineBoutique "privateIP";
+    external = mkDockerOnlineBoutique "publicIP";
 }
