@@ -1,4 +1,4 @@
-{ inputs, lib, ... }:
+{ pkgs, inputs, lib, ... }:
 with builtins; with lib;
 let
     # hosts = map () (attrNames (import ../vars.nix));
@@ -16,6 +16,7 @@ in
     imports = [
         "${inputs.nixpkgs}/nixos/modules/virtualisation/amazon-image.nix"
     ];
+    environment.systemPackages = [ inputs.prism.outputs.packages.${pkgs.system}.prism ];
     systemd.tmpfiles.rules = [
         "f /run/resolv.conf 0664 root resolvconf -"
     ];

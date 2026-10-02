@@ -46,8 +46,6 @@ let
     );
 in
 {
-    package = {
-        internal = mkDockerCompose "privateIP";
-        external = mkDockerCompose "publicIP";
-    };
+    internal = mkDockerCompose "privateIP";
+    external = mkDockerCompose "publicIP";
 }
