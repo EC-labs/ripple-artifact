@@ -9,7 +9,7 @@
             pkgs = import nixpkgs {
                 inherit system;
             };
-            manifests = pkgs.callPackage ./manifests {};
+            execution = pkgs.callPackage ./execution {};
             scripts = pkgs.callPackage ./scripts {};
             social-network = pkgs.callPackage ./execution/microservice-benchmarks/social-network {};
         in
@@ -35,7 +35,7 @@
                         cfssl
                     ];
                 };
-                manifests = manifests.devShell;
+                execution = execution.devShell;
             };
             nixosConfigurations = import ./nixos { inherit nixpkgs system inputs; };
         };
