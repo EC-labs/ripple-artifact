@@ -1,0 +1,89 @@
+services:
+  compose-review-memcached:
+    hostname: compose-review-memcached
+    image: memcached
+    ports:
+    - 11214:11211
+    restart: always
+  compose-review-service:
+    entrypoint: ComposeReviewService
+    hostname: compose-review-service
+    image: yg397/media-microservices
+    ports:
+    - 10006:10006
+    restart: always
+    volumes:
+    - $COMPOSE_SERVICE_CONFIG_PATH:/media-microservices/config/service-config.json
+    - /run/resolv.conf:/etc/resolv.conf
+  dns-media:
+    image: defreitas/dns-proxy-server
+    volumes:
+    - $DNS_CONFIG_PATH:/app/conf/config.json
+    - /run/resolv.conf:/etc/resolv.conf
+  movie-review-mongodb:
+    hostname: movie-review-mongodb
+    image: mongo:4.4.6
+    ports:
+    - 27022:27017
+    restart: always
+  movie-review-redis:
+    hostname: movie-review-redis
+    image: redis
+    ports:
+    - 6380:6379
+    restart: always
+  movie-review-service:
+    entrypoint: MovieReviewService
+    hostname: movie-review-service
+    image: yg397/media-microservices
+    ports:
+    - 10009:10009
+    restart: always
+    volumes:
+    - $COMPOSE_SERVICE_CONFIG_PATH:/media-microservices/config/service-config.json
+    - /run/resolv.conf:/etc/resolv.conf
+  review-storage-memcached:
+    hostname: review-storage-memcached
+    image: memcached
+    ports:
+    - 11215:11211
+    restart: always
+  review-storage-mongodb:
+    hostname: review-storage-mongodb
+    image: mongo:4.4.6
+    ports:
+    - 27020:27017
+    restart: always
+  review-storage-service:
+    entrypoint: ReviewStorageService
+    hostname: review-storage-service
+    image: yg397/media-microservices
+    ports:
+    - 10007:10007
+    restart: always
+    volumes:
+    - $COMPOSE_SERVICE_CONFIG_PATH:/media-microservices/config/service-config.json
+    - /run/resolv.conf:/etc/resolv.conf
+  user-review-mongodb:
+    hostname: user-review-mongodb
+    image: mongo:4.4.6
+    ports:
+    - 27021:27017
+    restart: always
+  user-review-redis:
+    hostname: user-review-redis
+    image: redis
+    ports:
+    - 6381:6379
+    restart: always
+  user-review-service:
+    entrypoint: UserReviewService
+    hostname: user-review-service
+    image: yg397/media-microservices
+    ports:
+    - 10008:10008
+    restart: always
+    volumes:
+    - $COMPOSE_SERVICE_CONFIG_PATH:/media-microservices/config/service-config.json
+    - /run/resolv.conf:/etc/resolv.conf
+version: '3'

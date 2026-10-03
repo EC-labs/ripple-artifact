@@ -1,0 +1,87 @@
+services:
+  dns-media:
+    image: defreitas/dns-proxy-server
+    volumes:
+    - $DNS_CONFIG_PATH:/app/conf/config.json
+    - /run/resolv.conf:/etc/resolv.conf
+  movie-id-memcached:
+    hostname: movie-id-memcached
+    image: memcached
+    ports:
+    - 11212:11211
+    restart: always
+  movie-id-mongodb:
+    hostname: movie-id-mongodb
+    image: mongo:4.4.6
+    ports:
+    - 27018:27017
+    restart: always
+  movie-id-service:
+    entrypoint: MovieIdService
+    hostname: movie-id-service
+    image: yg397/media-microservices
+    ports:
+    - 10002:10002
+    restart: always
+    volumes:
+    - $COMPOSE_SERVICE_CONFIG_PATH:/media-microservices/config/service-config.json
+    - /run/resolv.conf:/etc/resolv.conf
+  rating-redis:
+    hostname: rating-redis
+    image: redis
+    ports:
+    - 6382:6379
+    restart: always
+  rating-service:
+    entrypoint: RatingService
+    hostname: rating-service
+    image: yg397/media-microservices
+    ports:
+    - 10004:10004
+    restart: always
+    volumes:
+    - $COMPOSE_SERVICE_CONFIG_PATH:/media-microservices/config/service-config.json
+    - /run/resolv.conf:/etc/resolv.conf
+  text-service:
+    entrypoint: TextService
+    hostname: text-service
+    image: yg397/media-microservices
+    ports:
+    - 10003:10003
+    restart: always
+    volumes:
+    - $COMPOSE_SERVICE_CONFIG_PATH:/media-microservices/config/service-config.json
+    - /run/resolv.conf:/etc/resolv.conf
+  unique-id-service:
+    entrypoint: UniqueIdService
+    hostname: unique-id-service
+    image: yg397/media-microservices
+    ports:
+    - 10001:10001
+    restart: always
+    volumes:
+    - $COMPOSE_SERVICE_CONFIG_PATH:/media-microservices/config/service-config.json
+    - /run/resolv.conf:/etc/resolv.conf
+  user-memcached:
+    hostname: user-memcached
+    image: memcached
+    ports:
+    - 11213:11211
+    restart: always
+  user-mongodb:
+    hostname: user-mongodb
+    image: mongo:4.4.6
+    ports:
+    - 27019:27017
+    restart: always
+  user-service:
+    entrypoint: UserService
+    hostname: user-service
+    image: yg397/media-microservices
+    ports:
+    - 10005:10005
+    restart: always
+    volumes:
+    - $COMPOSE_SERVICE_CONFIG_PATH:/media-microservices/config/service-config.json
+    - /run/resolv.conf:/etc/resolv.conf
+version: '3'

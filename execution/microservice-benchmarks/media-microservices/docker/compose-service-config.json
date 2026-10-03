@@ -1,0 +1,123 @@
+{
+    "secret": "secret",
+    "movie-id-memcached": {
+        "addr": "movie-id-memcached",
+        "port": 11212
+    },
+    "movie-id-mongodb": {
+        "addr": "movie-id-mongodb",
+        "port": 27018
+    },
+    "movie-id-service": {
+        "addr": "movie-id-service",
+        "port": 10002
+    },
+    "rating-redis": {
+        "addr": "rating-redis",
+        "port": 6382
+    },
+    "rating-service": {
+        "addr": "rating-service",
+        "port": 10004
+    },
+    "text-service": {
+        "addr": "text-service",
+        "port": 10003
+    },
+    "unique-id-service": {
+        "addr": "unique-id-service",
+        "port": 10001
+    },
+    "user-memcached": {
+        "addr": "user-memcached",
+        "port": 11213
+    },
+    "user-mongodb": {
+        "addr": "user-mongodb",
+        "port": 27019
+    },
+    "user-service": {
+        "addr": "user-service",
+        "port": 10005
+    },
+    "compose-review-memcached": {
+        "addr": "compose-review-memcached",
+        "port": 11214
+    },
+    "compose-review-service": {
+        "addr": "compose-review-service",
+        "port": 10006
+    },
+    "movie-review-mongodb": {
+        "addr": "movie-review-mongodb",
+        "port": 27022
+    },
+    "movie-review-redis": {
+        "addr": "movie-review-redis",
+        "port": 6380
+    },
+    "movie-review-service": {
+        "addr": "movie-review-service",
+        "port": 10009
+    },
+    "review-storage-memcached": {
+        "addr": "review-storage-memcached",
+        "port": 11215
+    },
+    "review-storage-mongodb": {
+        "addr": "review-storage-mongodb",
+        "port": 27020
+    },
+    "review-storage-service": {
+        "addr": "review-storage-service",
+        "port": 10007
+    },
+    "user-review-mongodb": {
+        "addr": "user-review-mongodb",
+        "port": 27021
+    },
+    "user-review-redis": {
+        "addr": "user-review-redis",
+        "port": 6381
+    },
+    "user-review-service": {
+        "addr": "user-review-service",
+        "port": 10008
+    },
+    "cast-info-memcached": {
+        "addr": "cast-info-memcached",
+        "port": 11219
+    },
+    "cast-info-mongodb": {
+        "addr": "cast-info-mongodb",
+        "port": 27024
+    },
+    "cast-info-service": {
+        "addr": "cast-info-service",
+        "port": 10010
+    },
+    "movie-info-memcached": {
+        "addr": "movie-info-memcached",
+        "port": 11221
+    },
+    "movie-info-mongodb": {
+        "addr": "movie-info-mongodb",
+        "port": 27026
+    },
+    "movie-info-service": {
+        "addr": "movie-info-service",
+        "port": 10012
+    },
+    "plot-memcached": {
+        "addr": "plot-memcached",
+        "port": 11220
+    },
+    "plot-mongodb": {
+        "addr": "plot-mongodb",
+        "port": 27025
+    },
+    "plot-service": {
+        "addr": "plot-service",
+        "port": 10011
+    }
+}

@@ -12,6 +12,7 @@ let
         vars
     );
 
+    dockerMediaMicroservices = pkgs.callPackage ../../execution/microservice-benchmarks/media-microservices {};
     dockerSocialNetwork = pkgs.callPackage ../../execution/microservice-benchmarks/social-network {};
     dockerOnlineBoutique = pkgs.callPackage ../../execution/microservice-benchmarks/online-boutique {};
 in
@@ -48,6 +49,8 @@ in
     # Add docker compose experiment files
     environment.etc."social-network/internal.yaml".source = "${dockerSocialNetwork.internal}/compose-${config.services.kubernetes.kubelet.hostname}.yaml";
     environment.etc."social-network/external.yaml".source = "${dockerSocialNetwork.external}/compose-${config.services.kubernetes.kubelet.hostname}.yaml";
+    environment.etc."media-microservices/internal.yaml".source = "${dockerMediaMicroservices.internal}/compose-${config.services.kubernetes.kubelet.hostname}.yaml";
+    environment.etc."media-microservices/external.yaml".source = "${dockerMediaMicroservices.external}/compose-${config.services.kubernetes.kubelet.hostname}.yaml";
     environment.etc."online-boutique/internal.yaml".source = "${dockerOnlineBoutique.internal}/compose-${config.services.kubernetes.kubelet.hostname}.yaml";
     environment.etc."online-boutique/external.yaml".source = "${dockerOnlineBoutique.external}/compose-${config.services.kubernetes.kubelet.hostname}.yaml";
 

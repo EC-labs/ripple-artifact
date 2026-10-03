@@ -1,0 +1,101 @@
+services:
+  cast-info-memcached:
+    hostname: cast-info-memcached
+    image: memcached
+    ports:
+    - 11219:11211
+    restart: always
+  cast-info-mongodb:
+    hostname: cast-info-mongodb
+    image: mongo:4.4.6
+    ports:
+    - 27024:27017
+    restart: always
+  cast-info-service:
+    entrypoint: CastInfoService
+    hostname: cast-info-service
+    image: yg397/media-microservices
+    ports:
+    - 10010:10010
+    restart: always
+    volumes:
+    - $COMPOSE_SERVICE_CONFIG_PATH:/media-microservices/config/service-config.json
+    - /run/resolv.conf:/etc/resolv.conf
+  dns-media:
+    image: defreitas/dns-proxy-server
+    ports:
+    - 5380:5380
+    volumes:
+    - $DNS_CONFIG_PATH:/app/conf/config.json
+    - /run/resolv.conf:/etc/resolv.conf
+  jaeger:
+    environment:
+    - COLLECTOR_ZIPKIN_HTTP_PORT=9411
+    hostname: jaeger
+    image: jaegertracing/all-in-one:latest
+    ports:
+    - 16686:16686
+    - 5775:5775/udp
+    - 6831:6831/udp
+    - 6832:6832/udp
+    - 5778:5778
+    - 16686:16686
+    - 14268:14268
+    - 9411:9411
+  movie-info-memcached:
+    hostname: movie-info-memcached
+    image: memcached
+    ports:
+    - 11221:11211
+    restart: always
+  movie-info-mongodb:
+    hostname: movie-info-mongodb
+    image: mongo:4.4.6
+    ports:
+    - 27026:27017
+    restart: always
+  movie-info-service:
+    entrypoint: MovieInfoService
+    hostname: movie-info-service
+    image: yg397/media-microservices
+    ports:
+    - 10012:10012
+    restart: always
+    volumes:
+    - $COMPOSE_SERVICE_CONFIG_PATH:/media-microservices/config/service-config.json
+    - /run/resolv.conf:/etc/resolv.conf
+  nginx-web-server:
+    hostname: nginx-thrift
+    image: yg397/openresty-thrift:xenial
+    ports:
+    - 3009:8080
+    restart: always
+    volumes:
+    - $NGINX_WEB_SERVER_DISTRIBUTED_DOCKER_PATH/lua-scripts:/usr/local/openresty/nginx/lua-scripts
+    - $NGINX_WEB_SERVER_DISTRIBUTED_DOCKER_PATH/conf/nginx.conf:/usr/local/openresty/nginx/conf/nginx.conf
+    - $NGINX_WEB_SERVER_DISTRIBUTED_DOCKER_PATH/jaeger-config.json:/usr/local/openresty/nginx/jaeger-config.json
+    - $GEN_LUA_PATH:/gen-lua
+    - /run/resolv.conf:/etc/resolv.conf
+  plot-memcached:
+    hostname: plot-memcached
+    image: memcached
+    ports:
+    - 11220:11211
+    restart: always
+  plot-mongodb:
+    hostname: plot-mongodb
+    image: mongo:4.4.6
+    ports:
+    - 27025:27017
+    restart: always
+  plot-service:
+    entrypoint: PlotService
+    hostname: plot-service
+    image: yg397/media-microservices
+    ports:
+    - 10011:10011
+    restart: always
+    volumes:
+    - $COMPOSE_SERVICE_CONFIG_PATH:/media-microservices/config/service-config.json
+    - /run/resolv.conf:/etc/resolv.conf
+version: '3'
