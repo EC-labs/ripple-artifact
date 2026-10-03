@@ -25,6 +25,7 @@
                         jq
                         duckdb
                         self.packages.${system}.combine-dbs
+                        (python3.withPackages (py-pkgs: with py-pkgs; [ jinja2 duckdb numpy pandas ]))
                     ];
                     NIX_SSHOPTS = "-i nixos/secrets/id_ed25519";
                 };
