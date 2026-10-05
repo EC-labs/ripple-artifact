@@ -11,7 +11,10 @@ def services(db, is_k8s: bool, microservice_benchmark: str):
     if is_k8s:
         service_filter = f"(lsvc.namespace = '{microservice_benchmark}' AND rsvc.namespace = '{microservice_benchmark}')"
     else:
-        service_filter = f"(service1 LIKE '/{microservice_benchmark}-%' OR service2 LIKE '/{microservice_benchmark}-%')"
+        service_filter = f"""(
+                (service1 LIKE '/{microservice_benchmark}-%' OR service1 = 'docker-proxy') 
+                AND (service2 LIKE '/{microservice_benchmark}-%' OR service2 = 'docker-proxy')
+            )"""
 
     query = template.render({
         "service_filter": service_filter 

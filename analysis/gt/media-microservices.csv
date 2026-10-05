@@ -53,17 +53,3 @@ user-service,compose-review-service
 user-service,nginx-web-server
 user-service,user-memcached
 user-service,user-mongodb
-nginx-web-server,plot-service
-plot-service,nginx-web-server
-nginx-web-server,movie-info-service
-movie-info-service,nginx-web-server
-nginx-web-server,cast-info-service
-cast-info-service,nginx-web-server
-page-service,movie-info-service
-movie-info-service,page-service
-page-service,cast-info-service
-cast-info-service,page-service
-page-service,movie-review-service
-movie-review-service,page-service
-plot-memcached,plot-service
-plot-service,plot-memcached

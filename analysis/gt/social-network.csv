@@ -22,7 +22,6 @@ post-storage-service,compose-post-service
 post-storage-service,home-timeline-service
 post-storage-service,post-storage-mongodb
 post-storage-service,user-timeline-service
-post-storage-service,post-storage-memcached
 social-graph-mongodb,social-graph-service
 social-graph-redis,social-graph-service
 social-graph-service,home-timeline-service
@@ -50,4 +49,3 @@ user-timeline-service,nginx-thrift
 user-timeline-service,post-storage-service
 user-timeline-service,user-timeline-mongodb
 user-timeline-service,user-timeline-redis
-post-storage-memcached,post-storage-service
