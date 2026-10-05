@@ -2,7 +2,7 @@
 
 set -euo pipefail
 
-if [[ $# -ne 2 ]]; then
+if (( $# != 2 )); then
     echo "Usage: $0 <source> <destination>" >&2
     exit 1
 fi
@@ -15,7 +15,7 @@ resolve_remote() {
         local path="${arg#*:}"
 
         local nodeIP
-        nodeIP="$(jq -r --arg node "$node" '.[$node].publicIP // empty' nixos/vars.json)"
+        nodeIP="$(jq -r --arg node "$node" '.[$node].publicIP // empty' "$VARS_JSON")"
 
         if [[ -z "$nodeIP" ]]; then
             echo "$node does not exist in vars.json" >&2
@@ -32,4 +32,4 @@ source="$(resolve_remote "$1")"
 destination="$(resolve_remote "$2")"
 
 set -x 
-exec scp -i ./nixos/secrets/id_ed25519 "$source" "$destination"
+exec scp -i "$ED25519" "$source" "$destination"

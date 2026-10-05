@@ -10,12 +10,12 @@ fi
 node="$1"
 shift
 
-nodeIP="$(jq -r --arg node "$node" '.[$node].publicIP // empty' nixos/vars.json)"
+nodeIP="$(jq -r --arg node "$node" '.[$node].publicIP // empty' "$VARS_JSON")"
 
 if [[ -z "$nodeIP" ]]; then
-    echo "$node does not exist in vars.json" >&2
+    echo "$node does not exist in $VARS_JSON" >&2
     exit 1
 fi
 
 set -x
-exec ssh -o LogLevel=ERROR -i ./nixos/secrets/id_ed25519 "root@$nodeIP" "$@"
+exec ssh -o LogLevel=ERROR -i "$ED25519" "root@$nodeIP" "$@"

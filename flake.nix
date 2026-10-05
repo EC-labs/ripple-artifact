@@ -9,14 +9,15 @@
             pkgs = import nixpkgs {
                 inherit system;
             };
-            execution = pkgs.callPackage ./execution {};
+            execution = pkgs.callPackage ./execution { scripts = scripts.default; };
             scripts = pkgs.callPackage ./scripts {};
             social-network = pkgs.callPackage ./execution/microservice-benchmarks/social-network {};
         in
         {
             packages.${system} = {
-                inherit (scripts.packages) combine-dbs;
+                inherit scripts;
                 inherit social-network;
+                execution = execution.packages;
             };
 
             devShells.${system} = {
@@ -24,8 +25,14 @@
                     packages = with pkgs; [ 
                         jq
                         duckdb
-                        self.packages.${system}.combine-dbs
-                        (python3.withPackages (py-pkgs: with py-pkgs; [ jinja2 duckdb numpy pandas ]))
+                        self.packages.${system}.scripts.combine-dbs
+                        scripts.default
+                        (python3.withPackages (py-pkgs: with py-pkgs; [ 
+                            jinja2 
+                            duckdb 
+                            numpy 
+                            pandas 
+                        ]))
                     ];
                     NIX_SSHOPTS = "-i nixos/secrets/id_ed25519";
                 };
