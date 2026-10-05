@@ -39,20 +39,6 @@ services:
     image: defreitas/dns-proxy-server
     volumes:
     - $DNS_CONFIG_PATH:/app/conf/config.json
-  loadgenerator:
-    environment:
-    - AD_SERVICE_ADDR=adservice:9555
-    - CART_SERVICE_ADDR=cartservice:7070
-    - CHECKOUT_SERVICE_ADDR=checkoutservice:5050
-    - CURRENCY_SERVICE_ADDR=currencyservice:7000
-    - EMAIL_SERVICE_ADDR=emailservice:5000
-    - FRONTEND_ADDR=frontend:80
-    - PAYMENT_SERVICE_ADDR=paymentservice:50051
-    - PRODUCT_CATALOG_SERVICE_ADDR=productcatalogservice:3550
-    - RECOMMENDATION_SERVICE_ADDR=recommendationservice:8081
-    - REDIS_ADDR=redis-cart:6379
-    - SHIPPING_SERVICE_ADDR=shippingservice:50051
-    image: us-central1-docker.pkg.dev/google-samples/microservices-demo/loadgenerator:v0.10.3
   shippingservice:
     environment:
     - AD_SERVICE_ADDR=adservice:9555
