@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, lib, stdenv, scripts, ... }:
 with builtins;
 let
     masterPublicIP = (fromJSON (readFile ../nixos/vars.json))."k8s-master".publicIP;
@@ -41,7 +41,26 @@ in
             kubectl
             kubernetes-helm
             k9s
+            scripts
+            jq
         ];
         KUBECONFIG = kubeconfig;
+        VARS_JSON = "${./../nixos/vars.json}";
+    };
+    packages = {
+        ripple = stdenv.mkDerivation {
+            name = "ripple-distributed";
+            dontUnpack = true;
+            buildInputs = with pkgs; [ 
+                makeWrapper
+                bash
+                scripts
+            ];
+            installPhase = ''
+                mkdir $out
+                install -Dm555 ${./ripple/start-ripple.sh} $out/bin/start-ripple.sh
+                wrapProgram $out/bin/start-ripple.sh --prefix PATH : ${lib.makeBinPath [ scripts ]}
+            '';
+        };
     };
 }
