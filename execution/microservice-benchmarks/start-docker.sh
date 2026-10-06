@@ -3,7 +3,6 @@
 set -euo pipefail
 
 script="$(basename $0)"
-script_d="$(cd $(dirname ${BASH_SOURCE[0]}) && pwd)"
 
 USAGE="
 Usage: $script <microservice-benchmark> <run-type>
@@ -14,6 +13,11 @@ Positional parameters:
         'media-microservices', 'online-boutique'.
     run-type: Enumerator parameter to describe the type of execution. Allowed
         values are 'internal', and 'external'.
+
+Required environment variables:
+    KUBECONFIG: Path to kubeconfig to reach the k8s cluster
+    MANIFESTS_DIR: Path to microservice-benchmark manifests directory
+    VARS_JSON: Path to host to public and private IPs map
 "
 
 if (( $# != 2 )); then
@@ -49,12 +53,12 @@ ssh.sh k8s-worker2 "docker compose -f /etc/${microservice_benchmark}/${run_type}
 
 case "$microservice_benchmark" in
     "media-microservices")
-        sleep 10
+        sleep 5
         worker2IP="$(jq -r --arg node "k8s-worker2" '.[$node].publicIP // empty' "$VARS_JSON")"
         ssh.sh k8s-worker2 "docker run --rm --name init -e PYTHONUNBUFFERED=1 dclandau/initmediamicroservices:bd75677 ${worker2IP}:3009"
         ;;
     "social-network")
-        sleep 10
+        sleep 5
         worker2IP="$(jq -r --arg node "k8s-worker2" '.[$node].publicIP // empty' "$VARS_JSON")"
         ssh.sh k8s-worker2 "docker run --rm --name init -e PYTHONUNBUFFERED=1 dclandau/initsocialgraph:4181ebd --ip ${worker2IP} --port 3009"
         ;;
@@ -62,7 +66,9 @@ case "$microservice_benchmark" in
         ;;
 esac
 
-kubectl kustomize --enable-helm "${script_d}/${microservice_benchmark}/k8s/load" \
-    | kubectl apply -f -
+kubectl apply -f "${MANIFESTS_DIR}/${microservice_benchmark}/load.yaml"
 
-sleep 10
+kubectl wait deploy \
+    --all --for=condition=Available \
+    --timeout=120s \
+    --namespace="load-generators-${microservice_benchmark}"

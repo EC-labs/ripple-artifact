@@ -4,7 +4,7 @@ kind: Kustomization
 namespace: online-boutique
 
 helmGlobals:
- chartHome: ../../../../charts
+ chartHome: ../charts
 
 helmCharts:
   - name: online-boutique

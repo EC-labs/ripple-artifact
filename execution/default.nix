@@ -35,16 +35,18 @@ let
       }
     );
 in
-{
+rec {
     devShell = pkgs.mkShell {
         packages = with pkgs; [
             kubectl
             kubernetes-helm
             k9s
             scripts
+            packages.microservice-benchmarks.scripts
             jq
         ];
         KUBECONFIG = kubeconfig;
+        MANIFESTS_DIR = "${packages.microservice-benchmarks.manifests}";
         VARS_JSON = "${./../nixos/vars.json}";
     };
     packages = {
@@ -60,6 +62,27 @@ in
                 mkdir $out
                 install -Dm555 ${./ripple/start-ripple.sh} $out/bin/start-ripple.sh
                 wrapProgram $out/bin/start-ripple.sh --prefix PATH : ${lib.makeBinPath [ scripts ]}
+            '';
+        };
+        microservice-benchmarks = pkgs.callPackage ./microservice-benchmarks {
+            inherit kubeconfig; 
+            rippleScripts = scripts;
+        };
+        run = with pkgs; stdenv.mkDerivation {
+            name = "run";
+            dontUnpack = true;
+            buildInputs = [
+                makeWrapper
+                bash
+            ];
+            installPhase = ''
+                mkdir $out
+                install -Dm555 ${./run.sh} $out/bin/run.sh
+                wrapProgram $out/bin/run.sh --prefix PATH : "${lib.makeBinPath [
+                    packages.microservice-benchmarks.scripts 
+                    packages.ripple
+                    coreutils
+                ]}"
             '';
         };
     };

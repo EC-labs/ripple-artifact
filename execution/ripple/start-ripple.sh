@@ -3,7 +3,6 @@
 set -euo pipefail
 
 script=$(basename "$0")
-script_d="$(cd $(dirname ${BASH_SOURCE[0]}) && pwd)"
 
 if ! [[ -d "${DATA_DIR}" ]]; then
     mkdir "${DATA_DIR}"
