@@ -47,11 +47,20 @@ ssh.sh k8s-worker1 "docker compose -f /etc/${microservice_benchmark}/${run_type}
 ssh.sh k8s-worker2 "docker compose -f /etc/${microservice_benchmark}/${run_type}.yaml up -d"
 
 
-if [[ "$microservice_benchmark" == "media-microservices" ]]; then
-    sleep 30
-    worker2IP="$(jq -r --arg node "k8s-worker2" '.[$node].publicIP // empty' "$VARS_JSON")"
-    ssh.sh k8s-worker2 "docker run --rm --name init -e PYTHONUNBUFFERED=1 dclandau/initmediamicroservices:bd75677 ${worker2IP}:3009"
-fi
+case "$microservice_benchmark" in
+    "media-microservices")
+        sleep 10
+        worker2IP="$(jq -r --arg node "k8s-worker2" '.[$node].publicIP // empty' "$VARS_JSON")"
+        ssh.sh k8s-worker2 "docker run --rm --name init -e PYTHONUNBUFFERED=1 dclandau/initmediamicroservices:bd75677 ${worker2IP}:3009"
+        ;;
+    "social-network")
+        sleep 10
+        worker2IP="$(jq -r --arg node "k8s-worker2" '.[$node].publicIP // empty' "$VARS_JSON")"
+        ssh.sh k8s-worker2 "docker run --rm --name init -e PYTHONUNBUFFERED=1 dclandau/initsocialgraph:4181ebd --ip ${worker2IP} --port 3009"
+        ;;
+    *)
+        ;;
+esac
 
 kubectl kustomize --enable-helm "${script_d}/${microservice_benchmark}/k8s/load" \
     | kubectl apply -f -
