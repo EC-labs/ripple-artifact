@@ -8,6 +8,7 @@
             system = "x86_64-linux";
             pkgs = import nixpkgs {
                 inherit system;
+                config.allowUnfree = true;
             };
             analysis = pkgs.callPackage ./analysis {};
             execution = pkgs.callPackage ./execution {
@@ -15,12 +16,11 @@
                 analysis = analysis.package;
             };
             scripts = pkgs.callPackage ./scripts {};
-            social-network = pkgs.callPackage ./execution/microservice-benchmarks/social-network {};
+            terraform = pkgs.callPackage ./terraform {};
         in
         {
             packages.${system} = {
                 inherit scripts;
-                inherit social-network;
                 execution = execution.packages;
                 analysis = analysis.package;
             };
@@ -48,6 +48,7 @@
                     ];
                 };
                 execution = execution.devShell;
+                terraform = terraform.devShell;
             };
             nixosConfigurations = import ./nixos { inherit nixpkgs system inputs; };
         };
