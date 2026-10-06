@@ -52,9 +52,17 @@ nixos-rebuild.sh k8s-worker1
 nixos-rebuild.sh k8s-worker2
 ```
 
-The result of the switching might report a `systemctl` start error, which should autocorrect itself, after all systemd services are up and running. If not, it is possible that you might have to manually restart the systemd services in the VMs. Please contact `d.landau@uu.nl` if you're having issues.
+The result of the switching might report a `systemctl` start error, which should autocorrect itself, after all systemd services are up and running. If not, it is possible that you might have to manually restart the systemd services in the VMs. To `ssh` into a VM you can use the helper `ssh.sh` script we provide, by running:
+```bash
+ssh.sh <node-name>
+# where <node-name> can be "k8s-master", "k8s-worker1", and "k8s-worker2"
+# E.g.:
+ssh.sh k8s-worker1
+```
 
-After the previous 3 commands have completed, you can check whether the installation has been successful by running:
+Please reach out to `d.landau@uu.nl` if you're having issues.
+
+After the previous 3 commands have completed, this should have installed a 3 node kubernetes cluster, and prepared each VM for the experiments that are to be executed. You can check whether the installation has been successful by running:
 ```bash
 nix --extra-experimental-features 'nix-command flakes' develop .#execution
 
@@ -82,23 +90,36 @@ DATA_DIR=./data run.sh <microservice-benchmark> <run-type>
 DATA_DIR=./data run.sh media-microservices external
 ```
 
-This command will perform a full experiment with ripple, ranging from setting up the microservice benchmark ("social-network", "media-microservices", or "online-boutique") in the expected network configuration (`<run-type>`). The run type can assume 3 values: 
+This command will perform a full experiment with ripple, ranging from setting up the microservice benchmark ("social-network", "media-microservices", or "online-boutique") in the expected network configuration (`<run-type>`). `<run-type>` can assume 3 values: 
     
-    * "internal": which refers to the network configuration where the microservice benchmark is deployed with docker compose, and the services communicate with one another via the VMs privateIPs.
-    * "external": which refers to the network configuration where the microservice benchmark is deployed with docker compose, and the services communicate with one another via the VMs publicIPs.
-    * "k8s": refers to the network configuration where the microservice benchmark is deployed with k8s, and pods communicate and discover each other using standard kubernetes dns resolution and the flannel cni.
+* `internal`: which refers to the network configuration where the microservice benchmark is deployed with docker compose, and the services communicate with one another via the VMs privateIPs.
+* `external`: which refers to the network configuration where the microservice benchmark is deployed with docker compose, and the services communicate with one another via the VMs publicIPs.
+* `k8s`: refers to the network configuration where the microservice benchmark is deployed with k8s, and pods communicate and discover each other using standard kubernetes dns resolution and the flannel cni.
 
-As such, with this command you can run Ripple in the 9 network configurations reported in the paper.
+As such, with this command you can run Ripple in the 9 network configurations reported in the paper. 
 
-The `run.sh` script then starts the load generator, followed by starting ripple. Finally, after 30s running ripple, the data is copied and analysed against the ground truth. Note that the results might differ slightly depending on the context they are executed in, as a result of over-discovering services related to the microservice benchmark initialisation scripts.
+The `run.sh` script then starts the load generator, followed by starting ripple. Finally, after 30s running ripple, the data is copied and analysed against the ground truth. For example, the following output is expected when running the online-boutique internal experiment:
+```bash
+DATA_DIR=./data run.sh online-boutique internal
+# + exec ssh -o LogLevel=ERROR -i /nix/store/bffcc74cwfiq3si34m5yz5vh831r70wj-id_ed25519 root@18.195.37.79 'docker compose -f /etc/online-boutique/internal.yaml up -d'
+# ...
+# ...
+#    precision  recall  f1score
+# 0        1.0     1.0      1.0
+```
 
 The database for the experiment can be found in the `DATA_DIR` directory passed in as an environment variable in the command line (which in the previous command was `./data`).
+
+*Note 1: The results might differ slightly depending on the context they are executed in, as a result of over-discovering services related to the microservice benchmark initialisation scripts.*
+
+*Note 2: If the execution reports a very low fscore (lower than 0.8), then the load generator might not have run as expected. Run the experiment again with the same parameters, and if it still persists, reach out to `d.landau@uu.nl`.*
+
 
 ## Related Work
 
 Extracting the results from the related works is non-standard, and hard to automate due to the requirement to interact with the interfaces they provide. 
 
-As such, we provide the raw data and resulting service dependency graphs for all tools in the `./results` directory.
+**We provide the raw data and resulting service dependency graphs for all tools in the `./results/validation` directory.**
 
 # Experiment 2: Overhead
 
