@@ -1,0 +1,14 @@
+src,dst
+cartservice,cartservice
+cartservice,checkoutservice
+cartservice,frontend
+cartservice,recommendationservice
+checkoutservice,cartservice
+checkoutservice,emailservice
+emailservice,checkoutservice
+emailservice,frontend
+emailservice,loadgenerator
+frontend,cartservice
+frontend,emailservice
+loadgenerator,emailservice
+recommendationservice,cartservice

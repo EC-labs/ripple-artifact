@@ -1,0 +1,188 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+            <script src="lib/bindings/utils.js"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/dist/vis-network.min.css" integrity="sha512-WgxfT5LWjfszlPHXRmBWHkV2eceiWTOBvrKCNbdgDYTHrT2AeLCGbF4sZlZw3UMN3WtL0tGUoIAKsu8mllg/XA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/vis-network.min.js" integrity="sha512-LnvoEWDFrqGHlHmDD2101OrLcbsfkrzoSpvtSQtxK3RMnRV0eOkhhBN2dXHKRrUU8p2DGRTk35n4O8nWSVe1mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            
+        
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+          crossorigin="anonymous"
+        ></script>
+
+
+        <center>
+          <h1></h1>
+        </center>
+        <style type="text/css">
+
+             #mynetwork {
+                 width: 100%;
+                 height: 800px;
+                 background-color: #ffffff;
+                 border: 1px solid lightgray;
+                 position: relative;
+                 float: left;
+             }
+
+             
+
+             
+
+             
+        </style>
+    </head>
+
+
+    <body>
+        <div class="card" style="width: 100%">
+            
+            
+            <div id="mynetwork" class="card-body"></div>
+        </div>
+
+        
+        
+
+        <script type="text/javascript">
+
+              // initialize global variables.
+              var edges;
+              var nodes;
+              var allNodes;
+              var allEdges;
+              var nodeColors;
+              var originalNodes;
+              var network;
+              var container;
+              var options, data;
+              var filter = {
+                  item : '',
+                  property : '',
+                  value : []
+              };
+
+              
+
+              
+
+              // This method is responsible for drawing the graph, returns the drawn network
+              function drawGraph() {
+                  var container = document.getElementById('mynetwork');
+
+                  
+
+                  // parsing and collecting nodes and edges from the python
+                  nodes = new vis.DataSet([{"color": "#f36aaa", "font": {"multi": "html", "size": 12}, "id": "3-3318059", "label": "/online-adservice-1\n3318059", "shape": "dot", "size": 20, "title": "Machine: 3\nGroup: /online-adservice-1"}, {"color": "#f7e8f2", "font": {"multi": "html", "size": 12}, "id": "1-1824002", "label": "/online-frontend-1\n1824002", "shape": "dot", "size": 20, "title": "Machine: 1\nGroup: /online-frontend-1"}, {"color": "#c5e9d6", "font": {"multi": "html", "size": 12}, "id": "2-2537540", "label": "/online-cartservice-1\n2537540", "shape": "dot", "size": 20, "title": "Machine: 2\nGroup: /online-cartservice-1"}, {"color": "#f7e8f2", "font": {"multi": "html", "size": 12}, "id": "1-1824018", "label": "/online-checkoutservice-1\n1824018", "shape": "dot", "size": 20, "title": "Machine: 1\nGroup: /online-checkoutservice-1"}, {"color": "#f36aaa", "font": {"multi": "html", "size": 12}, "id": "3-3318007", "label": "/online-currencyservice-1\n3318007", "shape": "dot", "size": 20, "title": "Machine: 3\nGroup: /online-currencyservice-1"}, {"color": "#f36aaa", "font": {"multi": "html", "size": 12}, "id": "3-3329305", "label": "/online-loadgenerator-1\n3329305", "shape": "dot", "size": 20, "title": "Machine: 3\nGroup: /online-loadgenerator-1"}, {"color": "#f36aaa", "font": {"multi": "html", "size": 12}, "id": "3-3318050", "label": "/online-shippingservice-1\n3318050", "shape": "dot", "size": 20, "title": "Machine: 3\nGroup: /online-shippingservice-1"}, {"color": "#c5e9d6", "font": {"multi": "html", "size": 12}, "id": "2-2537287", "label": "/online-productcatalogservice-1\n2537287", "shape": "dot", "size": 20, "title": "Machine: 2\nGroup: /online-productcatalogservice-1"}, {"color": "#f7e8f2", "font": {"multi": "html", "size": 12}, "id": "1-1833226", "label": "/online-recommendationservice-1\n1833226", "shape": "dot", "size": 20, "title": "Machine: 1\nGroup: /online-recommendationservice-1"}, {"color": "#c5e9d6", "font": {"multi": "html", "size": 12}, "id": "2-2537274", "label": "/online-redis-cart-1\n2537274", "shape": "dot", "size": 20, "title": "Machine: 2\nGroup: /online-redis-cart-1"}, {"color": "#c5e9d6", "font": {"multi": "html", "size": 12}, "id": "2-2537281", "label": "/online-paymentservice-1\n2537281", "shape": "dot", "size": 20, "title": "Machine: 2\nGroup: /online-paymentservice-1"}, {"color": "#f7e8f2", "font": {"multi": "html", "size": 12}, "id": "1-1833233", "label": "/online-emailservice-1\n1833233", "shape": "dot", "size": 20, "title": "Machine: 1\nGroup: /online-emailservice-1"}, {"color": "#c5e9d6", "font": {"multi": "html", "size": 12}, "id": "2-642", "label": "/system.slice/containerd.service\n642", "shape": "dot", "size": 20, "title": "Machine: 2\nGroup: /system.slice/containerd.service"}, {"color": "#c5e9d6", "font": {"multi": "html", "size": 12}, "id": "2-3779398", "label": "/system.slice/kubelet.service\n3779398", "shape": "dot", "size": 20, "title": "Machine: 2\nGroup: /system.slice/kubelet.service"}, {"color": "#c5e9d6", "font": {"multi": "html", "size": 12}, "id": "2-765149", "label": "caretta-grafana-567587d54-t24t8\n765149", "shape": "dot", "size": 20, "title": "Machine: 2\nGroup: caretta-grafana-567587d54-t24t8"}, {"color": "#c5e9d6", "font": {"multi": "html", "size": 12}, "id": "2-3822437", "label": "caretta-vm-0\n3822437", "shape": "dot", "size": 20, "title": "Machine: 2\nGroup: caretta-vm-0"}, {"color": "#f7e8f2", "font": {"multi": "html", "size": 12}, "id": "1-1455", "label": "kube-apiserver-ip-172-31-21-222\n1455", "shape": "dot", "size": 20, "title": "Machine: 1\nGroup: kube-apiserver-ip-172-31-21-222"}, {"color": "#f36aaa", "font": {"multi": "html", "size": 12}, "id": "3-624", "label": "/system.slice/containerd.service\n624", "shape": "dot", "size": 20, "title": "Machine: 3\nGroup: /system.slice/containerd.service"}, {"color": "#f36aaa", "font": {"multi": "html", "size": 12}, "id": "3-579744", "label": "/system.slice/kubelet.service\n579744", "shape": "dot", "size": 20, "title": "Machine: 3\nGroup: /system.slice/kubelet.service"}, {"color": "#f36aaa", "font": {"multi": "html", "size": 12}, "id": "3-7735", "label": "coredns-674b8bbfcf-549p4\n7735", "shape": "dot", "size": 20, "title": "Machine: 3\nGroup: coredns-674b8bbfcf-549p4"}, {"color": "#f36aaa", "font": {"multi": "html", "size": 12}, "id": "3-3352077", "label": "openebs-ndm-operator-5849bb84b8-w4pz8\n3352077", "shape": "dot", "size": 20, "title": "Machine: 3\nGroup: openebs-ndm-operator-5849bb84b8-w4pz8"}, {"color": "#c5e9d6", "font": {"multi": "html", "size": 12}, "id": "2-3822317", "label": "caretta-9vxtm\n3822317", "shape": "dot", "size": 20, "title": "Machine: 2\nGroup: caretta-9vxtm"}, {"color": "#f36aaa", "font": {"multi": "html", "size": 12}, "id": "3-4110523", "label": "caretta-hzl24\n4110523", "shape": "dot", "size": 20, "title": "Machine: 3\nGroup: caretta-hzl24"}, {"color": "#f7e8f2", "font": {"multi": "html", "size": 12}, "id": "1-3432509", "label": "caretta-qjvrk\n3432509", "shape": "dot", "size": 20, "title": "Machine: 1\nGroup: caretta-qjvrk"}, {"color": "#f7e8f2", "font": {"multi": "html", "size": 12}, "id": "1-3456526", "label": "/system.slice/kubelet.service\n3456526", "shape": "dot", "size": 20, "title": "Machine: 1\nGroup: /system.slice/kubelet.service"}, {"color": "#f7e8f2", "font": {"multi": "html", "size": 12}, "id": "1-1473", "label": "etcd-ip-172-31-21-222\n1473", "shape": "dot", "size": 20, "title": "Machine: 1\nGroup: etcd-ip-172-31-21-222"}, {"color": "#f7e8f2", "font": {"multi": "html", "size": 12}, "id": "1-1504", "label": "kube-scheduler-ip-172-31-21-222\n1504", "shape": "dot", "size": 20, "title": "Machine: 1\nGroup: kube-scheduler-ip-172-31-21-222"}, {"color": "#f7e8f2", "font": {"multi": "html", "size": 12}, "id": "1-4097", "label": "coredns-674b8bbfcf-z86pt\n4097", "shape": "dot", "size": 20, "title": "Machine: 1\nGroup: coredns-674b8bbfcf-z86pt"}, {"color": "#f7e8f2", "font": {"multi": "html", "size": 12}, "id": "1-1511", "label": "kube-controller-manager-ip-172-31-21-222\n1511", "shape": "dot", "size": 20, "title": "Machine: 1\nGroup: kube-controller-manager-ip-172-31-21-222"}, {"color": "#f36aaa", "font": {"multi": "html", "size": 12}, "id": "3-1856", "label": "kube-proxy-xljfq\n1856", "shape": "dot", "size": 20, "title": "Machine: 3\nGroup: kube-proxy-xljfq"}, {"color": "#f36aaa", "font": {"multi": "html", "size": 12}, "id": "3-579579", "label": "openebs-localpv-provisioner-65dd55b8dc-ngg5m\n579579", "shape": "dot", "size": 20, "title": "Machine: 3\nGroup: openebs-localpv-provisioner-65dd55b8dc-ngg5m"}, {"color": "#f7e8f2", "font": {"multi": "html", "size": 12}, "id": "1-3887", "label": "kube-flannel-ds-k674b\n3887", "shape": "dot", "size": 20, "title": "Machine: 1\nGroup: kube-flannel-ds-k674b"}, {"color": "#f36aaa", "font": {"multi": "html", "size": 12}, "id": "3-7317", "label": "kube-flannel-ds-kcb69\n7317", "shape": "dot", "size": 20, "title": "Machine: 3\nGroup: kube-flannel-ds-kcb69"}, {"color": "#c5e9d6", "font": {"multi": "html", "size": 12}, "id": "2-4234", "label": "kube-flannel-ds-5s4dz\n4234", "shape": "dot", "size": 20, "title": "Machine: 2\nGroup: kube-flannel-ds-5s4dz"}, {"color": "#f7e8f2", "font": {"multi": "html", "size": 12}, "id": "1-1764", "label": "kube-proxy-5s997\n1764", "shape": "dot", "size": 20, "title": "Machine: 1\nGroup: kube-proxy-5s997"}, {"color": "#c5e9d6", "font": {"multi": "html", "size": 12}, "id": "2-1749", "label": "kube-proxy-6n97d\n1749", "shape": "dot", "size": 20, "title": "Machine: 2\nGroup: kube-proxy-6n97d"}]);
+                  edges = new vis.DataSet([{"color": "rgba(150,150,150,0.6)", "from": "3-3318059", "to": "1-1824002", "width": 1}, {"color": "rgba(150,150,150,0.6)", "from": "1-1824002", "to": "2-2537540", "width": 1}, {"color": "rgba(150,150,150,0.6)", "from": "1-1824002", "to": "1-1824018", "width": 1}, {"color": "rgba(150,150,150,0.6)", "from": "1-1824002", "to": "3-3318007", "width": 1}, {"color": "rgba(150,150,150,0.6)", "from": "1-1824002", "to": "3-3329305", "width": 1}, {"color": "rgba(150,150,150,0.6)", "from": "1-1824002", "to": "3-3318050", "width": 1}, {"color": "rgba(150,150,150,0.6)", "from": "1-1824002", "to": "2-2537287", "width": 1}, {"color": "rgba(150,150,150,0.6)", "from": "1-1824002", "to": "1-1833226", "width": 1}, {"color": "rgba(150,150,150,0.6)", "from": "2-2537540", "to": "2-2537274", "width": 1}, {"color": "rgba(150,150,150,0.6)", "from": "2-2537540", "to": "1-1824018", "width": 1}, {"color": "rgba(150,150,150,0.6)", "from": "1-1824018", "to": "2-2537281", "width": 1}, {"color": "rgba(150,150,150,0.6)", "from": "1-1824018", "to": "3-3318050", "width": 1}, {"color": "rgba(150,150,150,0.6)", "from": "1-1824018", "to": "2-2537287", "width": 1}, {"color": "rgba(150,150,150,0.6)", "from": "1-1824018", "to": "3-3318007", "width": 1}, {"color": "rgba(150,150,150,0.6)", "from": "1-1824018", "to": "1-1833233", "width": 1}, {"color": "rgba(150,150,150,0.6)", "from": "2-2537287", "to": "1-1833226", "width": 1}, {"color": "rgba(150,150,150,0.6)", "from": "2-642", "to": "2-3779398", "width": 1}, {"color": "rgba(150,150,150,0.6)", "from": "2-642", "to": "2-765149", "width": 1}, {"color": "rgba(150,150,150,0.6)", "from": "2-3779398", "to": "2-3822437", "width": 1}, {"color": "rgba(150,150,150,0.6)", "from": "2-3779398", "to": "2-765149", "width": 1}, {"color": "rgba(150,150,150,0.6)", "from": "2-3779398", "to": "1-1455", "width": 1}, {"color": "rgba(150,150,150,0.6)", "from": "3-624", "to": "3-579744", "width": 1}, {"color": "rgba(150,150,150,0.6)", "from": "3-579744", "to": "3-7735", "width": 1}, {"color": "rgba(150,150,150,0.6)", "from": "3-579744", "to": "3-3352077", "width": 1}, {"color": "rgba(150,150,150,0.6)", "from": "3-579744", "to": "1-1455", "width": 1}, {"color": "rgba(150,150,150,0.6)", "from": "2-3822437", "to": "2-3822317", "width": 1}, {"color": "rgba(150,150,150,0.6)", "from": "2-3822437", "to": "3-4110523", "width": 1}, {"color": "rgba(150,150,150,0.6)", "from": "2-3822437", "to": "1-3432509", "width": 1}, {"color": "rgba(150,150,150,0.6)", "from": "1-3456526", "to": "1-1473", "width": 1}, {"color": "rgba(150,150,150,0.6)", "from": "1-3456526", "to": "1-1455", "width": 1}, {"color": "rgba(150,150,150,0.6)", "from": "1-3456526", "to": "1-1504", "width": 1}, {"color": "rgba(150,150,150,0.6)", "from": "1-3456526", "to": "1-4097", "width": 1}, {"color": "rgba(150,150,150,0.6)", "from": "1-3456526", "to": "1-1511", "width": 1}, {"color": "rgba(150,150,150,0.6)", "from": "1-1473", "to": "1-1455", "width": 1}, {"color": "rgba(150,150,150,0.6)", "from": "1-1455", "to": "2-3822317", "width": 1}, {"color": "rgba(150,150,150,0.6)", "from": "1-1455", "to": "3-4110523", "width": 1}, {"color": "rgba(150,150,150,0.6)", "from": "1-1455", "to": "1-3432509", "width": 1}, {"color": "rgba(150,150,150,0.6)", "from": "1-1455", "to": "3-7735", "width": 1}, {"color": "rgba(150,150,150,0.6)", "from": "1-1455", "to": "1-4097", "width": 1}, {"color": "rgba(150,150,150,0.6)", "from": "1-1455", "to": "1-1455", "width": 1}, {"color": "rgba(150,150,150,0.6)", "from": "1-1455", "to": "3-1856", "width": 1}, {"color": "rgba(150,150,150,0.6)", "from": "1-1455", "to": "1-1511", "width": 1}, {"color": "rgba(150,150,150,0.6)", "from": "1-1455", "to": "1-1504", "width": 1}, {"color": "rgba(150,150,150,0.6)", "from": "1-1455", "to": "3-3352077", "width": 1}, {"color": "rgba(150,150,150,0.6)", "from": "1-1455", "to": "3-579579", "width": 1}, {"color": "rgba(150,150,150,0.6)", "from": "1-1455", "to": "1-3887", "width": 1}, {"color": "rgba(150,150,150,0.6)", "from": "1-1455", "to": "3-7317", "width": 1}, {"color": "rgba(150,150,150,0.6)", "from": "1-1455", "to": "2-4234", "width": 1}, {"color": "rgba(150,150,150,0.6)", "from": "1-1455", "to": "1-1764", "width": 1}, {"color": "rgba(150,150,150,0.6)", "from": "1-1455", "to": "2-1749", "width": 1}, {"color": "rgba(150,150,150,0.6)", "from": "3-7735", "to": "3-7735", "width": 1}, {"color": "rgba(150,150,150,0.6)", "from": "1-4097", "to": "1-4097", "width": 1}]);
+
+                  nodeColors = {};
+                  allNodes = nodes.get({ returnType: "Object" });
+                  for (nodeId in allNodes) {
+                    nodeColors[nodeId] = allNodes[nodeId].color;
+                  }
+                  allEdges = edges.get({ returnType: "Object" });
+                  // adding nodes and edges to the graph
+                  data = {nodes: nodes, edges: edges};
+
+                  var options = {
+    "configure": {
+        "enabled": false
+    },
+    "edges": {
+        "color": {
+            "inherit": true
+        },
+        "smooth": {
+            "enabled": false,
+            "type": "dynamic"
+        }
+    },
+    "interaction": {
+        "dragNodes": true,
+        "hideEdgesOnDrag": false,
+        "hideNodesOnDrag": false
+    },
+    "physics": {
+        "enabled": false,
+        "stabilization": {
+            "enabled": true,
+            "fit": true,
+            "iterations": 1000,
+            "onlyDynamicEdges": false,
+            "updateInterval": 50
+        }
+    }
+};
+
+                  
+
+
+                  
+
+                  network = new vis.Network(container, data, options);
+
+                  
+
+                  
+
+                  
+
+
+                  
+
+                  return network;
+
+              }
+              drawGraph();
+        </script>
+    
+    <div style="position:fixed;top:10px;right:10px;z-index:9999;">
+        <button onclick="downloadGraph()">Save Graph</button>
+        <input type="file" id="upload" onchange="uploadGraph()" style="display:none;" />
+        <button onclick="document.getElementById('upload').click();">Load Graph</button>
+    </div>
+    <script>
+    function downloadGraph() {
+        var positions = network.getPositions();
+        var blob = new Blob([JSON.stringify(positions, null, 2)], {type : 'application/json'});
+        var link = document.createElement('a');
+        link.href = window.URL.createObjectURL(blob);
+        link.download = 'graph-positions.json';
+        link.click();
+    }
+
+    function uploadGraph() {
+        var fileInput = document.getElementById('upload');
+        var file = fileInput.files[0];
+        var reader = new FileReader();
+        reader.onload = function(event) {
+            var positions = JSON.parse(event.target.result);
+            for (const [nodeId, pos] of Object.entries(positions)) {
+                network.moveNode(nodeId, pos.x, pos.y);
+            }
+        };
+        if (file) {
+            reader.readAsText(file);
+        }
+    }
+
+    </script>
+    </body>
+    
+</html>

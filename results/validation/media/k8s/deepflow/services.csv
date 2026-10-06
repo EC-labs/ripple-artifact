@@ -1,0 +1,34 @@
+﻿"Avg(Avg Data Delay)","Avg(Avg TCP Est. Delay)","Avg(Error %)","Avg(TCP Retrans. %)","Enum(observation_point)","auto_instance_0","auto_instance_id_0","auto_instance_type_0","bps","client_icon_id","client_node_type","client_resource","client_resource_id","client_resource_type","observation_point","pod_1","pod_id_1","server_icon_id","server_node_type","server_resource","server_resource_id","server_resource_type"
+,,,0,Client NIC,user-review-service-699cb58ccb-tlxbh,69,10,3.50,0,pod,user-review-service-699cb58ccb-tlxbh,69,pod,c,user-review-redis-c8f5c8544-v7h8q,6,0,pod,user-review-redis-c8f5c8544-v7h8q,6,pod
+,,0,0,Client K8s Node,user-review-service-699cb58ccb-tlxbh,69,10,8.75,0,pod,user-review-service-699cb58ccb-tlxbh,69,pod,c-nd,compose-review-service-599944bd5f-zvtqv,75,0,pod,compose-review-service-599944bd5f-zvtqv,75,pod
+3773,172,0,0,Server NIC,compose-review-service-599944bd5f-zvtqv,75,10,168,0,pod,compose-review-service-599944bd5f-zvtqv,75,pod,s,user-review-service-699cb58ccb-tlxbh,69,0,pod,user-review-service-699cb58ccb-tlxbh,69,pod
+,,,0,Client NIC,nginx-web-server-64f7744cd5-2ck9b,76,10,3.50,0,pod,nginx-web-server-64f7744cd5-2ck9b,76,pod,c,unique-id-service-899c546c7-v952c,20,0,pod,unique-id-service-899c546c7-v952c,20,pod
+,,0,0,Server NIC,ip-172-31-23-24,2,14,1.40,0,pod_node,ip-172-31-23-24,2,pod_node,s,nginx-web-server-64f7744cd5-2ck9b,76,0,pod,nginx-web-server-64f7744cd5-2ck9b,76,pod
+264,509,,0,Server NIC,user-service-645c955fbd-cxlcg,14,10,186,0,pod,user-service-645c955fbd-cxlcg,14,pod,s,user-memcached-6b68c64994-vzkj2,32,0,pod,user-memcached-6b68c64994-vzkj2,32,pod
+,,0,0,Server NIC,ip-172-31-23-24,2,14,2.80,0,pod_node,ip-172-31-23-24,2,pod_node,s,compose-review-service-599944bd5f-zvtqv,75,0,pod,compose-review-service-599944bd5f-zvtqv,75,pod
+4022,489,,0,Server NIC,movie-id-service-78bd687b8b-rtvkk,18,10,156,0,pod,movie-id-service-78bd687b8b-rtvkk,18,pod,s,compose-review-service-599944bd5f-zvtqv,75,0,pod,compose-review-service-599944bd5f-zvtqv,75,pod
+,,0,0,Client NIC,cast-info-service-77b4f6c69b-5qfgz,3,10,5.60,0,pod,cast-info-service-77b4f6c69b-5qfgz,3,pod,c,cast-info-mongodb-dccb88bc-v8nr4,48,0,pod,cast-info-mongodb-dccb88bc-v8nr4,48,pod
+4548,665,,0,Server NIC,user-service-645c955fbd-cxlcg,14,10,155,0,pod,user-service-645c955fbd-cxlcg,14,pod,s,compose-review-service-599944bd5f-zvtqv,75,0,pod,compose-review-service-599944bd5f-zvtqv,75,pod
+,,,0,Server NIC,ip-172-31-23-24,2,14,1.40,0,pod_node,ip-172-31-23-24,2,pod_node,s,user-memcached-6b68c64994-vzkj2,32,0,pod,user-memcached-6b68c64994-vzkj2,32,pod
+455,,,0,Server NIC,movie-review-service-696995ccdc-5bj5w,33,10,514,0,pod,movie-review-service-696995ccdc-5bj5w,33,pod,s,movie-review-mongodb-c9b8c7b8b-t4chh,36,0,pod,movie-review-mongodb-c9b8c7b8b-t4chh,36,pod
+,,,0,Client NIC,compose-review-service-599944bd5f-zvtqv,75,10,3.50,0,pod,compose-review-service-599944bd5f-zvtqv,75,pod,c,compose-review-memcached-5455f45f54-jglgq,65,0,pod,compose-review-memcached-5455f45f54-jglgq,65,pod
+,,0,0,Client NIC,user-review-service-699cb58ccb-tlxbh,69,10,4.90,0,pod,user-review-service-699cb58ccb-tlxbh,69,pod,c,user-review-mongodb-6dfd96575-9589x,26,0,pod,user-review-mongodb-6dfd96575-9589x,26,pod
+,,0,0,Server NIC,ip-172-31-23-24,2,14,2.10,0,pod_node,ip-172-31-23-24,2,pod_node,s,movie-review-mongodb-c9b8c7b8b-t4chh,36,0,pod,movie-review-mongodb-c9b8c7b8b-t4chh,36,pod
+,,,0,Server NIC,ip-172-31-23-24,2,14,1.40,0,pod_node,ip-172-31-23-24,2,pod_node,s,user-review-mongodb-6dfd96575-9589x,26,0,pod,user-review-mongodb-6dfd96575-9589x,26,pod
+,,0,0,Client K8s Node,ip-172-31-23-24,2,14,9.10,0,pod_node,ip-172-31-23-24,2,pod_node,c-nd,user-memcached-6b68c64994-vzkj2,32,0,pod,user-memcached-6b68c64994-vzkj2,32,pod
+,,,0,Client NIC,nginx-web-server-64f7744cd5-2ck9b,76,10,3.50,0,pod,nginx-web-server-64f7744cd5-2ck9b,76,pod,c,user-service-645c955fbd-cxlcg,14,0,pod,user-service-645c955fbd-cxlcg,14,pod
+,,0,0,Server NIC,ip-172-31-23-24,2,14,2.10,0,pod_node,ip-172-31-23-24,2,pod_node,s,movie-id-mongodb-7cd8758469-f5mt2,31,0,pod,movie-id-mongodb-7cd8758469-f5mt2,31,pod
+,,0,0,Client NIC,compose-review-service-599944bd5f-zvtqv,75,10,6.65,0,pod,compose-review-service-599944bd5f-zvtqv,75,pod,c,user-review-service-699cb58ccb-tlxbh,69,0,pod,user-review-service-699cb58ccb-tlxbh,69,pod
+,,100,0,Server K8s Node,text-service-64bd7dd568-sh6gn,61,10,15.4,0,pod,text-service-64bd7dd568-sh6gn,61,pod,s-nd,compose-review-service-599944bd5f-zvtqv,75,0,pod,compose-review-service-599944bd5f-zvtqv,75,pod
+,,,0,Client NIC,nginx-web-server-64f7744cd5-2ck9b,76,10,3.50,0,pod,nginx-web-server-64f7744cd5-2ck9b,76,pod,c,text-service-64bd7dd568-sh6gn,61,0,pod,text-service-64bd7dd568-sh6gn,61,pod
+4659,1148,,0,Server NIC,unique-id-service-899c546c7-v952c,20,10,154,0,pod,unique-id-service-899c546c7-v952c,20,pod,s,compose-review-service-599944bd5f-zvtqv,75,0,pod,compose-review-service-599944bd5f-zvtqv,75,pod
+,,0,0,Client NIC,user-review-service-699cb58ccb-tlxbh,69,10,0.700,0,pod,user-review-service-699cb58ccb-tlxbh,69,pod,c,compose-review-service-599944bd5f-zvtqv,75,0,pod,compose-review-service-599944bd5f-zvtqv,75,pod
+,,0,0,Server NIC,ip-172-31-23-24,2,14,1.40,0,pod_node,ip-172-31-23-24,2,pod_node,s,cast-info-mongodb-dccb88bc-v8nr4,48,0,pod,cast-info-mongodb-dccb88bc-v8nr4,48,pod
+278,,0,0,Server NIC,cast-info-service-77b4f6c69b-5qfgz,3,10,53.5,0,pod,cast-info-service-77b4f6c69b-5qfgz,3,pod,s,cast-info-mongodb-dccb88bc-v8nr4,48,0,pod,cast-info-mongodb-dccb88bc-v8nr4,48,pod
+4929,543,,0,Server NIC,text-service-64bd7dd568-sh6gn,61,10,256,0,pod,text-service-64bd7dd568-sh6gn,61,pod,s,compose-review-service-599944bd5f-zvtqv,75,0,pod,compose-review-service-599944bd5f-zvtqv,75,pod
+592,,,0,Server NIC,movie-id-service-78bd687b8b-rtvkk,18,10,171,0,pod,movie-id-service-78bd687b8b-rtvkk,18,pod,s,movie-id-mongodb-7cd8758469-f5mt2,31,0,pod,movie-id-mongodb-7cd8758469-f5mt2,31,pod
+,,0,0,Server NIC,ip-172-31-23-24,2,14,1.40,0,pod_node,ip-172-31-23-24,2,pod_node,s,user-review-service-699cb58ccb-tlxbh,69,0,pod,user-review-service-699cb58ccb-tlxbh,69,pod
+,,,0,Client NIC,nginx-web-server-64f7744cd5-2ck9b,76,10,3.50,0,pod,nginx-web-server-64f7744cd5-2ck9b,76,pod,c,movie-id-service-78bd687b8b-rtvkk,18,0,pod,movie-id-service-78bd687b8b-rtvkk,18,pod
+,,,0,Client NIC,compose-review-service-599944bd5f-zvtqv,75,10,3.50,0,pod,compose-review-service-599944bd5f-zvtqv,75,pod,c,movie-review-service-696995ccdc-5bj5w,33,0,pod,movie-review-service-696995ccdc-5bj5w,33,pod
+8727,834,,0,Server NIC,rating-service-dc8bd6666-t7jt6,68,10,155,0,pod,rating-service-dc8bd6666-t7jt6,68,pod,s,compose-review-service-599944bd5f-zvtqv,75,0,pod,compose-review-service-599944bd5f-zvtqv,75,pod
+794,,0,0,Server NIC,user-review-service-699cb58ccb-tlxbh,69,10,506,0,pod,user-review-service-699cb58ccb-tlxbh,69,pod,s,user-review-mongodb-6dfd96575-9589x,26,0,pod,user-review-mongodb-6dfd96575-9589x,26,pod

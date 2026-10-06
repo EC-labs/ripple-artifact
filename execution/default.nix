@@ -44,6 +44,7 @@ rec {
             scripts
             packages.microservice-benchmarks.scripts
             jq
+            packages.run
         ];
         KUBECONFIG = kubeconfig;
         MANIFESTS_DIR = "${packages.microservice-benchmarks.manifests}";

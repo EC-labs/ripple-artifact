@@ -1,0 +1,3058 @@
+{
+    "context": {
+        "status": {
+            "status": "ok",
+            "error": "",
+            "prometheus": {
+                "status": "ok",
+                "message": "ok",
+                "error": "",
+                "action": ""
+            },
+            "node_agent": {
+                "status": "ok",
+                "nodes": 3
+            },
+            "kube_state_metrics": {
+                "status": "ok",
+                "applications": 113
+            }
+        },
+        "search": {
+            "applications": [
+                {
+                    "id": "_:Unknown:udisks2",
+                    "status": "ok"
+                },
+                {
+                    "id": "_:Unknown:ripple-user-memcached-1",
+                    "status": "ok"
+                },
+                {
+                    "id": "_:Unknown:ripple-movie-info-mongodb-1",
+                    "status": "ok"
+                },
+                {
+                    "id": "openebs:Deployment:openebs-localpv-provisioner",
+                    "status": "ok"
+                },
+                {
+                    "id": "_:Unknown:ripple-dns-media-1",
+                    "status": "ok"
+                },
+                {
+                    "id": "_:Unknown:systemd-udevd",
+                    "status": "warning"
+                },
+                {
+                    "id": "_:Unknown:nix-daemon",
+                    "status": "ok"
+                },
+                {
+                    "id": "external:ExternalService:pkg-containers.githubusercontent.com",
+                    "status": "unknown"
+                },
+                {
+                    "id": "external:ExternalService:movie-id-service:11212",
+                    "status": "unknown"
+                },
+                {
+                    "id": "kube-system:DaemonSet:kube-proxy",
+                    "status": "ok"
+                },
+                {
+                    "id": "default:Deployment:registry",
+                    "status": "ok"
+                },
+                {
+                    "id": "_:Unknown:containerd",
+                    "status": "ok"
+                },
+                {
+                    "id": "external:ExternalService:movie-id-service:10001",
+                    "status": "unknown"
+                },
+                {
+                    "id": "external:ExternalService:compose-review-memcached:6381",
+                    "status": "ok"
+                },
+                {
+                    "id": "coroot:StatefulSet:coroot-coroot",
+                    "status": "ok"
+                },
+                {
+                    "id": "_:Unknown:ripple-plot-service-1",
+                    "status": "ok"
+                },
+                {
+                    "id": "_:Unknown:system-getty",
+                    "status": "ok"
+                },
+                {
+                    "id": "openebs:Deployment:openebs-ndm-operator",
+                    "status": "ok"
+                },
+                {
+                    "id": "openebs:DaemonSet:openebs-ndm",
+                    "status": "ok"
+                },
+                {
+                    "id": "external:ExternalService:compose-review-memcached:27022",
+                    "status": "ok"
+                },
+                {
+                    "id": "external:ExternalService:production.cloudflare.docker.com",
+                    "status": "unknown"
+                },
+                {
+                    "id": "_:Unknown:chrony",
+                    "status": "ok"
+                },
+                {
+                    "id": "caretta:StatefulSet:caretta-vm",
+                    "status": "ok"
+                },
+                {
+                    "id": "_:Unknown:ripple-user-service-1",
+                    "status": "ok"
+                },
+                {
+                    "id": "external:ExternalService:compose-review-memcached:27021",
+                    "status": "ok"
+                },
+                {
+                    "id": "_:Unknown:ripple-movie-info-service-1",
+                    "status": "ok"
+                },
+                {
+                    "id": "_:Unknown:multipathd",
+                    "status": "ok"
+                },
+                {
+                    "id": "external:ExternalService:movie-id-service:10003",
+                    "status": "unknown"
+                },
+                {
+                    "id": "external:ExternalService:compose-review-memcached:6380",
+                    "status": "ok"
+                },
+                {
+                    "id": "_:Unknown:systemd-journald",
+                    "status": "ok"
+                },
+                {
+                    "id": "_:Unknown:ripple-compose-review-memcached-1",
+                    "status": "ok"
+                },
+                {
+                    "id": "external:ExternalService:compose-review-memcached:11214",
+                    "status": "unknown"
+                },
+                {
+                    "id": "external:ExternalService:registry-1.docker.io",
+                    "status": "unknown"
+                },
+                {
+                    "id": "openebs:DaemonSet:openebs-ndm-node-exporter",
+                    "status": "ok"
+                },
+                {
+                    "id": "caretta:DaemonSet:caretta",
+                    "status": "ok"
+                },
+                {
+                    "id": "_:Unknown:ripple-movie-id-memcached-1",
+                    "status": "ok"
+                },
+                {
+                    "id": "external:ExternalService:grafana.com:443",
+                    "status": "unknown"
+                },
+                {
+                    "id": "openebs:StaticPods:init-pvc-aba6936f-ff16-4dab-afad-4a507ffecac7",
+                    "status": "ok"
+                },
+                {
+                    "id": "_:Unknown:ripple-plot-memcached-1",
+                    "status": "ok"
+                },
+                {
+                    "id": "external:ExternalService:ghcr.io:443",
+                    "status": "unknown"
+                },
+                {
+                    "id": "_:Unknown:ripple-text-service-1",
+                    "status": "ok"
+                },
+                {
+                    "id": "_:Unknown:ModemManager",
+                    "status": "ok"
+                },
+                {
+                    "id": "_:Unknown:ripple-movie-info-memcached-1",
+                    "status": "ok"
+                },
+                {
+                    "id": "external:ExternalService:external-http",
+                    "status": "unknown"
+                },
+                {
+                    "id": "external:ExternalService:movie-id-service:27019",
+                    "status": "ok"
+                },
+                {
+                    "id": "caretta:Deployment:caretta-grafana",
+                    "status": "ok"
+                },
+                {
+                    "id": "_:Unknown:ripple-user-review-service-1",
+                    "status": "ok"
+                },
+                {
+                    "id": "_:Unknown:ripple-cast-info-mongodb-1",
+                    "status": "ok"
+                },
+                {
+                    "id": "_:Unknown:ripple-plot-mongodb-1",
+                    "status": "ok"
+                },
+                {
+                    "id": "_:Unknown:irqbalance",
+                    "status": "ok"
+                },
+                {
+                    "id": "external:ExternalService:compose-review-memcached:10006",
+                    "status": "unknown"
+                },
+                {
+                    "id": "_:Unknown:ripple-movie-review-mongodb-1",
+                    "status": "ok"
+                },
+                {
+                    "id": "_:Unknown:systemd-logind",
+                    "status": "ok"
+                },
+                {
+                    "id": "external:ExternalService:movie-id-service:27018",
+                    "status": "ok"
+                },
+                {
+                    "id": "external:ExternalService:auth.docker.io",
+                    "status": "unknown"
+                },
+                {
+                    "id": "kube-system:Deployment:coredns",
+                    "status": "ok"
+                },
+                {
+                    "id": "coroot:Deployment:coroot-prometheus",
+                    "status": "ok"
+                },
+                {
+                    "id": "coroot:DaemonSet:coroot-node-agent",
+                    "status": "ok"
+                },
+                {
+                    "id": "kube-system:StaticPods:kube-scheduler",
+                    "status": "ok"
+                },
+                {
+                    "id": "_:Unknown:acpid",
+                    "status": "ok"
+                },
+                {
+                    "id": "_:Unknown:cron",
+                    "status": "ok"
+                },
+                {
+                    "id": "external:ExternalService:compose-review-memcached:10009",
+                    "status": "unknown"
+                },
+                {
+                    "id": "_:Unknown:ripple-review-storage-mongodb-1",
+                    "status": "ok"
+                },
+                {
+                    "id": "_:Unknown:snapd",
+                    "status": "ok"
+                },
+                {
+                    "id": "external:ExternalService:movie-id-service:10005",
+                    "status": "unknown"
+                },
+                {
+                    "id": "external:ExternalService:external:27024",
+                    "status": "unknown"
+                },
+                {
+                    "id": "_:Unknown:unattended-upgrades",
+                    "status": "ok"
+                },
+                {
+                    "id": "external:ExternalService:movie-id-service:11213",
+                    "status": "unknown"
+                },
+                {
+                    "id": "kube-flannel:DaemonSet:kube-flannel-ds",
+                    "status": "ok"
+                },
+                {
+                    "id": "_:Unknown:systemd-networkd",
+                    "status": "ok"
+                },
+                {
+                    "id": "_:Unknown:ripple-cast-info-service-1",
+                    "status": "ok"
+                },
+                {
+                    "id": "_:Unknown:snap.amazon-ssm-agent.amazon-ssm-agent",
+                    "status": "ok"
+                },
+                {
+                    "id": "_:Unknown:ripple-rating-service-1",
+                    "status": "ok"
+                },
+                {
+                    "id": "_:Unknown:ripple-movie-id-service-1",
+                    "status": "ok"
+                },
+                {
+                    "id": "_:Unknown:ripple-nginx-web-server-1",
+                    "status": "ok"
+                },
+                {
+                    "id": "_:Unknown:ripple-user-review-mongodb-1",
+                    "status": "ok"
+                },
+                {
+                    "id": "_:Unknown:ssh",
+                    "status": "ok"
+                },
+                {
+                    "id": "_:Unknown:ripple-review-storage-service-1",
+                    "status": "ok"
+                },
+                {
+                    "id": "_:Unknown:networkd-dispatcher",
+                    "status": "ok"
+                },
+                {
+                    "id": "external:ExternalService:movie-id-service:10004",
+                    "status": "unknown"
+                },
+                {
+                    "id": "external:ExternalService:external:27025",
+                    "status": "unknown"
+                },
+                {
+                    "id": "coroot:StatefulSet:coroot-clickhouse-keeper",
+                    "status": "ok"
+                },
+                {
+                    "id": "coroot:Deployment:coroot-operator",
+                    "status": "ok"
+                },
+                {
+                    "id": "_:Unknown:ripple-movie-review-redis-1",
+                    "status": "ok"
+                },
+                {
+                    "id": "_:Unknown:kubelet",
+                    "status": "ok"
+                },
+                {
+                    "id": "_:Unknown:dbus",
+                    "status": "ok"
+                },
+                {
+                    "id": "_:Unknown:ripple-movie-review-service-1",
+                    "status": "ok"
+                },
+                {
+                    "id": "_:Unknown:ripple-cast-info-memcached-1",
+                    "status": "ok"
+                },
+                {
+                    "id": "external:ExternalService:compose-review-memcached:10008",
+                    "status": "unknown"
+                },
+                {
+                    "id": "_:Unknown:ripple-compose-review-service-1",
+                    "status": "ok"
+                },
+                {
+                    "id": "_:Unknown:ripple-movie-id-mongodb-1",
+                    "status": "ok"
+                },
+                {
+                    "id": "_:Unknown:ripple-unique-id-service-1",
+                    "status": "ok"
+                },
+                {
+                    "id": "_:Unknown:ripple-user-review-redis-1",
+                    "status": "ok"
+                },
+                {
+                    "id": "_:Unknown:system-serial-getty",
+                    "status": "ok"
+                },
+                {
+                    "id": "kube-system:StaticPods:kube-apiserver",
+                    "status": "ok"
+                },
+                {
+                    "id": "_:Unknown:rsyslog",
+                    "status": "ok"
+                },
+                {
+                    "id": "_:Unknown:ripple-review-storage-memcached-1",
+                    "status": "ok"
+                },
+                {
+                    "id": "_:Unknown:polkit",
+                    "status": "ok"
+                },
+                {
+                    "id": "external:ExternalService:movie-id-service:6382",
+                    "status": "ok"
+                },
+                {
+                    "id": "external:ExternalService:movie-id-service:10002",
+                    "status": "unknown"
+                },
+                {
+                    "id": "external:ExternalService:compose-review-memcached:10007",
+                    "status": "unknown"
+                },
+                {
+                    "id": "coroot:Deployment:coroot-cluster-agent",
+                    "status": "ok"
+                },
+                {
+                    "id": "kube-system:StaticPods:etcd",
+                    "status": "ok"
+                },
+                {
+                    "id": "openebs:StaticPods:init-pvc-183ec4d6-7460-4076-9c9c-a4c3654c387c",
+                    "status": "ok"
+                },
+                {
+                    "id": "_:Unknown:ripple-rating-redis-1",
+                    "status": "ok"
+                },
+                {
+                    "id": "coroot:DatabaseCluster:coroot-clickhouse",
+                    "status": "ok"
+                },
+                {
+                    "id": "external:ExternalService:compose-review-memcached:27020",
+                    "status": "ok"
+                },
+                {
+                    "id": "kube-system:StaticPods:kube-controller-manager",
+                    "status": "ok"
+                },
+                {
+                    "id": "openebs:Deployment:openebs-ndm-cluster-exporter",
+                    "status": "ok"
+                },
+                {
+                    "id": "_:Unknown:docker",
+                    "status": "ok"
+                },
+                {
+                    "id": "external:ExternalService:external:27026",
+                    "status": "unknown"
+                },
+                {
+                    "id": "_:Unknown:ripple-user-mongodb-1",
+                    "status": "ok"
+                },
+                {
+                    "id": "_:Unknown:ripple-jaeger-1",
+                    "status": "ok"
+                }
+            ],
+            "nodes": [
+                {
+                    "name": "ip-172-31-28-169",
+                    "status": "ok"
+                },
+                {
+                    "name": "ip-172-31-21-222",
+                    "status": "ok"
+                },
+                {
+                    "name": "ip-172-31-23-24",
+                    "status": "ok"
+                }
+            ]
+        }
+    },
+    "data": {
+        "applications": null,
+        "incidents": null,
+        "map": [
+            {
+                "id": "external:ExternalService:grafana.com:443",
+                "custom": false,
+                "category": "monitoring",
+                "labels": {},
+                "status": "unknown",
+                "icon": "",
+                "indicators": null,
+                "upstreams": [],
+                "downstreams": [
+                    {
+                        "id": "caretta:Deployment:caretta-grafana",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    }
+                ]
+            },
+            {
+                "id": "external:ExternalService:ghcr.io:443",
+                "custom": false,
+                "category": "control-plane",
+                "labels": {},
+                "status": "unknown",
+                "icon": "",
+                "indicators": null,
+                "upstreams": [],
+                "downstreams": [
+                    {
+                        "id": "_:Unknown:containerd",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    }
+                ]
+            },
+            {
+                "id": "_:Unknown:ripple-text-service-1",
+                "custom": false,
+                "category": "application",
+                "labels": {
+                    "instances": "1"
+                },
+                "status": "ok",
+                "icon": "",
+                "indicators": [
+                    {
+                        "status": "ok",
+                        "message": "Instances"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "CPU"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Memory"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Net"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Logs"
+                    }
+                ],
+                "upstreams": [
+                    {
+                        "id": "external:ExternalService:compose-review-memcached:10006",
+                        "status": "ok",
+                        "stats": null,
+                        "weight": 0
+                    }
+                ],
+                "downstreams": []
+            },
+            {
+                "id": "_:Unknown:ripple-user-review-service-1",
+                "custom": false,
+                "category": "application",
+                "labels": {
+                    "instances": "1"
+                },
+                "status": "ok",
+                "icon": "",
+                "indicators": [
+                    {
+                        "status": "ok",
+                        "message": "Instances"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "CPU"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Memory"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Net"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Logs"
+                    }
+                ],
+                "upstreams": [
+                    {
+                        "id": "external:ExternalService:compose-review-memcached:27021",
+                        "status": "ok",
+                        "stats": [
+                            "📈 0 rps",
+                            "↑6B/s ↓32B/s"
+                        ],
+                        "weight": 0
+                    },
+                    {
+                        "id": "external:ExternalService:compose-review-memcached:6381",
+                        "status": "ok",
+                        "stats": [
+                            "📈 0 rps"
+                        ],
+                        "weight": 0
+                    }
+                ],
+                "downstreams": []
+            },
+            {
+                "id": "external:ExternalService:external-http",
+                "custom": false,
+                "category": "application",
+                "labels": {},
+                "status": "unknown",
+                "icon": "",
+                "indicators": null,
+                "upstreams": [],
+                "downstreams": [
+                    {
+                        "id": "openebs:Deployment:openebs-localpv-provisioner",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    },
+                    {
+                        "id": "coroot:Deployment:coroot-operator",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    },
+                    {
+                        "id": "coroot:StatefulSet:coroot-coroot",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    },
+                    {
+                        "id": "caretta:Deployment:caretta-grafana",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    },
+                    {
+                        "id": "_:Unknown:containerd",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    }
+                ]
+            },
+            {
+                "id": "external:ExternalService:movie-id-service:27019",
+                "custom": false,
+                "category": "application",
+                "labels": {},
+                "status": "ok",
+                "icon": "mongodb",
+                "indicators": [
+                    {
+                        "status": "ok",
+                        "message": "SLO"
+                    }
+                ],
+                "upstreams": [],
+                "downstreams": [
+                    {
+                        "id": "_:Unknown:ripple-user-service-1",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    }
+                ]
+            },
+            {
+                "id": "caretta:Deployment:caretta-grafana",
+                "custom": false,
+                "category": "monitoring",
+                "labels": {
+                    "ns": "caretta"
+                },
+                "status": "ok",
+                "icon": "golang",
+                "indicators": [
+                    {
+                        "status": "ok",
+                        "message": "SLO"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Instances"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "CPU"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Memory"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Net"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Logs"
+                    }
+                ],
+                "upstreams": [
+                    {
+                        "id": "external:ExternalService:grafana.com:443",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    },
+                    {
+                        "id": "external:ExternalService:external-http",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    }
+                ],
+                "downstreams": [
+                    {
+                        "id": "_:Unknown:kubelet",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    }
+                ]
+            },
+            {
+                "id": "external:ExternalService:compose-review-memcached:10006",
+                "custom": false,
+                "category": "application",
+                "labels": {},
+                "status": "unknown",
+                "icon": "",
+                "indicators": null,
+                "upstreams": [],
+                "downstreams": [
+                    {
+                        "id": "_:Unknown:ripple-rating-service-1",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    },
+                    {
+                        "id": "_:Unknown:ripple-unique-id-service-1",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    },
+                    {
+                        "id": "_:Unknown:ripple-text-service-1",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    },
+                    {
+                        "id": "_:Unknown:ripple-movie-id-service-1",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    },
+                    {
+                        "id": "_:Unknown:ripple-user-service-1",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    }
+                ]
+            },
+            {
+                "id": "coroot:Deployment:coroot-prometheus",
+                "custom": false,
+                "category": "monitoring",
+                "labels": {
+                    "db": "prometheus",
+                    "ns": "coroot"
+                },
+                "status": "ok",
+                "icon": "prometheus",
+                "indicators": [
+                    {
+                        "status": "ok",
+                        "message": "SLO"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Instances"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "CPU"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Memory"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Storage"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Logs"
+                    }
+                ],
+                "upstreams": [],
+                "downstreams": [
+                    {
+                        "id": "_:Unknown:kubelet",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    },
+                    {
+                        "id": "coroot:StatefulSet:coroot-coroot",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    }
+                ]
+            },
+            {
+                "id": "external:ExternalService:movie-id-service:27018",
+                "custom": false,
+                "category": "application",
+                "labels": {},
+                "status": "ok",
+                "icon": "mongodb",
+                "indicators": [
+                    {
+                        "status": "ok",
+                        "message": "SLO"
+                    }
+                ],
+                "upstreams": [],
+                "downstreams": [
+                    {
+                        "id": "_:Unknown:ripple-movie-id-service-1",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    }
+                ]
+            },
+            {
+                "id": "external:ExternalService:auth.docker.io",
+                "custom": false,
+                "category": "control-plane",
+                "labels": {},
+                "status": "unknown",
+                "icon": "",
+                "indicators": null,
+                "upstreams": [],
+                "downstreams": [
+                    {
+                        "id": "_:Unknown:containerd",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    }
+                ]
+            },
+            {
+                "id": "kube-system:Deployment:coredns",
+                "custom": false,
+                "category": "control-plane",
+                "labels": {
+                    "ns": "kube-system"
+                },
+                "status": "ok",
+                "icon": "golang",
+                "indicators": [
+                    {
+                        "status": "ok",
+                        "message": "SLO"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Instances"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "CPU"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Memory"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Net"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "DNS"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Logs"
+                    }
+                ],
+                "upstreams": [
+                    {
+                        "id": "kube-system:StaticPods:kube-apiserver",
+                        "status": "ok",
+                        "stats": [
+                            "↑1B/s ↓16B/s"
+                        ],
+                        "weight": 0
+                    }
+                ],
+                "downstreams": [
+                    {
+                        "id": "_:Unknown:kubelet",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    }
+                ]
+            },
+            {
+                "id": "kube-system:StaticPods:kube-scheduler",
+                "custom": false,
+                "category": "control-plane",
+                "labels": {
+                    "ns": "kube-system"
+                },
+                "status": "ok",
+                "icon": "kubernetes",
+                "indicators": [
+                    {
+                        "status": "ok",
+                        "message": "Instances"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "CPU"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Memory"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Logs"
+                    }
+                ],
+                "upstreams": [],
+                "downstreams": [
+                    {
+                        "id": "_:Unknown:kubelet",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    }
+                ]
+            },
+            {
+                "id": "coroot:DaemonSet:coroot-node-agent",
+                "custom": false,
+                "category": "monitoring",
+                "labels": {
+                    "ns": "coroot"
+                },
+                "status": "ok",
+                "icon": "coroot",
+                "indicators": [
+                    {
+                        "status": "ok",
+                        "message": "Instances"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "CPU"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Memory"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Net"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "DNS"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Logs"
+                    }
+                ],
+                "upstreams": [
+                    {
+                        "id": "coroot:StatefulSet:coroot-coroot",
+                        "status": "ok",
+                        "stats": [
+                            "📈 1 rps ⏱️ 4ms",
+                            "↑15kB/s ↓137B/s"
+                        ],
+                        "weight": 1.3000156
+                    }
+                ],
+                "downstreams": []
+            },
+            {
+                "id": "external:ExternalService:compose-review-memcached:10009",
+                "custom": false,
+                "category": "application",
+                "labels": {},
+                "status": "unknown",
+                "icon": "",
+                "indicators": null,
+                "upstreams": [],
+                "downstreams": [
+                    {
+                        "id": "_:Unknown:ripple-compose-review-service-1",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    }
+                ]
+            },
+            {
+                "id": "external:ExternalService:movie-id-service:11213",
+                "custom": false,
+                "category": "application",
+                "labels": {},
+                "status": "unknown",
+                "icon": "",
+                "indicators": null,
+                "upstreams": [],
+                "downstreams": [
+                    {
+                        "id": "_:Unknown:ripple-user-service-1",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    }
+                ]
+            },
+            {
+                "id": "external:ExternalService:movie-id-service:10005",
+                "custom": false,
+                "category": "application",
+                "labels": {},
+                "status": "unknown",
+                "icon": "",
+                "indicators": null,
+                "upstreams": [],
+                "downstreams": [
+                    {
+                        "id": "_:Unknown:ripple-nginx-web-server-1",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    }
+                ]
+            },
+            {
+                "id": "external:ExternalService:external:27024",
+                "custom": false,
+                "category": "application",
+                "labels": {},
+                "status": "unknown",
+                "icon": "",
+                "indicators": null,
+                "upstreams": [],
+                "downstreams": [
+                    {
+                        "id": "_:Unknown:ripple-cast-info-service-1",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    }
+                ]
+            },
+            {
+                "id": "kube-flannel:DaemonSet:kube-flannel-ds",
+                "custom": false,
+                "category": "application",
+                "labels": {
+                    "ns": "kube-flannel"
+                },
+                "status": "ok",
+                "icon": "golang",
+                "indicators": [
+                    {
+                        "status": "ok",
+                        "message": "Instances"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "CPU"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Memory"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Net"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Logs"
+                    }
+                ],
+                "upstreams": [
+                    {
+                        "id": "kube-system:StaticPods:kube-apiserver",
+                        "status": "ok",
+                        "stats": [
+                            "↑4B/s ↓75B/s"
+                        ],
+                        "weight": 0
+                    }
+                ],
+                "downstreams": []
+            },
+            {
+                "id": "_:Unknown:ripple-cast-info-service-1",
+                "custom": false,
+                "category": "application",
+                "labels": {
+                    "instances": "1"
+                },
+                "status": "ok",
+                "icon": "",
+                "indicators": [
+                    {
+                        "status": "ok",
+                        "message": "Instances"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "CPU"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Memory"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Net"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Logs"
+                    }
+                ],
+                "upstreams": [
+                    {
+                        "id": "external:ExternalService:external:27024",
+                        "status": "ok",
+                        "stats": [
+                            "↑6B/s ↓32B/s"
+                        ],
+                        "weight": 0
+                    }
+                ],
+                "downstreams": []
+            },
+            {
+                "id": "_:Unknown:ripple-nginx-web-server-1",
+                "custom": false,
+                "category": "application",
+                "labels": {
+                    "instances": "1"
+                },
+                "status": "ok",
+                "icon": "nginx",
+                "indicators": [
+                    {
+                        "status": "ok",
+                        "message": "Instances"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "CPU"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Memory"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Net"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Logs"
+                    }
+                ],
+                "upstreams": [
+                    {
+                        "id": "external:ExternalService:movie-id-service:10005",
+                        "status": "ok",
+                        "stats": null,
+                        "weight": 0
+                    },
+                    {
+                        "id": "external:ExternalService:movie-id-service:10001",
+                        "status": "ok",
+                        "stats": null,
+                        "weight": 0
+                    },
+                    {
+                        "id": "external:ExternalService:movie-id-service:10003",
+                        "status": "ok",
+                        "stats": null,
+                        "weight": 0
+                    },
+                    {
+                        "id": "external:ExternalService:movie-id-service:10002",
+                        "status": "ok",
+                        "stats": null,
+                        "weight": 0
+                    }
+                ],
+                "downstreams": []
+            },
+            {
+                "id": "_:Unknown:ripple-rating-service-1",
+                "custom": false,
+                "category": "application",
+                "labels": {
+                    "instances": "1"
+                },
+                "status": "ok",
+                "icon": "",
+                "indicators": [
+                    {
+                        "status": "ok",
+                        "message": "Instances"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "CPU"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Memory"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Net"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Logs"
+                    }
+                ],
+                "upstreams": [
+                    {
+                        "id": "external:ExternalService:compose-review-memcached:10006",
+                        "status": "ok",
+                        "stats": null,
+                        "weight": 0
+                    },
+                    {
+                        "id": "external:ExternalService:movie-id-service:6382",
+                        "status": "ok",
+                        "stats": [
+                            "📈 0 rps"
+                        ],
+                        "weight": 0
+                    }
+                ],
+                "downstreams": []
+            },
+            {
+                "id": "_:Unknown:ripple-movie-id-service-1",
+                "custom": false,
+                "category": "application",
+                "labels": {
+                    "instances": "1"
+                },
+                "status": "ok",
+                "icon": "",
+                "indicators": [
+                    {
+                        "status": "ok",
+                        "message": "Instances"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "CPU"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Memory"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Net"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Logs"
+                    }
+                ],
+                "upstreams": [
+                    {
+                        "id": "external:ExternalService:movie-id-service:11212",
+                        "status": "ok",
+                        "stats": null,
+                        "weight": 0
+                    },
+                    {
+                        "id": "external:ExternalService:movie-id-service:10004",
+                        "status": "ok",
+                        "stats": null,
+                        "weight": 0
+                    },
+                    {
+                        "id": "external:ExternalService:compose-review-memcached:10006",
+                        "status": "ok",
+                        "stats": null,
+                        "weight": 0
+                    },
+                    {
+                        "id": "external:ExternalService:movie-id-service:27018",
+                        "status": "ok",
+                        "stats": [
+                            "📈 0 rps",
+                            "↑6B/s ↓32B/s"
+                        ],
+                        "weight": 0
+                    }
+                ],
+                "downstreams": []
+            },
+            {
+                "id": "coroot:Deployment:coroot-operator",
+                "custom": false,
+                "category": "monitoring",
+                "labels": {
+                    "ns": "coroot"
+                },
+                "status": "ok",
+                "icon": "coroot",
+                "indicators": [
+                    {
+                        "status": "ok",
+                        "message": "Instances"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "CPU"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Memory"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Net"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Logs"
+                    }
+                ],
+                "upstreams": [
+                    {
+                        "id": "kube-system:StaticPods:kube-apiserver",
+                        "status": "ok",
+                        "stats": [
+                            "📈 0.07 rps ⏱️ 2ms",
+                            "↑13B/s ↓20B/s"
+                        ],
+                        "weight": 0.06666667
+                    },
+                    {
+                        "id": "external:ExternalService:external-http",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    }
+                ],
+                "downstreams": []
+            },
+            {
+                "id": "_:Unknown:ripple-review-storage-service-1",
+                "custom": false,
+                "category": "application",
+                "labels": {
+                    "instances": "1"
+                },
+                "status": "ok",
+                "icon": "",
+                "indicators": [
+                    {
+                        "status": "ok",
+                        "message": "Instances"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "CPU"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Memory"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Net"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Logs"
+                    }
+                ],
+                "upstreams": [
+                    {
+                        "id": "external:ExternalService:compose-review-memcached:27020",
+                        "status": "ok",
+                        "stats": [
+                            "📈 0 rps",
+                            "↑6B/s ↓32B/s"
+                        ],
+                        "weight": 0
+                    }
+                ],
+                "downstreams": []
+            },
+            {
+                "id": "external:ExternalService:movie-id-service:10004",
+                "custom": false,
+                "category": "application",
+                "labels": {},
+                "status": "unknown",
+                "icon": "",
+                "indicators": null,
+                "upstreams": [],
+                "downstreams": [
+                    {
+                        "id": "_:Unknown:ripple-movie-id-service-1",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    }
+                ]
+            },
+            {
+                "id": "external:ExternalService:external:27025",
+                "custom": false,
+                "category": "application",
+                "labels": {},
+                "status": "unknown",
+                "icon": "",
+                "indicators": null,
+                "upstreams": [],
+                "downstreams": [
+                    {
+                        "id": "_:Unknown:ripple-plot-service-1",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    }
+                ]
+            },
+            {
+                "id": "coroot:StatefulSet:coroot-clickhouse-keeper",
+                "custom": false,
+                "category": "monitoring",
+                "labels": {
+                    "ns": "coroot"
+                },
+                "status": "ok",
+                "icon": "",
+                "indicators": [
+                    {
+                        "status": "ok",
+                        "message": "SLO"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Instances"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "CPU"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Memory"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Storage"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Net"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "DNS"
+                    },
+                    {
+                        "status": "warning",
+                        "message": "Logs"
+                    }
+                ],
+                "upstreams": [],
+                "downstreams": [
+                    {
+                        "id": "coroot:DatabaseCluster:coroot-clickhouse",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    }
+                ]
+            },
+            {
+                "id": "_:Unknown:ripple-movie-review-service-1",
+                "custom": false,
+                "category": "application",
+                "labels": {
+                    "instances": "1"
+                },
+                "status": "ok",
+                "icon": "",
+                "indicators": [
+                    {
+                        "status": "ok",
+                        "message": "Instances"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "CPU"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Memory"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Net"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Logs"
+                    }
+                ],
+                "upstreams": [
+                    {
+                        "id": "external:ExternalService:compose-review-memcached:27022",
+                        "status": "ok",
+                        "stats": [
+                            "📈 0 rps",
+                            "↑6B/s ↓32B/s"
+                        ],
+                        "weight": 0
+                    },
+                    {
+                        "id": "external:ExternalService:compose-review-memcached:6380",
+                        "status": "ok",
+                        "stats": [
+                            "📈 0 rps"
+                        ],
+                        "weight": 0
+                    }
+                ],
+                "downstreams": []
+            },
+            {
+                "id": "_:Unknown:kubelet",
+                "custom": false,
+                "category": "control-plane",
+                "labels": {
+                    "instances": "3"
+                },
+                "status": "ok",
+                "icon": "kubernetes",
+                "indicators": [
+                    {
+                        "status": "ok",
+                        "message": "Instances"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "CPU"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Memory"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Storage"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Net"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "DNS"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Logs"
+                    }
+                ],
+                "upstreams": [
+                    {
+                        "id": "caretta:StatefulSet:caretta-vm",
+                        "status": "ok",
+                        "stats": [
+                            "📈 0.1 rps ⏱️ 0.2ms",
+                            "↑11B/s ↓17B/s"
+                        ],
+                        "weight": 0.1
+                    },
+                    {
+                        "id": "kube-system:StaticPods:kube-scheduler",
+                        "status": "ok",
+                        "stats": [
+                            "↑2kB/s ↓4kB/s"
+                        ],
+                        "weight": 0
+                    },
+                    {
+                        "id": "coroot:StatefulSet:coroot-coroot",
+                        "status": "ok",
+                        "stats": [
+                            "📈 0.07 rps ⏱️ 0.3ms",
+                            "↑11B/s ↓9B/s"
+                        ],
+                        "weight": 0.06666889
+                    },
+                    {
+                        "id": "openebs:Deployment:openebs-ndm-operator",
+                        "status": "ok",
+                        "stats": [
+                            "📈 0.1 rps ⏱️ 0.2ms",
+                            "↑18B/s ↓28B/s"
+                        ],
+                        "weight": 0.13333778
+                    },
+                    {
+                        "id": "kube-system:Deployment:coredns",
+                        "status": "ok",
+                        "stats": [
+                            "📈 0.4 rps ⏱️ 0.2ms",
+                            "↑43B/s ↓55B/s"
+                        ],
+                        "weight": 0.40000665
+                    },
+                    {
+                        "id": "kube-system:StaticPods:kube-controller-manager",
+                        "status": "ok",
+                        "stats": [
+                            "↑59B/s ↓122B/s"
+                        ],
+                        "weight": 0
+                    },
+                    {
+                        "id": "coroot:Deployment:coroot-prometheus",
+                        "status": "ok",
+                        "stats": [
+                            "📈 0.07 rps ⏱️ 0.4ms",
+                            "↑11B/s ↓17B/s"
+                        ],
+                        "weight": 0.06666667
+                    },
+                    {
+                        "id": "caretta:Deployment:caretta-grafana",
+                        "status": "ok",
+                        "stats": [
+                            "📈 0.2 rps ⏱️ 0.4ms",
+                            "↑15B/s ↓48B/s"
+                        ],
+                        "weight": 0.16666667
+                    },
+                    {
+                        "id": "coroot:DatabaseCluster:coroot-clickhouse",
+                        "status": "ok",
+                        "stats": [
+                            "📈 0.07 rps ⏱️ 0.4ms",
+                            "↑7B/s ↓14B/s"
+                        ],
+                        "weight": 0.06666889
+                    },
+                    {
+                        "id": "kube-system:StaticPods:kube-apiserver",
+                        "status": "ok",
+                        "stats": [
+                            "↑2kB/s ↓4kB/s"
+                        ],
+                        "weight": 0
+                    },
+                    {
+                        "id": "kube-system:StaticPods:etcd",
+                        "status": "ok",
+                        "stats": [
+                            "📈 0.2 rps ⏱️ 0.3ms",
+                            "↑75B/s ↓120B/s"
+                        ],
+                        "weight": 0.2
+                    }
+                ],
+                "downstreams": []
+            },
+            {
+                "id": "external:ExternalService:compose-review-memcached:10008",
+                "custom": false,
+                "category": "application",
+                "labels": {},
+                "status": "unknown",
+                "icon": "",
+                "indicators": null,
+                "upstreams": [],
+                "downstreams": [
+                    {
+                        "id": "_:Unknown:ripple-compose-review-service-1",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    }
+                ]
+            },
+            {
+                "id": "_:Unknown:ripple-compose-review-service-1",
+                "custom": false,
+                "category": "application",
+                "labels": {
+                    "instances": "1"
+                },
+                "status": "ok",
+                "icon": "",
+                "indicators": [
+                    {
+                        "status": "ok",
+                        "message": "Instances"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "CPU"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Memory"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Net"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "DNS"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Logs"
+                    }
+                ],
+                "upstreams": [
+                    {
+                        "id": "external:ExternalService:compose-review-memcached:10009",
+                        "status": "ok",
+                        "stats": null,
+                        "weight": 0
+                    },
+                    {
+                        "id": "external:ExternalService:compose-review-memcached:10007",
+                        "status": "ok",
+                        "stats": null,
+                        "weight": 0
+                    },
+                    {
+                        "id": "external:ExternalService:compose-review-memcached:11214",
+                        "status": "ok",
+                        "stats": null,
+                        "weight": 0
+                    },
+                    {
+                        "id": "external:ExternalService:compose-review-memcached:10008",
+                        "status": "ok",
+                        "stats": null,
+                        "weight": 0
+                    }
+                ],
+                "downstreams": []
+            },
+            {
+                "id": "_:Unknown:ripple-unique-id-service-1",
+                "custom": false,
+                "category": "application",
+                "labels": {
+                    "instances": "1"
+                },
+                "status": "ok",
+                "icon": "",
+                "indicators": [
+                    {
+                        "status": "ok",
+                        "message": "Instances"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "CPU"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Memory"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Net"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Logs"
+                    }
+                ],
+                "upstreams": [
+                    {
+                        "id": "external:ExternalService:compose-review-memcached:10006",
+                        "status": "ok",
+                        "stats": null,
+                        "weight": 0
+                    }
+                ],
+                "downstreams": []
+            },
+            {
+                "id": "kube-system:StaticPods:kube-apiserver",
+                "custom": false,
+                "category": "control-plane",
+                "labels": {
+                    "ns": "kube-system"
+                },
+                "status": "ok",
+                "icon": "kubernetes",
+                "indicators": [
+                    {
+                        "status": "ok",
+                        "message": "SLO"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Instances"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "CPU"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Memory"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Logs"
+                    }
+                ],
+                "upstreams": [],
+                "downstreams": [
+                    {
+                        "id": "coroot:Deployment:coroot-cluster-agent",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    },
+                    {
+                        "id": "kube-system:Deployment:coredns",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    },
+                    {
+                        "id": "kube-system:DaemonSet:kube-proxy",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    },
+                    {
+                        "id": "kube-flannel:DaemonSet:kube-flannel-ds",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    },
+                    {
+                        "id": "caretta:StatefulSet:caretta-vm",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    },
+                    {
+                        "id": "_:Unknown:kubelet",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    },
+                    {
+                        "id": "openebs:Deployment:openebs-ndm-operator",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    },
+                    {
+                        "id": "caretta:DaemonSet:caretta",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    },
+                    {
+                        "id": "coroot:Deployment:coroot-operator",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    },
+                    {
+                        "id": "openebs:Deployment:openebs-localpv-provisioner",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    }
+                ]
+            },
+            {
+                "id": "kube-system:StaticPods:etcd",
+                "custom": false,
+                "category": "control-plane",
+                "labels": {
+                    "ns": "kube-system"
+                },
+                "status": "ok",
+                "icon": "etcd",
+                "indicators": [
+                    {
+                        "status": "ok",
+                        "message": "SLO"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Instances"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "CPU"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Memory"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Logs"
+                    }
+                ],
+                "upstreams": [],
+                "downstreams": [
+                    {
+                        "id": "_:Unknown:kubelet",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    }
+                ]
+            },
+            {
+                "id": "external:ExternalService:movie-id-service:6382",
+                "custom": false,
+                "category": "application",
+                "labels": {},
+                "status": "ok",
+                "icon": "redis",
+                "indicators": [
+                    {
+                        "status": "ok",
+                        "message": "SLO"
+                    }
+                ],
+                "upstreams": [],
+                "downstreams": [
+                    {
+                        "id": "_:Unknown:ripple-rating-service-1",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    }
+                ]
+            },
+            {
+                "id": "external:ExternalService:movie-id-service:10002",
+                "custom": false,
+                "category": "application",
+                "labels": {},
+                "status": "unknown",
+                "icon": "",
+                "indicators": null,
+                "upstreams": [],
+                "downstreams": [
+                    {
+                        "id": "_:Unknown:ripple-nginx-web-server-1",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    }
+                ]
+            },
+            {
+                "id": "external:ExternalService:compose-review-memcached:10007",
+                "custom": false,
+                "category": "application",
+                "labels": {},
+                "status": "unknown",
+                "icon": "",
+                "indicators": null,
+                "upstreams": [],
+                "downstreams": [
+                    {
+                        "id": "_:Unknown:ripple-compose-review-service-1",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    }
+                ]
+            },
+            {
+                "id": "coroot:Deployment:coroot-cluster-agent",
+                "custom": false,
+                "category": "monitoring",
+                "labels": {
+                    "ns": "coroot"
+                },
+                "status": "ok",
+                "icon": "coroot",
+                "indicators": [
+                    {
+                        "status": "ok",
+                        "message": "Instances"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "CPU"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Memory"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Net"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "DNS"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Logs"
+                    }
+                ],
+                "upstreams": [
+                    {
+                        "id": "coroot:StatefulSet:coroot-coroot",
+                        "status": "ok",
+                        "stats": [
+                            "📈 0.1 rps ⏱️ 14ms",
+                            "↑6kB/s ↓9B/s"
+                        ],
+                        "weight": 0.13333334
+                    },
+                    {
+                        "id": "kube-system:StaticPods:kube-apiserver",
+                        "status": "ok",
+                        "stats": [
+                            "📈 0.03 rps ⏱️ 1ms",
+                            "↑14B/s ↓335B/s"
+                        ],
+                        "weight": 0.033333335
+                    }
+                ],
+                "downstreams": []
+            },
+            {
+                "id": "coroot:DatabaseCluster:coroot-clickhouse",
+                "custom": false,
+                "category": "monitoring",
+                "labels": {
+                    "db": "clickhouse",
+                    "ns": "coroot"
+                },
+                "status": "ok",
+                "icon": "clickhouse",
+                "indicators": [
+                    {
+                        "status": "ok",
+                        "message": "SLO"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Instances"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "CPU"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Memory"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Storage"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Net"
+                    },
+                    {
+                        "status": "warning",
+                        "message": "Logs"
+                    }
+                ],
+                "upstreams": [
+                    {
+                        "id": "coroot:StatefulSet:coroot-clickhouse-keeper",
+                        "status": "ok",
+                        "stats": [
+                            "📈 4 rps ⏱️ 3ms",
+                            "↑5kB/s ↓4kB/s"
+                        ],
+                        "weight": 4.2334743
+                    }
+                ],
+                "downstreams": [
+                    {
+                        "id": "_:Unknown:kubelet",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    },
+                    {
+                        "id": "coroot:StatefulSet:coroot-coroot",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    }
+                ]
+            },
+            {
+                "id": "external:ExternalService:compose-review-memcached:27020",
+                "custom": false,
+                "category": "application",
+                "labels": {},
+                "status": "ok",
+                "icon": "mongodb",
+                "indicators": [
+                    {
+                        "status": "ok",
+                        "message": "SLO"
+                    }
+                ],
+                "upstreams": [],
+                "downstreams": [
+                    {
+                        "id": "_:Unknown:ripple-review-storage-service-1",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    }
+                ]
+            },
+            {
+                "id": "kube-system:StaticPods:kube-controller-manager",
+                "custom": false,
+                "category": "control-plane",
+                "labels": {
+                    "ns": "kube-system"
+                },
+                "status": "ok",
+                "icon": "kubernetes",
+                "indicators": [
+                    {
+                        "status": "ok",
+                        "message": "Instances"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "CPU"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Memory"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Logs"
+                    }
+                ],
+                "upstreams": [],
+                "downstreams": [
+                    {
+                        "id": "_:Unknown:kubelet",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    }
+                ]
+            },
+            {
+                "id": "external:ExternalService:external:27026",
+                "custom": false,
+                "category": "application",
+                "labels": {},
+                "status": "unknown",
+                "icon": "",
+                "indicators": null,
+                "upstreams": [],
+                "downstreams": [
+                    {
+                        "id": "_:Unknown:ripple-movie-info-service-1",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    }
+                ]
+            },
+            {
+                "id": "openebs:Deployment:openebs-localpv-provisioner",
+                "custom": false,
+                "category": "application",
+                "labels": {
+                    "ns": "openebs"
+                },
+                "status": "ok",
+                "icon": "golang",
+                "indicators": [
+                    {
+                        "status": "ok",
+                        "message": "Instances"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "CPU"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Memory"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Net"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Logs"
+                    }
+                ],
+                "upstreams": [
+                    {
+                        "id": "kube-system:StaticPods:kube-apiserver",
+                        "status": "ok",
+                        "stats": [
+                            "↑443B/s ↓891B/s"
+                        ],
+                        "weight": 0
+                    },
+                    {
+                        "id": "external:ExternalService:external-http",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    }
+                ],
+                "downstreams": []
+            },
+            {
+                "id": "external:ExternalService:pkg-containers.githubusercontent.com",
+                "custom": false,
+                "category": "control-plane",
+                "labels": {},
+                "status": "unknown",
+                "icon": "",
+                "indicators": null,
+                "upstreams": [],
+                "downstreams": [
+                    {
+                        "id": "_:Unknown:containerd",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    }
+                ]
+            },
+            {
+                "id": "external:ExternalService:movie-id-service:11212",
+                "custom": false,
+                "category": "application",
+                "labels": {},
+                "status": "unknown",
+                "icon": "",
+                "indicators": null,
+                "upstreams": [],
+                "downstreams": [
+                    {
+                        "id": "_:Unknown:ripple-movie-id-service-1",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    }
+                ]
+            },
+            {
+                "id": "kube-system:DaemonSet:kube-proxy",
+                "custom": false,
+                "category": "control-plane",
+                "labels": {
+                    "ns": "kube-system"
+                },
+                "status": "ok",
+                "icon": "golang",
+                "indicators": [
+                    {
+                        "status": "ok",
+                        "message": "Instances"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "CPU"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Memory"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Net"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Logs"
+                    }
+                ],
+                "upstreams": [
+                    {
+                        "id": "kube-system:StaticPods:kube-apiserver",
+                        "status": "ok",
+                        "stats": [
+                            "↑8B/s ↓26B/s"
+                        ],
+                        "weight": 0
+                    }
+                ],
+                "downstreams": []
+            },
+            {
+                "id": "_:Unknown:ripple-plot-service-1",
+                "custom": false,
+                "category": "application",
+                "labels": {
+                    "instances": "1"
+                },
+                "status": "ok",
+                "icon": "",
+                "indicators": [
+                    {
+                        "status": "ok",
+                        "message": "Instances"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "CPU"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Memory"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Net"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Logs"
+                    }
+                ],
+                "upstreams": [
+                    {
+                        "id": "external:ExternalService:external:27025",
+                        "status": "ok",
+                        "stats": [
+                            "↑6B/s ↓32B/s"
+                        ],
+                        "weight": 0
+                    }
+                ],
+                "downstreams": []
+            },
+            {
+                "id": "_:Unknown:containerd",
+                "custom": false,
+                "category": "control-plane",
+                "labels": {
+                    "instances": "3"
+                },
+                "status": "ok",
+                "icon": "golang",
+                "indicators": [
+                    {
+                        "status": "ok",
+                        "message": "Instances"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "CPU"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Memory"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Storage"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Net"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "DNS"
+                    },
+                    {
+                        "status": "warning",
+                        "message": "Logs"
+                    }
+                ],
+                "upstreams": [
+                    {
+                        "id": "external:ExternalService:registry-1.docker.io",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    },
+                    {
+                        "id": "external:ExternalService:production.cloudflare.docker.com",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    },
+                    {
+                        "id": "external:ExternalService:ghcr.io:443",
+                        "status": "ok",
+                        "stats": [
+                            "↑16B/s ↓17B/s"
+                        ],
+                        "weight": 0
+                    },
+                    {
+                        "id": "external:ExternalService:auth.docker.io",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    },
+                    {
+                        "id": "external:ExternalService:external-http",
+                        "status": "ok",
+                        "stats": [
+                            "📈 0 rps",
+                            "↑16B/s ↓16B/s"
+                        ],
+                        "weight": 0
+                    },
+                    {
+                        "id": "external:ExternalService:pkg-containers.githubusercontent.com",
+                        "status": "unknown",
+                        "stats": [
+                            "↑16B/s ↓17B/s"
+                        ],
+                        "weight": 0
+                    }
+                ],
+                "downstreams": []
+            },
+            {
+                "id": "external:ExternalService:movie-id-service:10001",
+                "custom": false,
+                "category": "application",
+                "labels": {},
+                "status": "unknown",
+                "icon": "",
+                "indicators": null,
+                "upstreams": [],
+                "downstreams": [
+                    {
+                        "id": "_:Unknown:ripple-nginx-web-server-1",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    }
+                ]
+            },
+            {
+                "id": "external:ExternalService:compose-review-memcached:6381",
+                "custom": false,
+                "category": "application",
+                "labels": {},
+                "status": "ok",
+                "icon": "redis",
+                "indicators": [
+                    {
+                        "status": "ok",
+                        "message": "SLO"
+                    }
+                ],
+                "upstreams": [],
+                "downstreams": [
+                    {
+                        "id": "_:Unknown:ripple-user-review-service-1",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    }
+                ]
+            },
+            {
+                "id": "coroot:StatefulSet:coroot-coroot",
+                "custom": false,
+                "category": "monitoring",
+                "labels": {
+                    "ns": "coroot"
+                },
+                "status": "ok",
+                "icon": "coroot",
+                "indicators": [
+                    {
+                        "status": "ok",
+                        "message": "SLO"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Instances"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "CPU"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Memory"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Storage"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Net"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "DNS"
+                    },
+                    {
+                        "status": "warning",
+                        "message": "Logs"
+                    }
+                ],
+                "upstreams": [
+                    {
+                        "id": "external:ExternalService:external-http",
+                        "status": "unknown",
+                        "stats": [
+                            "📈 0 rps"
+                        ],
+                        "weight": 0
+                    },
+                    {
+                        "id": "coroot:DatabaseCluster:coroot-clickhouse",
+                        "status": "ok",
+                        "stats": [
+                            "📈 0.4 rps ⏱️ 25ms",
+                            "↑2kB/s ↓4kB/s"
+                        ],
+                        "weight": 0.40001333
+                    },
+                    {
+                        "id": "coroot:Deployment:coroot-prometheus",
+                        "status": "ok",
+                        "stats": [
+                            "📈 0.3 rps ⏱️ 12ms",
+                            "↑18kB/s ↓21B/s"
+                        ],
+                        "weight": 0.33334446
+                    }
+                ],
+                "downstreams": [
+                    {
+                        "id": "coroot:Deployment:coroot-cluster-agent",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    },
+                    {
+                        "id": "_:Unknown:kubelet",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    },
+                    {
+                        "id": "coroot:DaemonSet:coroot-node-agent",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    }
+                ]
+            },
+            {
+                "id": "openebs:Deployment:openebs-ndm-operator",
+                "custom": false,
+                "category": "application",
+                "labels": {
+                    "ns": "openebs"
+                },
+                "status": "ok",
+                "icon": "golang",
+                "indicators": [
+                    {
+                        "status": "ok",
+                        "message": "Instances"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "CPU"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Memory"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Net"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Logs"
+                    }
+                ],
+                "upstreams": [
+                    {
+                        "id": "kube-system:StaticPods:kube-apiserver",
+                        "status": "ok",
+                        "stats": [
+                            "📈 0 rps",
+                            "↑1B/s ↓7B/s"
+                        ],
+                        "weight": 0
+                    }
+                ],
+                "downstreams": [
+                    {
+                        "id": "_:Unknown:kubelet",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    }
+                ]
+            },
+            {
+                "id": "external:ExternalService:production.cloudflare.docker.com",
+                "custom": false,
+                "category": "control-plane",
+                "labels": {},
+                "status": "unknown",
+                "icon": "",
+                "indicators": null,
+                "upstreams": [],
+                "downstreams": [
+                    {
+                        "id": "_:Unknown:containerd",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    }
+                ]
+            },
+            {
+                "id": "external:ExternalService:compose-review-memcached:27022",
+                "custom": false,
+                "category": "application",
+                "labels": {},
+                "status": "ok",
+                "icon": "mongodb",
+                "indicators": [
+                    {
+                        "status": "ok",
+                        "message": "SLO"
+                    }
+                ],
+                "upstreams": [],
+                "downstreams": [
+                    {
+                        "id": "_:Unknown:ripple-movie-review-service-1",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    }
+                ]
+            },
+            {
+                "id": "caretta:StatefulSet:caretta-vm",
+                "custom": false,
+                "category": "application",
+                "labels": {
+                    "db": "victoria-metrics",
+                    "ns": "caretta"
+                },
+                "status": "ok",
+                "icon": "victoriametrics",
+                "indicators": [
+                    {
+                        "status": "ok",
+                        "message": "Instances"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "CPU"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Memory"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Net"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Logs"
+                    }
+                ],
+                "upstreams": [
+                    {
+                        "id": "kube-system:StaticPods:kube-apiserver",
+                        "status": "ok",
+                        "stats": [
+                            "📈 0 rps"
+                        ],
+                        "weight": 0
+                    },
+                    {
+                        "id": "caretta:DaemonSet:caretta",
+                        "status": "ok",
+                        "stats": [
+                            "📈 0.6 rps ⏱️ 41ms",
+                            "↑115B/s ↓29kB/s"
+                        ],
+                        "weight": 0.6
+                    }
+                ],
+                "downstreams": [
+                    {
+                        "id": "_:Unknown:kubelet",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    }
+                ]
+            },
+            {
+                "id": "_:Unknown:ripple-user-service-1",
+                "custom": false,
+                "category": "application",
+                "labels": {
+                    "instances": "1"
+                },
+                "status": "ok",
+                "icon": "",
+                "indicators": [
+                    {
+                        "status": "ok",
+                        "message": "Instances"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "CPU"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Memory"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Net"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Logs"
+                    }
+                ],
+                "upstreams": [
+                    {
+                        "id": "external:ExternalService:movie-id-service:27019",
+                        "status": "ok",
+                        "stats": [
+                            "📈 0 rps",
+                            "↑6B/s ↓32B/s"
+                        ],
+                        "weight": 0
+                    },
+                    {
+                        "id": "external:ExternalService:compose-review-memcached:10006",
+                        "status": "ok",
+                        "stats": null,
+                        "weight": 0
+                    },
+                    {
+                        "id": "external:ExternalService:movie-id-service:11213",
+                        "status": "ok",
+                        "stats": null,
+                        "weight": 0
+                    }
+                ],
+                "downstreams": []
+            },
+            {
+                "id": "external:ExternalService:compose-review-memcached:27021",
+                "custom": false,
+                "category": "application",
+                "labels": {},
+                "status": "ok",
+                "icon": "mongodb",
+                "indicators": [
+                    {
+                        "status": "ok",
+                        "message": "SLO"
+                    }
+                ],
+                "upstreams": [],
+                "downstreams": [
+                    {
+                        "id": "_:Unknown:ripple-user-review-service-1",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    }
+                ]
+            },
+            {
+                "id": "_:Unknown:ripple-movie-info-service-1",
+                "custom": false,
+                "category": "application",
+                "labels": {
+                    "instances": "1"
+                },
+                "status": "ok",
+                "icon": "",
+                "indicators": [
+                    {
+                        "status": "ok",
+                        "message": "Instances"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "CPU"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Memory"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Net"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Logs"
+                    }
+                ],
+                "upstreams": [
+                    {
+                        "id": "external:ExternalService:external:27026",
+                        "status": "ok",
+                        "stats": [
+                            "↑6B/s ↓32B/s"
+                        ],
+                        "weight": 0
+                    }
+                ],
+                "downstreams": []
+            },
+            {
+                "id": "external:ExternalService:movie-id-service:10003",
+                "custom": false,
+                "category": "application",
+                "labels": {},
+                "status": "unknown",
+                "icon": "",
+                "indicators": null,
+                "upstreams": [],
+                "downstreams": [
+                    {
+                        "id": "_:Unknown:ripple-nginx-web-server-1",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    }
+                ]
+            },
+            {
+                "id": "external:ExternalService:compose-review-memcached:6380",
+                "custom": false,
+                "category": "application",
+                "labels": {},
+                "status": "ok",
+                "icon": "redis",
+                "indicators": [
+                    {
+                        "status": "ok",
+                        "message": "SLO"
+                    }
+                ],
+                "upstreams": [],
+                "downstreams": [
+                    {
+                        "id": "_:Unknown:ripple-movie-review-service-1",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    }
+                ]
+            },
+            {
+                "id": "caretta:DaemonSet:caretta",
+                "custom": false,
+                "category": "application",
+                "labels": {
+                    "ns": "caretta"
+                },
+                "status": "ok",
+                "icon": "golang",
+                "indicators": [
+                    {
+                        "status": "ok",
+                        "message": "SLO"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Instances"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "CPU"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Memory"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Net"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "DNS"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Logs"
+                    }
+                ],
+                "upstreams": [
+                    {
+                        "id": "kube-system:StaticPods:kube-apiserver",
+                        "status": "ok",
+                        "stats": [
+                            "📈 0 rps",
+                            "↑4B/s ↓4B/s"
+                        ],
+                        "weight": 0
+                    }
+                ],
+                "downstreams": [
+                    {
+                        "id": "caretta:StatefulSet:caretta-vm",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    }
+                ]
+            },
+            {
+                "id": "external:ExternalService:compose-review-memcached:11214",
+                "custom": false,
+                "category": "application",
+                "labels": {},
+                "status": "unknown",
+                "icon": "",
+                "indicators": null,
+                "upstreams": [],
+                "downstreams": [
+                    {
+                        "id": "_:Unknown:ripple-compose-review-service-1",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    }
+                ]
+            },
+            {
+                "id": "external:ExternalService:registry-1.docker.io",
+                "custom": false,
+                "category": "control-plane",
+                "labels": {},
+                "status": "unknown",
+                "icon": "",
+                "indicators": null,
+                "upstreams": [],
+                "downstreams": [
+                    {
+                        "id": "_:Unknown:containerd",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    }
+                ]
+            }
+        ],
+        "nodes": null,
+        "deployments": null,
+        "traces": null,
+        "logs": null,
+        "costs": null,
+        "risks": null,
+        "categories": [
+            "control-plane",
+            "monitoring"
+        ]
+    }
+}

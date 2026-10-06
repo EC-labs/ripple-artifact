@@ -1,0 +1,188 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+            <script src="lib/bindings/utils.js"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/dist/vis-network.min.css" integrity="sha512-WgxfT5LWjfszlPHXRmBWHkV2eceiWTOBvrKCNbdgDYTHrT2AeLCGbF4sZlZw3UMN3WtL0tGUoIAKsu8mllg/XA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/vis-network.min.js" integrity="sha512-LnvoEWDFrqGHlHmDD2101OrLcbsfkrzoSpvtSQtxK3RMnRV0eOkhhBN2dXHKRrUU8p2DGRTk35n4O8nWSVe1mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            
+        
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+          crossorigin="anonymous"
+        ></script>
+
+
+        <center>
+          <h1></h1>
+        </center>
+        <style type="text/css">
+
+             #mynetwork {
+                 width: 100%;
+                 height: 800px;
+                 background-color: #ffffff;
+                 border: 1px solid lightgray;
+                 position: relative;
+                 float: left;
+             }
+
+             
+
+             
+
+             
+        </style>
+    </head>
+
+
+    <body>
+        <div class="card" style="width: 100%">
+            
+            
+            <div id="mynetwork" class="card-body"></div>
+        </div>
+
+        
+        
+
+        <script type="text/javascript">
+
+              // initialize global variables.
+              var edges;
+              var nodes;
+              var allNodes;
+              var allEdges;
+              var nodeColors;
+              var originalNodes;
+              var network;
+              var container;
+              var options, data;
+              var filter = {
+                  item : '',
+                  property : '',
+                  value : []
+              };
+
+              
+
+              
+
+              // This method is responsible for drawing the graph, returns the drawn network
+              function drawGraph() {
+                  var container = document.getElementById('mynetwork');
+
+                  
+
+                  // parsing and collecting nodes and edges from the python
+                  nodes = new vis.DataSet([{"color": "#c5e9d6", "font": {"multi": "html", "size": 12}, "id": "2-2004565", "label": "/ripple-compose-review-memcached-1\n2004565", "shape": "dot", "size": 20, "title": "Machine: 2\nGroup: /ripple-compose-review-memcached-1"}, {"color": "#c5e9d6", "font": {"multi": "html", "size": 12}, "id": "2-2006731", "label": "/ripple-compose-review-service-1\n2006731", "shape": "dot", "size": 20, "title": "Machine: 2\nGroup: /ripple-compose-review-service-1"}, {"color": "#f7e8f2", "font": {"multi": "html", "size": 12}, "id": "1-1302804", "label": "/ripple-movie-id-service-1\n1302804", "shape": "dot", "size": 20, "title": "Machine: 1\nGroup: /ripple-movie-id-service-1"}, {"color": "#c5e9d6", "font": {"multi": "html", "size": 12}, "id": "2-2006864", "label": "/ripple-movie-review-service-1\n2006864", "shape": "dot", "size": 20, "title": "Machine: 2\nGroup: /ripple-movie-review-service-1"}, {"color": "#c5e9d6", "font": {"multi": "html", "size": 12}, "id": "2-2006554", "label": "/ripple-review-storage-service-1\n2006554", "shape": "dot", "size": 20, "title": "Machine: 2\nGroup: /ripple-review-storage-service-1"}, {"color": "#f7e8f2", "font": {"multi": "html", "size": 12}, "id": "1-1302703", "label": "/ripple-user-service-1\n1302703", "shape": "dot", "size": 20, "title": "Machine: 1\nGroup: /ripple-user-service-1"}, {"color": "#c5e9d6", "font": {"multi": "html", "size": 12}, "id": "2-2006690", "label": "/ripple-user-review-service-1\n2006690", "shape": "dot", "size": 20, "title": "Machine: 2\nGroup: /ripple-user-review-service-1"}, {"color": "#f7e8f2", "font": {"multi": "html", "size": 12}, "id": "1-1303048", "label": "/ripple-text-service-1\n1303048", "shape": "dot", "size": 20, "title": "Machine: 1\nGroup: /ripple-text-service-1"}, {"color": "#f7e8f2", "font": {"multi": "html", "size": 12}, "id": "1-1302702", "label": "/ripple-rating-service-1\n1302702", "shape": "dot", "size": 20, "title": "Machine: 1\nGroup: /ripple-rating-service-1"}, {"color": "#f7e8f2", "font": {"multi": "html", "size": 12}, "id": "1-1303098", "label": "/ripple-unique-id-service-1\n1303098", "shape": "dot", "size": 20, "title": "Machine: 1\nGroup: /ripple-unique-id-service-1"}, {"color": "#f7e8f2", "font": {"multi": "html", "size": 12}, "id": "1-1300619", "label": "/ripple-movie-id-memcached-1\n1300619", "shape": "dot", "size": 20, "title": "Machine: 1\nGroup: /ripple-movie-id-memcached-1"}, {"color": "#f7e8f2", "font": {"multi": "html", "size": 12}, "id": "1-1300659", "label": "/ripple-movie-id-mongodb-1\n1300659", "shape": "dot", "size": 20, "title": "Machine: 1\nGroup: /ripple-movie-id-mongodb-1"}, {"color": "#f36aaa", "font": {"multi": "html", "size": 12}, "id": "3-2758657", "label": "/ripple-nginx-web-server-1\n2758657", "shape": "dot", "size": 20, "title": "Machine: 3\nGroup: /ripple-nginx-web-server-1"}, {"color": "#f36aaa", "font": {"multi": "html", "size": 12}, "id": "3-2758656", "label": "/ripple-nginx-web-server-1\n2758656", "shape": "dot", "size": 20, "title": "Machine: 3\nGroup: /ripple-nginx-web-server-1"}, {"color": "#c5e9d6", "font": {"multi": "html", "size": 12}, "id": "2-2004440", "label": "/ripple-movie-review-mongodb-1\n2004440", "shape": "dot", "size": 20, "title": "Machine: 2\nGroup: /ripple-movie-review-mongodb-1"}, {"color": "#c5e9d6", "font": {"multi": "html", "size": 12}, "id": "2-2004570", "label": "/ripple-movie-review-redis-1\n2004570", "shape": "dot", "size": 20, "title": "Machine: 2\nGroup: /ripple-movie-review-redis-1"}, {"color": "#c5e9d6", "font": {"multi": "html", "size": 12}, "id": "2-2004071", "label": "/ripple-review-storage-mongodb-1\n2004071", "shape": "dot", "size": 20, "title": "Machine: 2\nGroup: /ripple-review-storage-mongodb-1"}, {"color": "#f7e8f2", "font": {"multi": "html", "size": 12}, "id": "1-1300625", "label": "/ripple-user-memcached-1\n1300625", "shape": "dot", "size": 20, "title": "Machine: 1\nGroup: /ripple-user-memcached-1"}, {"color": "#f7e8f2", "font": {"multi": "html", "size": 12}, "id": "1-1300330", "label": "/ripple-user-mongodb-1\n1300330", "shape": "dot", "size": 20, "title": "Machine: 1\nGroup: /ripple-user-mongodb-1"}, {"color": "#c5e9d6", "font": {"multi": "html", "size": 12}, "id": "2-2004410", "label": "/ripple-user-review-mongodb-1\n2004410", "shape": "dot", "size": 20, "title": "Machine: 2\nGroup: /ripple-user-review-mongodb-1"}, {"color": "#c5e9d6", "font": {"multi": "html", "size": 12}, "id": "2-2004400", "label": "/ripple-user-review-redis-1\n2004400", "shape": "dot", "size": 20, "title": "Machine: 2\nGroup: /ripple-user-review-redis-1"}, {"color": "#f7e8f2", "font": {"multi": "html", "size": 12}, "id": "1-1300669", "label": "/ripple-rating-redis-1\n1300669", "shape": "dot", "size": 20, "title": "Machine: 1\nGroup: /ripple-rating-redis-1"}]);
+                  edges = new vis.DataSet([{"color": "rgba(150,150,150,0.6)", "from": "2-2004565", "to": "2-2006731", "width": 1}, {"color": "rgba(150,150,150,0.6)", "from": "2-2006731", "to": "1-1302804", "width": 1}, {"color": "rgba(150,150,150,0.6)", "from": "2-2006731", "to": "2-2006864", "width": 1}, {"color": "rgba(150,150,150,0.6)", "from": "2-2006731", "to": "2-2006554", "width": 1}, {"color": "rgba(150,150,150,0.6)", "from": "2-2006731", "to": "1-1302703", "width": 1}, {"color": "rgba(150,150,150,0.6)", "from": "2-2006731", "to": "2-2006690", "width": 1}, {"color": "rgba(150,150,150,0.6)", "from": "2-2006731", "to": "1-1303048", "width": 1}, {"color": "rgba(150,150,150,0.6)", "from": "2-2006731", "to": "1-1302702", "width": 1}, {"color": "rgba(150,150,150,0.6)", "from": "2-2006731", "to": "1-1303098", "width": 1}, {"color": "rgba(150,150,150,0.6)", "from": "1-1302804", "to": "1-1300619", "width": 1}, {"color": "rgba(150,150,150,0.6)", "from": "1-1302804", "to": "1-1300659", "width": 1}, {"color": "rgba(150,150,150,0.6)", "from": "1-1302804", "to": "1-1302702", "width": 1}, {"color": "rgba(150,150,150,0.6)", "from": "1-1302804", "to": "3-2758657", "width": 1}, {"color": "rgba(150,150,150,0.6)", "from": "1-1302804", "to": "3-2758656", "width": 1}, {"color": "rgba(150,150,150,0.6)", "from": "2-2006864", "to": "2-2004440", "width": 1}, {"color": "rgba(150,150,150,0.6)", "from": "2-2006864", "to": "2-2004570", "width": 1}, {"color": "rgba(150,150,150,0.6)", "from": "2-2006554", "to": "2-2004071", "width": 1}, {"color": "rgba(150,150,150,0.6)", "from": "1-1302703", "to": "3-2758656", "width": 1}, {"color": "rgba(150,150,150,0.6)", "from": "1-1302703", "to": "3-2758657", "width": 1}, {"color": "rgba(150,150,150,0.6)", "from": "1-1302703", "to": "1-1300625", "width": 1}, {"color": "rgba(150,150,150,0.6)", "from": "1-1302703", "to": "1-1300330", "width": 1}, {"color": "rgba(150,150,150,0.6)", "from": "2-2006690", "to": "2-2004410", "width": 1}, {"color": "rgba(150,150,150,0.6)", "from": "2-2006690", "to": "2-2004400", "width": 1}, {"color": "rgba(150,150,150,0.6)", "from": "1-1303048", "to": "3-2758656", "width": 1}, {"color": "rgba(150,150,150,0.6)", "from": "1-1303048", "to": "3-2758657", "width": 1}, {"color": "rgba(150,150,150,0.6)", "from": "1-1302702", "to": "1-1300669", "width": 1}, {"color": "rgba(150,150,150,0.6)", "from": "1-1303098", "to": "3-2758656", "width": 1}, {"color": "rgba(150,150,150,0.6)", "from": "1-1303098", "to": "3-2758657", "width": 1}]);
+
+                  nodeColors = {};
+                  allNodes = nodes.get({ returnType: "Object" });
+                  for (nodeId in allNodes) {
+                    nodeColors[nodeId] = allNodes[nodeId].color;
+                  }
+                  allEdges = edges.get({ returnType: "Object" });
+                  // adding nodes and edges to the graph
+                  data = {nodes: nodes, edges: edges};
+
+                  var options = {
+    "configure": {
+        "enabled": false
+    },
+    "edges": {
+        "color": {
+            "inherit": true
+        },
+        "smooth": {
+            "enabled": false,
+            "type": "dynamic"
+        }
+    },
+    "interaction": {
+        "dragNodes": true,
+        "hideEdgesOnDrag": false,
+        "hideNodesOnDrag": false
+    },
+    "physics": {
+        "enabled": false,
+        "stabilization": {
+            "enabled": true,
+            "fit": true,
+            "iterations": 1000,
+            "onlyDynamicEdges": false,
+            "updateInterval": 50
+        }
+    }
+};
+
+                  
+
+
+                  
+
+                  network = new vis.Network(container, data, options);
+
+                  
+
+                  
+
+                  
+
+
+                  
+
+                  return network;
+
+              }
+              drawGraph();
+        </script>
+    
+    <div style="position:fixed;top:10px;right:10px;z-index:9999;">
+        <button onclick="downloadGraph()">Save Graph</button>
+        <input type="file" id="upload" onchange="uploadGraph()" style="display:none;" />
+        <button onclick="document.getElementById('upload').click();">Load Graph</button>
+    </div>
+    <script>
+    function downloadGraph() {
+        var positions = network.getPositions();
+        var blob = new Blob([JSON.stringify(positions, null, 2)], {type : 'application/json'});
+        var link = document.createElement('a');
+        link.href = window.URL.createObjectURL(blob);
+        link.download = 'graph-positions.json';
+        link.click();
+    }
+
+    function uploadGraph() {
+        var fileInput = document.getElementById('upload');
+        var file = fileInput.files[0];
+        var reader = new FileReader();
+        reader.onload = function(event) {
+            var positions = JSON.parse(event.target.result);
+            for (const [nodeId, pos] of Object.entries(positions)) {
+                network.moveNode(nodeId, pos.x, pos.y);
+            }
+        };
+        if (file) {
+            reader.readAsText(file);
+        }
+    }
+
+    </script>
+    </body>
+    
+</html>

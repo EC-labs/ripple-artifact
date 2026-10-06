@@ -1,0 +1,5 @@
+tool,precision,recall,f1score
+caretta,1.0,1.0,1.0
+coroot,1.0,0.8125,0.896551724137931
+deepflow,1.0,1.0,1.0
+ripple,1.0,1.0,1.0

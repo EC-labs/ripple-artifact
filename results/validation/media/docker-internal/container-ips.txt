@@ -1,0 +1,37 @@
+ripple-user-service-1 172.18.0.10
+ripple-dns-media-1 172.18.0.12
+ripple-unique-id-service-1 172.18.0.6
+ripple-text-service-1 172.18.0.3
+ripple-user-mongodb-1 172.18.0.7
+ripple-movie-id-mongodb-1 172.18.0.8
+ripple-rating-redis-1 172.18.0.2
+ripple-rating-service-1 172.18.0.9
+ripple-movie-id-service-1 172.18.0.5
+ripple-user-memcached-1 172.18.0.11
+ripple-movie-id-memcached-1 172.18.0.4
+
+ripple-user-review-mongodb-1 172.18.0.12
+ripple-movie-review-service-1 172.18.0.7
+ripple-review-storage-mongodb-1 172.18.0.8
+ripple-dns-media-1 172.18.0.11
+ripple-movie-review-redis-1 172.18.0.2
+ripple-compose-review-memcached-1 172.18.0.6
+ripple-review-storage-service-1 172.18.0.5
+ripple-compose-review-service-1 172.18.0.9
+ripple-user-review-service-1 172.18.0.13
+ripple-user-review-redis-1 172.18.0.10
+ripple-movie-review-mongodb-1 172.18.0.4
+ripple-review-storage-memcached-1 172.18.0.3
+
+ripple-movie-info-memcached-1 172.19.0.10
+ripple-dns-media-1 172.19.0.4
+ripple-jaeger-1 172.19.0.7
+ripple-cast-info-memcached-1 172.19.0.2
+ripple-movie-info-service-1 172.19.0.5
+ripple-plot-mongodb-1 172.19.0.6
+ripple-plot-memcached-1 172.19.0.3
+ripple-movie-info-mongodb-1 172.19.0.12
+ripple-cast-info-mongodb-1 172.19.0.8
+ripple-plot-service-1 172.19.0.9
+ripple-nginx-web-server-1 172.19.0.13
+ripple-cast-info-service-1 172.19.0.11

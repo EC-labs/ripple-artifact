@@ -1,0 +1,45 @@
+[2025-06-18 14:40:27,628] alcaraz/INFO/locust.main: Starting Locust 2.33.2
+[2025-06-18 14:40:27,630] alcaraz/INFO/locust.main: Run time limit set to 30 seconds
+[2025-06-18 14:40:27,633] alcaraz/INFO/locust.runners: Ramping to 10 users at a rate of 1.00 per second
+[2025-06-18 14:40:36,647] alcaraz/INFO/locust.runners: All users spawned: {"WebsiteUser": 10} (10 total users)
+[2025-06-18 14:40:55,970] alcaraz/INFO/locust.main: --run-time limit reached, shutting down
+[2025-06-18 14:40:56,095] alcaraz/INFO/locust.main: Shutting down (exit code 0)
+Type     Name                                                                          # reqs      # fails |    Avg     Min     Max    Med |   req/s  failures/s
+--------|----------------------------------------------------------------------------|-------|-------------|-------|-------|-------|-------|--------|-----------
+GET      /                                                                                 10     0(0.00%) |    103      83     144     93 |    0.36        0.00
+GET      /cart                                                                              5     0(0.00%) |     42      33      53     36 |    0.18        0.00
+POST     /cart                                                                             10     0(0.00%) |     93      67     213     75 |    0.36        0.00
+POST     /cart/checkout                                                                     1     0(0.00%) |     44      44      44     44 |    0.04        0.00
+GET      /product/0PUK6V6EV0                                                                3     0(0.00%) |     35      33      37     35 |    0.11        0.00
+GET      /product/1YMWWN1N4O                                                                5     0(0.00%) |     35      33      37     36 |    0.18        0.00
+GET      /product/2ZYFJ3GM2N                                                                9     0(0.00%) |     58      35     141     37 |    0.32        0.00
+GET      /product/66VCHSJNUP                                                                4     0(0.00%) |     41      35      51     38 |    0.14        0.00
+GET      /product/6E92ZMYYFZ                                                                3     0(0.00%) |     73      37     146     38 |    0.11        0.00
+GET      /product/9SIQT8TOJO                                                                4     0(0.00%) |     36      33      38     36 |    0.14        0.00
+GET      /product/L9ECAV7KIM                                                                3     0(0.00%) |     36      33      39     36 |    0.11        0.00
+GET      /product/LS4PSXUNUM                                                                3     0(0.00%) |     37      32      45     36 |    0.11        0.00
+GET      /product/OLJCESPC7Z                                                                4     0(0.00%) |     36      34      38     36 |    0.14        0.00
+POST     /setCurrency                                                                       2     0(0.00%) |     64      55      73     55 |    0.07        0.00
+--------|----------------------------------------------------------------------------|-------|-------------|-------|-------|-------|-------|--------|-----------
+         Aggregated                                                                        66     0(0.00%) |     61      32     213     39 |    2.36        0.00
+
+Response time percentiles (approximated)
+Type     Name                                                                                  50%    66%    75%    80%    90%    95%    98%    99%  99.9% 99.99%   100% # reqs
+--------|--------------------------------------------------------------------------------|--------|------|------|------|------|------|------|------|------|------|------|------
+GET      /                                                                                      97     98    130    130    140    140    140    140    140    140    140     10
+GET      /cart                                                                                  36     52     52     54     54     54     54     54     54     54     54      5
+POST     /cart                                                                                  84     87     97    100    210    210    210    210    210    210    210     10
+POST     /cart/checkout                                                                         44     44     44     44     44     44     44     44     44     44     44      1
+GET      /product/0PUK6V6EV0                                                                    35     35     38     38     38     38     38     38     38     38     38      3
+GET      /product/1YMWWN1N4O                                                                    36     36     36     37     37     37     37     37     37     37     37      5
+GET      /product/2ZYFJ3GM2N                                                                    37     37     40    130    140    140    140    140    140    140    140      9
+GET      /product/66VCHSJNUP                                                                    40     40     51     51     51     51     51     51     51     51     51      4
+GET      /product/6E92ZMYYFZ                                                                    38     38    150    150    150    150    150    150    150    150    150      3
+GET      /product/9SIQT8TOJO                                                                    36     36     39     39     39     39     39     39     39     39     39      4
+GET      /product/L9ECAV7KIM                                                                    36     36     39     39     39     39     39     39     39     39     39      3
+GET      /product/LS4PSXUNUM                                                                    36     36     46     46     46     46     46     46     46     46     46      3
+GET      /product/OLJCESPC7Z                                                                    37     37     38     38     38     38     38     38     38     38     38      4
+POST     /setCurrency                                                                           74     74     74     74     74     74     74     74     74     74     74      2
+--------|--------------------------------------------------------------------------------|--------|------|------|------|------|------|------|------|------|------|------|------
+         Aggregated                                                                             39     68     84     87    130    140    150    210    210    210    210     66
+

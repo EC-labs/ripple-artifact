@@ -1,0 +1,18 @@
+﻿"Time","arc__color","detail__kind","id","subTitle","title","Value #nodes"
+2025-06-17 16:05:00.000,1,DaemonSet,2486312469,caretta,caretta,150079
+2025-06-17 16:05:00.000,1,Deployment,131388598,openebs,openebs-ndm-operator,9654
+2025-06-17 16:05:00.000,1,Deployment,3285303426,openebs,openebs-localpv-provisioner,97479
+2025-06-17 16:05:00.000,1,Deployment,357647946,kube-system,coredns,12390
+2025-06-17 16:05:00.000,1,Service,3335631702,default,kubernetes,100510
+2025-06-17 16:05:00.000,1,StatefulSet,136149725,caretta,caretta-vm,143182
+2025-06-17 16:05:00.000,1,external,1092907137,external,ip-10-244-2-1.eu-central-1.compute.internal.,22366
+2025-06-17 16:05:00.000,1,external,1296745812,external,ec2-18-197-157-103.eu-central-1.compute.amazonaws.com.,409003
+2025-06-17 16:05:00.000,1,external,133797137,external,localhost,50400
+2025-06-17 16:05:00.000,1,external,1411482583,external,ip-172-19-0-6.eu-central-1.compute.internal.,142479
+2025-06-17 16:05:00.000,1,external,1570929195,external,ip-172-19-0-2.eu-central-1.compute.internal.,200620
+2025-06-17 16:05:00.000,1,external,1682669328,external,77-171-239-251.fixed.kpn.net.,3223632
+2025-06-17 16:05:00.000,1,external,256504349,external,ip-172-19-0-4.eu-central-1.compute.internal.,16574
+2025-06-17 16:05:00.000,1,external,3306916980,external,ip-172-19-0-5.eu-central-1.compute.internal.,49330
+2025-06-17 16:05:00.000,1,node,1538706024,node,ip-172-31-28-169,3239460
+2025-06-17 16:05:00.000,1,node,2461043519,node,ip-172-31-21-222,15633
+

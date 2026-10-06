@@ -1,0 +1,2907 @@
+{
+    "context": {
+        "status": {
+            "status": "ok",
+            "error": "",
+            "prometheus": {
+                "status": "ok",
+                "message": "ok",
+                "error": "",
+                "action": ""
+            },
+            "node_agent": {
+                "status": "ok",
+                "nodes": 3
+            },
+            "kube_state_metrics": {
+                "status": "ok",
+                "applications": 87
+            }
+        },
+        "search": {
+            "applications": [
+                {
+                    "id": "_:Unknown:systemd-udevd",
+                    "status": "warning"
+                },
+                {
+                    "id": "_:Unknown:unattended-upgrades",
+                    "status": "ok"
+                },
+                {
+                    "id": "_:Unknown:udisks2",
+                    "status": "ok"
+                },
+                {
+                    "id": "_:Unknown:cron",
+                    "status": "ok"
+                },
+                {
+                    "id": "coroot:Deployment:coroot-operator",
+                    "status": "ok"
+                },
+                {
+                    "id": "default:Deployment:url-shorten-service",
+                    "status": "ok"
+                },
+                {
+                    "id": "default:Deployment:unique-id-service",
+                    "status": "ok"
+                },
+                {
+                    "id": "_:Unknown:kubelet",
+                    "status": "ok"
+                },
+                {
+                    "id": "_:Unknown:snap.amazon-ssm-agent.amazon-ssm-agent",
+                    "status": "ok"
+                },
+                {
+                    "id": "_:Unknown:ModemManager",
+                    "status": "ok"
+                },
+                {
+                    "id": "kube-system:Deployment:coredns",
+                    "status": "ok"
+                },
+                {
+                    "id": "default:Deployment:user-timeline-service",
+                    "status": "ok"
+                },
+                {
+                    "id": "openebs:StaticPods:cleanup-pvc-9876e8fe-0e93-47f5-ace4-bef9cff94fab",
+                    "status": "ok"
+                },
+                {
+                    "id": "default:Deployment:user-mongodb",
+                    "status": "ok"
+                },
+                {
+                    "id": "_:Unknown:systemd-journald",
+                    "status": "ok"
+                },
+                {
+                    "id": "_:Unknown:multipathd",
+                    "status": "ok"
+                },
+                {
+                    "id": "coroot:DatabaseCluster:coroot-clickhouse",
+                    "status": "ok"
+                },
+                {
+                    "id": "kube-flannel:DaemonSet:kube-flannel-ds",
+                    "status": "ok"
+                },
+                {
+                    "id": "coroot:Deployment:coroot-cluster-agent",
+                    "status": "ok"
+                },
+                {
+                    "id": "default:Deployment:post-storage-service",
+                    "status": "ok"
+                },
+                {
+                    "id": "_:Unknown:acpid",
+                    "status": "ok"
+                },
+                {
+                    "id": "_:Unknown:fwupd-refresh",
+                    "status": "ok"
+                },
+                {
+                    "id": "_:Unknown:sysstat-collect",
+                    "status": "ok"
+                },
+                {
+                    "id": "external:ExternalService:external:3000",
+                    "status": "unknown"
+                },
+                {
+                    "id": "default:Deployment:social-graph-redis",
+                    "status": "ok"
+                },
+                {
+                    "id": "default:Deployment:user-timeline-redis",
+                    "status": "ok"
+                },
+                {
+                    "id": "external:ExternalService:external-http",
+                    "status": "unknown"
+                },
+                {
+                    "id": "external:ExternalService:grafana.com:443",
+                    "status": "ok"
+                },
+                {
+                    "id": "default:Deployment:user-mention-service",
+                    "status": "ok"
+                },
+                {
+                    "id": "coroot:DaemonSet:coroot-node-agent",
+                    "status": "ok"
+                },
+                {
+                    "id": "openebs:DaemonSet:openebs-ndm",
+                    "status": "ok"
+                },
+                {
+                    "id": "openebs:StaticPods:cleanup-pvc-dca5618c-003c-46fa-9332-5e9d78adfc12",
+                    "status": "ok"
+                },
+                {
+                    "id": "_:Unknown:containerd",
+                    "status": "ok"
+                },
+                {
+                    "id": "kube-system:StaticPods:kube-controller-manager",
+                    "status": "ok"
+                },
+                {
+                    "id": "default:Deployment:media-frontend",
+                    "status": "ok"
+                },
+                {
+                    "id": "kube-system:StaticPods:kube-apiserver",
+                    "status": "ok"
+                },
+                {
+                    "id": "default:Deployment:media-mongodb",
+                    "status": "ok"
+                },
+                {
+                    "id": "_:Unknown:networkd-dispatcher",
+                    "status": "ok"
+                },
+                {
+                    "id": "caretta:StatefulSet:caretta-vm",
+                    "status": "ok"
+                },
+                {
+                    "id": "default:Deployment:post-storage-memcached",
+                    "status": "ok"
+                },
+                {
+                    "id": "_:Unknown:systemd-logind",
+                    "status": "ok"
+                },
+                {
+                    "id": "_:Unknown:systemd-resolved",
+                    "status": "ok"
+                },
+                {
+                    "id": "_:Unknown:systemd-networkd",
+                    "status": "ok"
+                },
+                {
+                    "id": "_:Unknown:system-getty",
+                    "status": "ok"
+                },
+                {
+                    "id": "kube-system:DaemonSet:kube-proxy",
+                    "status": "ok"
+                },
+                {
+                    "id": "default:Deployment:media-memcached",
+                    "status": "ok"
+                },
+                {
+                    "id": "default:Deployment:url-shorten-mongodb",
+                    "status": "ok"
+                },
+                {
+                    "id": "default:Deployment:compose-post-service",
+                    "status": "ok"
+                },
+                {
+                    "id": "default:Deployment:social-graph-mongodb",
+                    "status": "ok"
+                },
+                {
+                    "id": "_:Unknown:snapd",
+                    "status": "ok"
+                },
+                {
+                    "id": "_:Unknown:nix-daemon",
+                    "status": "ok"
+                },
+                {
+                    "id": "_:Unknown:system-serial-getty",
+                    "status": "ok"
+                },
+                {
+                    "id": "default:Deployment:media-service",
+                    "status": "ok"
+                },
+                {
+                    "id": "caretta:Deployment:caretta-grafana",
+                    "status": "ok"
+                },
+                {
+                    "id": "_:Unknown:polkit",
+                    "status": "ok"
+                },
+                {
+                    "id": "_:Unknown:irqbalance",
+                    "status": "ok"
+                },
+                {
+                    "id": "default:Deployment:user-timeline-mongodb",
+                    "status": "ok"
+                },
+                {
+                    "id": "kube-system:StaticPods:kube-scheduler",
+                    "status": "ok"
+                },
+                {
+                    "id": "default:Deployment:post-storage-mongodb",
+                    "status": "ok"
+                },
+                {
+                    "id": "_:Unknown:docker",
+                    "status": "ok"
+                },
+                {
+                    "id": "_:Unknown:ssh",
+                    "status": "ok"
+                },
+                {
+                    "id": "_:Unknown:rsyslog",
+                    "status": "ok"
+                },
+                {
+                    "id": "kube-system:StaticPods:etcd",
+                    "status": "ok"
+                },
+                {
+                    "id": "openebs:DaemonSet:openebs-ndm-node-exporter",
+                    "status": "ok"
+                },
+                {
+                    "id": "_:Unknown:dbus",
+                    "status": "ok"
+                },
+                {
+                    "id": "default:Deployment:nginx-thrift",
+                    "status": "ok"
+                },
+                {
+                    "id": "openebs:StaticPods:init-pvc-ea1c6176-52df-48dc-8b73-6e22febd9b1d",
+                    "status": "ok"
+                },
+                {
+                    "id": "default:Deployment:text-service",
+                    "status": "ok"
+                },
+                {
+                    "id": "default:Deployment:jaeger",
+                    "status": "ok"
+                },
+                {
+                    "id": "default:Deployment:user-memcached",
+                    "status": "ok"
+                },
+                {
+                    "id": "coroot:Deployment:coroot-prometheus",
+                    "status": "ok"
+                },
+                {
+                    "id": "default:Deployment:user-service",
+                    "status": "ok"
+                },
+                {
+                    "id": "default:Deployment:url-shorten-memcached",
+                    "status": "ok"
+                },
+                {
+                    "id": "_:Unknown:fwupd",
+                    "status": "warning"
+                },
+                {
+                    "id": "external:ExternalService:raw.githubusercontent.com",
+                    "status": "unknown"
+                },
+                {
+                    "id": "default:Deployment:social-graph-service",
+                    "status": "ok"
+                },
+                {
+                    "id": "coroot:StatefulSet:coroot-coroot",
+                    "status": "ok"
+                },
+                {
+                    "id": "external:ExternalService:ssm.eu-central-1.amazonaws.com:443",
+                    "status": "unknown"
+                },
+                {
+                    "id": "openebs:Deployment:openebs-ndm-operator",
+                    "status": "ok"
+                },
+                {
+                    "id": "openebs:Deployment:openebs-ndm-cluster-exporter",
+                    "status": "ok"
+                },
+                {
+                    "id": "caretta:DaemonSet:caretta",
+                    "status": "ok"
+                },
+                {
+                    "id": "default:Deployment:home-timeline-redis",
+                    "status": "ok"
+                },
+                {
+                    "id": "openebs:Deployment:openebs-localpv-provisioner",
+                    "status": "ok"
+                },
+                {
+                    "id": "default:Deployment:home-timeline-service",
+                    "status": "ok"
+                },
+                {
+                    "id": "_:Unknown:chrony",
+                    "status": "ok"
+                },
+                {
+                    "id": "default:Deployment:registry",
+                    "status": "ok"
+                },
+                {
+                    "id": "coroot:StatefulSet:coroot-clickhouse-keeper",
+                    "status": "ok"
+                }
+            ],
+            "nodes": [
+                {
+                    "name": "ip-172-31-23-24",
+                    "status": "ok"
+                },
+                {
+                    "name": "ip-172-31-28-169",
+                    "status": "ok"
+                },
+                {
+                    "name": "ip-172-31-21-222",
+                    "status": "ok"
+                }
+            ]
+        }
+    },
+    "data": {
+        "applications": null,
+        "incidents": null,
+        "map": [
+            {
+                "id": "external:ExternalService:raw.githubusercontent.com",
+                "custom": false,
+                "category": "monitoring",
+                "labels": {},
+                "status": "unknown",
+                "icon": "",
+                "indicators": null,
+                "upstreams": [],
+                "downstreams": [
+                    {
+                        "id": "caretta:Deployment:caretta-grafana",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    }
+                ]
+            },
+            {
+                "id": "default:Deployment:social-graph-service",
+                "custom": false,
+                "category": "application",
+                "labels": {
+                    "ns": "default"
+                },
+                "status": "ok",
+                "icon": "",
+                "indicators": [
+                    {
+                        "status": "ok",
+                        "message": "Instances"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "CPU"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Memory"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Net"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Logs"
+                    }
+                ],
+                "upstreams": [
+                    {
+                        "id": "default:Deployment:social-graph-mongodb",
+                        "status": "ok",
+                        "stats": [
+                            "📈 0 rps",
+                            "↑6B/s ↓32B/s"
+                        ],
+                        "weight": 0
+                    },
+                    {
+                        "id": "default:Deployment:social-graph-redis",
+                        "status": "ok",
+                        "stats": [
+                            "📈 0 rps"
+                        ],
+                        "weight": 0
+                    }
+                ],
+                "downstreams": [
+                    {
+                        "id": "default:Deployment:home-timeline-service",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    }
+                ]
+            },
+            {
+                "id": "coroot:StatefulSet:coroot-coroot",
+                "custom": false,
+                "category": "monitoring",
+                "labels": {
+                    "ns": "coroot"
+                },
+                "status": "ok",
+                "icon": "coroot",
+                "indicators": [
+                    {
+                        "status": "ok",
+                        "message": "SLO"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Instances"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "CPU"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Memory"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Storage"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Net"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "DNS"
+                    },
+                    {
+                        "status": "warning",
+                        "message": "Logs"
+                    }
+                ],
+                "upstreams": [
+                    {
+                        "id": "external:ExternalService:external-http",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    },
+                    {
+                        "id": "coroot:DatabaseCluster:coroot-clickhouse",
+                        "status": "ok",
+                        "stats": [
+                            "📈 0.4 rps ⏱️ 467ms",
+                            "↑2kB/s ↓4kB/s"
+                        ],
+                        "weight": 0.36666667
+                    },
+                    {
+                        "id": "coroot:Deployment:coroot-prometheus",
+                        "status": "ok",
+                        "stats": [
+                            "📈 0.5 rps ⏱️ 8ms",
+                            "↑24kB/s ↓30B/s"
+                        ],
+                        "weight": 0.46666667
+                    }
+                ],
+                "downstreams": [
+                    {
+                        "id": "coroot:Deployment:coroot-cluster-agent",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    },
+                    {
+                        "id": "_:Unknown:kubelet",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    },
+                    {
+                        "id": "coroot:DaemonSet:coroot-node-agent",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    }
+                ]
+            },
+            {
+                "id": "default:Deployment:user-memcached",
+                "custom": false,
+                "category": "application",
+                "labels": {
+                    "db": "memcached",
+                    "ns": "default"
+                },
+                "status": "ok",
+                "icon": "memcached",
+                "indicators": [
+                    {
+                        "status": "ok",
+                        "message": "Instances"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "CPU"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Memory"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Logs"
+                    }
+                ],
+                "upstreams": [],
+                "downstreams": [
+                    {
+                        "id": "default:Deployment:user-mention-service",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    }
+                ]
+            },
+            {
+                "id": "coroot:Deployment:coroot-prometheus",
+                "custom": false,
+                "category": "monitoring",
+                "labels": {
+                    "db": "prometheus",
+                    "ns": "coroot"
+                },
+                "status": "ok",
+                "icon": "prometheus",
+                "indicators": [
+                    {
+                        "status": "ok",
+                        "message": "SLO"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Instances"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "CPU"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Memory"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Storage"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Logs"
+                    }
+                ],
+                "upstreams": [],
+                "downstreams": [
+                    {
+                        "id": "_:Unknown:kubelet",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    },
+                    {
+                        "id": "coroot:StatefulSet:coroot-coroot",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    }
+                ]
+            },
+            {
+                "id": "default:Deployment:user-service",
+                "custom": false,
+                "category": "application",
+                "labels": {
+                    "ns": "default"
+                },
+                "status": "ok",
+                "icon": "",
+                "indicators": [
+                    {
+                        "status": "ok",
+                        "message": "Instances"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "CPU"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Memory"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Net"
+                    },
+                    {
+                        "status": "warning",
+                        "message": "Logs"
+                    }
+                ],
+                "upstreams": [
+                    {
+                        "id": "default:Deployment:user-mongodb",
+                        "status": "ok",
+                        "stats": [
+                            "↑6B/s ↓32B/s"
+                        ],
+                        "weight": 0
+                    }
+                ],
+                "downstreams": [
+                    {
+                        "id": "default:Deployment:compose-post-service",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    }
+                ]
+            },
+            {
+                "id": "external:ExternalService:ssm.eu-central-1.amazonaws.com:443",
+                "custom": false,
+                "category": "control-plane",
+                "labels": {},
+                "status": "unknown",
+                "icon": "",
+                "indicators": null,
+                "upstreams": [],
+                "downstreams": [
+                    {
+                        "id": "_:Unknown:snap.amazon-ssm-agent.amazon-ssm-agent",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    }
+                ]
+            },
+            {
+                "id": "caretta:DaemonSet:caretta",
+                "custom": false,
+                "category": "application",
+                "labels": {
+                    "ns": "caretta"
+                },
+                "status": "ok",
+                "icon": "golang",
+                "indicators": [
+                    {
+                        "status": "ok",
+                        "message": "SLO"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Instances"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "CPU"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Memory"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Net"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "DNS"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Logs"
+                    }
+                ],
+                "upstreams": [
+                    {
+                        "id": "kube-system:StaticPods:kube-apiserver",
+                        "status": "ok",
+                        "stats": [
+                            "📈 0 rps",
+                            "↑5B/s ↓408B/s"
+                        ],
+                        "weight": 0
+                    }
+                ],
+                "downstreams": [
+                    {
+                        "id": "caretta:StatefulSet:caretta-vm",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    }
+                ]
+            },
+            {
+                "id": "default:Deployment:home-timeline-redis",
+                "custom": false,
+                "category": "application",
+                "labels": {
+                    "db": "redis",
+                    "ns": "default"
+                },
+                "status": "ok",
+                "icon": "redis",
+                "indicators": [
+                    {
+                        "status": "ok",
+                        "message": "SLO"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Instances"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "CPU"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Memory"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Logs"
+                    }
+                ],
+                "upstreams": [],
+                "downstreams": [
+                    {
+                        "id": "default:Deployment:home-timeline-service",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    }
+                ]
+            },
+            {
+                "id": "openebs:Deployment:openebs-ndm-operator",
+                "custom": false,
+                "category": "application",
+                "labels": {
+                    "ns": "openebs"
+                },
+                "status": "ok",
+                "icon": "golang",
+                "indicators": [
+                    {
+                        "status": "ok",
+                        "message": "Instances"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "CPU"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Memory"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Net"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Logs"
+                    }
+                ],
+                "upstreams": [
+                    {
+                        "id": "kube-system:StaticPods:kube-apiserver",
+                        "status": "ok",
+                        "stats": [
+                            "📈 0 rps"
+                        ],
+                        "weight": 0
+                    }
+                ],
+                "downstreams": [
+                    {
+                        "id": "_:Unknown:kubelet",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    }
+                ]
+            },
+            {
+                "id": "coroot:StatefulSet:coroot-clickhouse-keeper",
+                "custom": false,
+                "category": "monitoring",
+                "labels": {
+                    "ns": "coroot"
+                },
+                "status": "ok",
+                "icon": "",
+                "indicators": [
+                    {
+                        "status": "ok",
+                        "message": "SLO"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Instances"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "CPU"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Memory"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Storage"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Net"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "DNS"
+                    },
+                    {
+                        "status": "warning",
+                        "message": "Logs"
+                    }
+                ],
+                "upstreams": [],
+                "downstreams": [
+                    {
+                        "id": "coroot:DatabaseCluster:coroot-clickhouse",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    }
+                ]
+            },
+            {
+                "id": "openebs:Deployment:openebs-localpv-provisioner",
+                "custom": false,
+                "category": "application",
+                "labels": {
+                    "ns": "openebs"
+                },
+                "status": "ok",
+                "icon": "golang",
+                "indicators": [
+                    {
+                        "status": "ok",
+                        "message": "Instances"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "CPU"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Memory"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Net"
+                    },
+                    {
+                        "status": "warning",
+                        "message": "Logs"
+                    }
+                ],
+                "upstreams": [
+                    {
+                        "id": "kube-system:StaticPods:kube-apiserver",
+                        "status": "ok",
+                        "stats": [
+                            "↑438B/s ↓894B/s"
+                        ],
+                        "weight": 0
+                    },
+                    {
+                        "id": "external:ExternalService:external-http",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    }
+                ],
+                "downstreams": []
+            },
+            {
+                "id": "default:Deployment:home-timeline-service",
+                "custom": false,
+                "category": "application",
+                "labels": {
+                    "ns": "default"
+                },
+                "status": "ok",
+                "icon": "",
+                "indicators": [
+                    {
+                        "status": "ok",
+                        "message": "Instances"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "CPU"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Memory"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Net"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "DNS"
+                    },
+                    {
+                        "status": "warning",
+                        "message": "Logs"
+                    }
+                ],
+                "upstreams": [
+                    {
+                        "id": "default:Deployment:home-timeline-redis",
+                        "status": "ok",
+                        "stats": [
+                            "📈 0 rps"
+                        ],
+                        "weight": 0
+                    },
+                    {
+                        "id": "default:Deployment:post-storage-service",
+                        "status": "ok",
+                        "stats": null,
+                        "weight": 0
+                    },
+                    {
+                        "id": "default:Deployment:social-graph-service",
+                        "status": "ok",
+                        "stats": null,
+                        "weight": 0
+                    }
+                ],
+                "downstreams": [
+                    {
+                        "id": "default:Deployment:nginx-thrift",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    },
+                    {
+                        "id": "default:Deployment:compose-post-service",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    }
+                ]
+            },
+            {
+                "id": "coroot:Deployment:coroot-operator",
+                "custom": false,
+                "category": "monitoring",
+                "labels": {
+                    "ns": "coroot"
+                },
+                "status": "ok",
+                "icon": "coroot",
+                "indicators": [
+                    {
+                        "status": "ok",
+                        "message": "Instances"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "CPU"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Memory"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Net"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Logs"
+                    }
+                ],
+                "upstreams": [
+                    {
+                        "id": "kube-system:StaticPods:kube-apiserver",
+                        "status": "ok",
+                        "stats": [
+                            "📈 0.03 rps ⏱️ 1ms",
+                            "↑6B/s ↓5B/s"
+                        ],
+                        "weight": 0.033333335
+                    },
+                    {
+                        "id": "external:ExternalService:external-http",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    }
+                ],
+                "downstreams": []
+            },
+            {
+                "id": "default:Deployment:url-shorten-service",
+                "custom": false,
+                "category": "application",
+                "labels": {
+                    "ns": "default"
+                },
+                "status": "ok",
+                "icon": "",
+                "indicators": [
+                    {
+                        "status": "ok",
+                        "message": "Instances"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "CPU"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Memory"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Net"
+                    },
+                    {
+                        "status": "warning",
+                        "message": "Logs"
+                    }
+                ],
+                "upstreams": [
+                    {
+                        "id": "default:Deployment:url-shorten-mongodb",
+                        "status": "ok",
+                        "stats": [
+                            "📈 0 rps",
+                            "↑6B/s ↓32B/s"
+                        ],
+                        "weight": 0
+                    }
+                ],
+                "downstreams": [
+                    {
+                        "id": "default:Deployment:text-service",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    }
+                ]
+            },
+            {
+                "id": "kube-system:Deployment:coredns",
+                "custom": false,
+                "category": "control-plane",
+                "labels": {
+                    "ns": "kube-system"
+                },
+                "status": "ok",
+                "icon": "golang",
+                "indicators": [
+                    {
+                        "status": "ok",
+                        "message": "SLO"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Instances"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "CPU"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Memory"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Net"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "DNS"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Logs"
+                    }
+                ],
+                "upstreams": [
+                    {
+                        "id": "kube-system:StaticPods:kube-apiserver",
+                        "status": "ok",
+                        "stats": null,
+                        "weight": 0
+                    }
+                ],
+                "downstreams": [
+                    {
+                        "id": "_:Unknown:kubelet",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    }
+                ]
+            },
+            {
+                "id": "default:Deployment:user-timeline-service",
+                "custom": false,
+                "category": "application",
+                "labels": {
+                    "ns": "default"
+                },
+                "status": "ok",
+                "icon": "",
+                "indicators": [
+                    {
+                        "status": "ok",
+                        "message": "Instances"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "CPU"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Memory"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Net"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "DNS"
+                    },
+                    {
+                        "status": "warning",
+                        "message": "Logs"
+                    }
+                ],
+                "upstreams": [
+                    {
+                        "id": "default:Deployment:user-timeline-mongodb",
+                        "status": "ok",
+                        "stats": [
+                            "📈 0 rps",
+                            "↑6B/s ↓32B/s"
+                        ],
+                        "weight": 0
+                    },
+                    {
+                        "id": "default:Deployment:user-timeline-redis",
+                        "status": "ok",
+                        "stats": [
+                            "📈 0 rps"
+                        ],
+                        "weight": 0
+                    },
+                    {
+                        "id": "default:Deployment:post-storage-service",
+                        "status": "ok",
+                        "stats": null,
+                        "weight": 0
+                    }
+                ],
+                "downstreams": [
+                    {
+                        "id": "default:Deployment:nginx-thrift",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    },
+                    {
+                        "id": "default:Deployment:compose-post-service",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    }
+                ]
+            },
+            {
+                "id": "default:Deployment:unique-id-service",
+                "custom": false,
+                "category": "application",
+                "labels": {
+                    "ns": "default"
+                },
+                "status": "ok",
+                "icon": "",
+                "indicators": [
+                    {
+                        "status": "ok",
+                        "message": "Instances"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "CPU"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Memory"
+                    },
+                    {
+                        "status": "warning",
+                        "message": "Logs"
+                    }
+                ],
+                "upstreams": [],
+                "downstreams": [
+                    {
+                        "id": "default:Deployment:compose-post-service",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    }
+                ]
+            },
+            {
+                "id": "_:Unknown:kubelet",
+                "custom": false,
+                "category": "control-plane",
+                "labels": {
+                    "instances": "3"
+                },
+                "status": "ok",
+                "icon": "kubernetes",
+                "indicators": [
+                    {
+                        "status": "ok",
+                        "message": "Instances"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "CPU"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Memory"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Net"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "DNS"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Logs"
+                    }
+                ],
+                "upstreams": [
+                    {
+                        "id": "coroot:Deployment:coroot-prometheus",
+                        "status": "ok",
+                        "stats": [
+                            "📈 0.1 rps ⏱️ 0.5ms",
+                            "↑11B/s ↓17B/s"
+                        ],
+                        "weight": 0.1
+                    },
+                    {
+                        "id": "kube-system:Deployment:coredns",
+                        "status": "ok",
+                        "stats": [
+                            "📈 0.3 rps ⏱️ 0.2ms",
+                            "↑40B/s ↓50B/s"
+                        ],
+                        "weight": 0.33333334
+                    },
+                    {
+                        "id": "kube-system:StaticPods:kube-controller-manager",
+                        "status": "ok",
+                        "stats": [
+                            "↑119B/s ↓246B/s"
+                        ],
+                        "weight": 0
+                    },
+                    {
+                        "id": "kube-system:StaticPods:kube-apiserver",
+                        "status": "ok",
+                        "stats": [
+                            "↑2kB/s ↓4kB/s"
+                        ],
+                        "weight": 0
+                    },
+                    {
+                        "id": "coroot:StatefulSet:coroot-coroot",
+                        "status": "ok",
+                        "stats": [
+                            "📈 0.03 rps ⏱️ 0.2ms",
+                            "↑7B/s ↓6B/s"
+                        ],
+                        "weight": 0.033333335
+                    },
+                    {
+                        "id": "kube-system:StaticPods:etcd",
+                        "status": "ok",
+                        "stats": [
+                            "📈 0.2 rps ⏱️ 0.4ms",
+                            "↑82B/s ↓131B/s"
+                        ],
+                        "weight": 0.16666667
+                    },
+                    {
+                        "id": "openebs:Deployment:openebs-ndm-operator",
+                        "status": "ok",
+                        "stats": [
+                            "📈 0.1 rps ⏱️ 0.2ms",
+                            "↑15B/s ↓23B/s"
+                        ],
+                        "weight": 0.13333334
+                    },
+                    {
+                        "id": "caretta:StatefulSet:caretta-vm",
+                        "status": "ok",
+                        "stats": [
+                            "📈 0.1 rps ⏱️ 0.3ms",
+                            "↑11B/s ↓17B/s"
+                        ],
+                        "weight": 0.1
+                    },
+                    {
+                        "id": "kube-system:StaticPods:kube-scheduler",
+                        "status": "ok",
+                        "stats": [
+                            "↑2kB/s ↓4kB/s"
+                        ],
+                        "weight": 0
+                    },
+                    {
+                        "id": "caretta:Deployment:caretta-grafana",
+                        "status": "ok",
+                        "stats": [
+                            "📈 0.2 rps ⏱️ 0.5ms",
+                            "↑22B/s ↓71B/s"
+                        ],
+                        "weight": 0.2
+                    },
+                    {
+                        "id": "coroot:DatabaseCluster:coroot-clickhouse",
+                        "status": "ok",
+                        "stats": [
+                            "📈 0.1 rps ⏱️ 0.6ms",
+                            "↑11B/s ↓20B/s"
+                        ],
+                        "weight": 0.1
+                    }
+                ],
+                "downstreams": []
+            },
+            {
+                "id": "_:Unknown:snap.amazon-ssm-agent.amazon-ssm-agent",
+                "custom": false,
+                "category": "control-plane",
+                "labels": {
+                    "instances": "3"
+                },
+                "status": "ok",
+                "icon": "golang",
+                "indicators": [
+                    {
+                        "status": "ok",
+                        "message": "Instances"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "CPU"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Memory"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Storage"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Net"
+                    },
+                    {
+                        "status": "warning",
+                        "message": "Logs"
+                    }
+                ],
+                "upstreams": [
+                    {
+                        "id": "external:ExternalService:ssm.eu-central-1.amazonaws.com:443",
+                        "status": "ok",
+                        "stats": null,
+                        "weight": 0
+                    }
+                ],
+                "downstreams": []
+            },
+            {
+                "id": "coroot:DatabaseCluster:coroot-clickhouse",
+                "custom": false,
+                "category": "monitoring",
+                "labels": {
+                    "db": "clickhouse",
+                    "ns": "coroot"
+                },
+                "status": "ok",
+                "icon": "clickhouse",
+                "indicators": [
+                    {
+                        "status": "ok",
+                        "message": "SLO"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Instances"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "CPU"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Memory"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Storage"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Net"
+                    },
+                    {
+                        "status": "warning",
+                        "message": "Logs"
+                    }
+                ],
+                "upstreams": [
+                    {
+                        "id": "coroot:StatefulSet:coroot-clickhouse-keeper",
+                        "status": "ok",
+                        "stats": [
+                            "📈 5 rps ⏱️ 3ms",
+                            "↑5kB/s ↓4kB/s"
+                        ],
+                        "weight": 4.766667
+                    }
+                ],
+                "downstreams": [
+                    {
+                        "id": "_:Unknown:kubelet",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    },
+                    {
+                        "id": "coroot:StatefulSet:coroot-coroot",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    }
+                ]
+            },
+            {
+                "id": "kube-flannel:DaemonSet:kube-flannel-ds",
+                "custom": false,
+                "category": "application",
+                "labels": {
+                    "ns": "kube-flannel"
+                },
+                "status": "ok",
+                "icon": "golang",
+                "indicators": [
+                    {
+                        "status": "ok",
+                        "message": "Instances"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "CPU"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Memory"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Net"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Logs"
+                    }
+                ],
+                "upstreams": [
+                    {
+                        "id": "kube-system:StaticPods:kube-apiserver",
+                        "status": "ok",
+                        "stats": [
+                            "↑7B/s ↓438B/s"
+                        ],
+                        "weight": 0
+                    }
+                ],
+                "downstreams": []
+            },
+            {
+                "id": "coroot:Deployment:coroot-cluster-agent",
+                "custom": false,
+                "category": "monitoring",
+                "labels": {
+                    "ns": "coroot"
+                },
+                "status": "ok",
+                "icon": "coroot",
+                "indicators": [
+                    {
+                        "status": "ok",
+                        "message": "Instances"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "CPU"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Memory"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Net"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "DNS"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Logs"
+                    }
+                ],
+                "upstreams": [
+                    {
+                        "id": "coroot:StatefulSet:coroot-coroot",
+                        "status": "ok",
+                        "stats": [
+                            "📈 0.3 rps ⏱️ 10ms",
+                            "↑12kB/s ↓17B/s"
+                        ],
+                        "weight": 0.26666668
+                    },
+                    {
+                        "id": "kube-system:StaticPods:kube-apiserver",
+                        "status": "ok",
+                        "stats": [
+                            "📈 0 rps",
+                            "↑18B/s ↓696B/s"
+                        ],
+                        "weight": 0
+                    }
+                ],
+                "downstreams": []
+            },
+            {
+                "id": "default:Deployment:user-mongodb",
+                "custom": false,
+                "category": "application",
+                "labels": {
+                    "db": "mongodb",
+                    "ns": "default"
+                },
+                "status": "ok",
+                "icon": "mongodb",
+                "indicators": [
+                    {
+                        "status": "ok",
+                        "message": "SLO"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Instances"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "CPU"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Memory"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Logs"
+                    }
+                ],
+                "upstreams": [],
+                "downstreams": [
+                    {
+                        "id": "default:Deployment:user-mention-service",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    },
+                    {
+                        "id": "default:Deployment:user-service",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    }
+                ]
+            },
+            {
+                "id": "external:ExternalService:external:3000",
+                "custom": false,
+                "category": "control-plane",
+                "labels": {},
+                "status": "unknown",
+                "icon": "",
+                "indicators": null,
+                "upstreams": [],
+                "downstreams": [
+                    {
+                        "id": "_:Unknown:containerd",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    }
+                ]
+            },
+            {
+                "id": "default:Deployment:social-graph-redis",
+                "custom": false,
+                "category": "application",
+                "labels": {
+                    "db": "redis",
+                    "ns": "default"
+                },
+                "status": "ok",
+                "icon": "redis",
+                "indicators": [
+                    {
+                        "status": "ok",
+                        "message": "SLO"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Instances"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "CPU"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Memory"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Logs"
+                    }
+                ],
+                "upstreams": [],
+                "downstreams": [
+                    {
+                        "id": "default:Deployment:social-graph-service",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    }
+                ]
+            },
+            {
+                "id": "default:Deployment:user-timeline-redis",
+                "custom": false,
+                "category": "application",
+                "labels": {
+                    "db": "redis",
+                    "ns": "default"
+                },
+                "status": "ok",
+                "icon": "redis",
+                "indicators": [
+                    {
+                        "status": "ok",
+                        "message": "SLO"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Instances"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "CPU"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Memory"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Logs"
+                    }
+                ],
+                "upstreams": [],
+                "downstreams": [
+                    {
+                        "id": "default:Deployment:user-timeline-service",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    }
+                ]
+            },
+            {
+                "id": "default:Deployment:post-storage-service",
+                "custom": false,
+                "category": "application",
+                "labels": {
+                    "ns": "default"
+                },
+                "status": "ok",
+                "icon": "",
+                "indicators": [
+                    {
+                        "status": "ok",
+                        "message": "Instances"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "CPU"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Memory"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Net"
+                    },
+                    {
+                        "status": "warning",
+                        "message": "Logs"
+                    }
+                ],
+                "upstreams": [
+                    {
+                        "id": "default:Deployment:post-storage-mongodb",
+                        "status": "ok",
+                        "stats": [
+                            "📈 0 rps",
+                            "↑6B/s ↓32B/s"
+                        ],
+                        "weight": 0
+                    }
+                ],
+                "downstreams": [
+                    {
+                        "id": "default:Deployment:home-timeline-service",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    },
+                    {
+                        "id": "default:Deployment:user-timeline-service",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    },
+                    {
+                        "id": "default:Deployment:compose-post-service",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    }
+                ]
+            },
+            {
+                "id": "external:ExternalService:external-http",
+                "custom": false,
+                "category": "application",
+                "labels": {},
+                "status": "unknown",
+                "icon": "",
+                "indicators": null,
+                "upstreams": [],
+                "downstreams": [
+                    {
+                        "id": "openebs:Deployment:openebs-localpv-provisioner",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    },
+                    {
+                        "id": "caretta:Deployment:caretta-grafana",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    },
+                    {
+                        "id": "_:Unknown:containerd",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    },
+                    {
+                        "id": "coroot:StatefulSet:coroot-coroot",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    },
+                    {
+                        "id": "coroot:Deployment:coroot-operator",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    }
+                ]
+            },
+            {
+                "id": "external:ExternalService:grafana.com:443",
+                "custom": false,
+                "category": "monitoring",
+                "labels": {},
+                "status": "ok",
+                "icon": "",
+                "indicators": [
+                    {
+                        "status": "ok",
+                        "message": "SLO"
+                    }
+                ],
+                "upstreams": [],
+                "downstreams": [
+                    {
+                        "id": "caretta:Deployment:caretta-grafana",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    }
+                ]
+            },
+            {
+                "id": "coroot:DaemonSet:coroot-node-agent",
+                "custom": false,
+                "category": "monitoring",
+                "labels": {
+                    "ns": "coroot"
+                },
+                "status": "ok",
+                "icon": "coroot",
+                "indicators": [
+                    {
+                        "status": "ok",
+                        "message": "Instances"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "CPU"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Memory"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Net"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "DNS"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Logs"
+                    }
+                ],
+                "upstreams": [
+                    {
+                        "id": "coroot:StatefulSet:coroot-coroot",
+                        "status": "ok",
+                        "stats": [
+                            "📈 1 rps ⏱️ 3ms",
+                            "↑16kB/s ↓137B/s"
+                        ],
+                        "weight": 1.3
+                    }
+                ],
+                "downstreams": []
+            },
+            {
+                "id": "default:Deployment:user-mention-service",
+                "custom": false,
+                "category": "application",
+                "labels": {
+                    "ns": "default"
+                },
+                "status": "ok",
+                "icon": "",
+                "indicators": [
+                    {
+                        "status": "ok",
+                        "message": "Instances"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "CPU"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Memory"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Net"
+                    },
+                    {
+                        "status": "warning",
+                        "message": "Logs"
+                    }
+                ],
+                "upstreams": [
+                    {
+                        "id": "default:Deployment:user-mongodb",
+                        "status": "ok",
+                        "stats": [
+                            "📈 0 rps",
+                            "↑6B/s ↓32B/s"
+                        ],
+                        "weight": 0
+                    },
+                    {
+                        "id": "default:Deployment:user-memcached",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    }
+                ],
+                "downstreams": [
+                    {
+                        "id": "default:Deployment:text-service",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    }
+                ]
+            },
+            {
+                "id": "_:Unknown:containerd",
+                "custom": false,
+                "category": "control-plane",
+                "labels": {
+                    "instances": "3"
+                },
+                "status": "ok",
+                "icon": "golang",
+                "indicators": [
+                    {
+                        "status": "ok",
+                        "message": "Instances"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "CPU"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Memory"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Storage"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Net"
+                    },
+                    {
+                        "status": "warning",
+                        "message": "Logs"
+                    }
+                ],
+                "upstreams": [
+                    {
+                        "id": "external:ExternalService:external-http",
+                        "status": "unknown",
+                        "stats": [
+                            "📈 0 rps"
+                        ],
+                        "weight": 0
+                    },
+                    {
+                        "id": "external:ExternalService:external:3000",
+                        "status": "ok",
+                        "stats": [
+                            "📈 0 rps",
+                            "↑31B/s ↓1kB/s"
+                        ],
+                        "weight": 0
+                    }
+                ],
+                "downstreams": []
+            },
+            {
+                "id": "kube-system:StaticPods:kube-controller-manager",
+                "custom": false,
+                "category": "control-plane",
+                "labels": {
+                    "ns": "kube-system"
+                },
+                "status": "ok",
+                "icon": "kubernetes",
+                "indicators": [
+                    {
+                        "status": "ok",
+                        "message": "Instances"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "CPU"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Memory"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Logs"
+                    }
+                ],
+                "upstreams": [],
+                "downstreams": [
+                    {
+                        "id": "_:Unknown:kubelet",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    }
+                ]
+            },
+            {
+                "id": "caretta:StatefulSet:caretta-vm",
+                "custom": false,
+                "category": "application",
+                "labels": {
+                    "db": "victoria-metrics",
+                    "ns": "caretta"
+                },
+                "status": "ok",
+                "icon": "victoriametrics",
+                "indicators": [
+                    {
+                        "status": "ok",
+                        "message": "Instances"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "CPU"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Memory"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Net"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Logs"
+                    }
+                ],
+                "upstreams": [
+                    {
+                        "id": "caretta:DaemonSet:caretta",
+                        "status": "ok",
+                        "stats": [
+                            "📈 0.6 rps ⏱️ 18ms",
+                            "↑115B/s ↓23kB/s"
+                        ],
+                        "weight": 0.6
+                    },
+                    {
+                        "id": "kube-system:StaticPods:kube-apiserver",
+                        "status": "ok",
+                        "stats": [
+                            "📈 0 rps"
+                        ],
+                        "weight": 0
+                    }
+                ],
+                "downstreams": [
+                    {
+                        "id": "caretta:Deployment:caretta-grafana",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    },
+                    {
+                        "id": "_:Unknown:kubelet",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    }
+                ]
+            },
+            {
+                "id": "kube-system:StaticPods:kube-apiserver",
+                "custom": false,
+                "category": "control-plane",
+                "labels": {
+                    "ns": "kube-system"
+                },
+                "status": "ok",
+                "icon": "kubernetes",
+                "indicators": [
+                    {
+                        "status": "ok",
+                        "message": "SLO"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Instances"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "CPU"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Memory"
+                    },
+                    {
+                        "status": "warning",
+                        "message": "Logs"
+                    }
+                ],
+                "upstreams": [],
+                "downstreams": [
+                    {
+                        "id": "caretta:StatefulSet:caretta-vm",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    },
+                    {
+                        "id": "coroot:Deployment:coroot-cluster-agent",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    },
+                    {
+                        "id": "openebs:Deployment:openebs-localpv-provisioner",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    },
+                    {
+                        "id": "kube-system:Deployment:coredns",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    },
+                    {
+                        "id": "kube-flannel:DaemonSet:kube-flannel-ds",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    },
+                    {
+                        "id": "caretta:DaemonSet:caretta",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    },
+                    {
+                        "id": "openebs:Deployment:openebs-ndm-operator",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    },
+                    {
+                        "id": "kube-system:DaemonSet:kube-proxy",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    },
+                    {
+                        "id": "_:Unknown:kubelet",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    },
+                    {
+                        "id": "coroot:Deployment:coroot-operator",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    }
+                ]
+            },
+            {
+                "id": "kube-system:DaemonSet:kube-proxy",
+                "custom": false,
+                "category": "control-plane",
+                "labels": {
+                    "ns": "kube-system"
+                },
+                "status": "ok",
+                "icon": "golang",
+                "indicators": [
+                    {
+                        "status": "ok",
+                        "message": "Instances"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "CPU"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Memory"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Net"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Logs"
+                    }
+                ],
+                "upstreams": [
+                    {
+                        "id": "kube-system:StaticPods:kube-apiserver",
+                        "status": "ok",
+                        "stats": [
+                            "↑29B/s ↓67B/s"
+                        ],
+                        "weight": 0
+                    }
+                ],
+                "downstreams": []
+            },
+            {
+                "id": "default:Deployment:media-service",
+                "custom": false,
+                "category": "application",
+                "labels": {
+                    "ns": "default"
+                },
+                "status": "ok",
+                "icon": "",
+                "indicators": [
+                    {
+                        "status": "ok",
+                        "message": "Instances"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "CPU"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Memory"
+                    },
+                    {
+                        "status": "warning",
+                        "message": "Logs"
+                    }
+                ],
+                "upstreams": [],
+                "downstreams": [
+                    {
+                        "id": "default:Deployment:compose-post-service",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    }
+                ]
+            },
+            {
+                "id": "caretta:Deployment:caretta-grafana",
+                "custom": false,
+                "category": "monitoring",
+                "labels": {
+                    "ns": "caretta"
+                },
+                "status": "ok",
+                "icon": "golang",
+                "indicators": [
+                    {
+                        "status": "ok",
+                        "message": "SLO"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Instances"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "CPU"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Memory"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Net"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "DNS"
+                    },
+                    {
+                        "status": "warning",
+                        "message": "Logs"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Deployments"
+                    }
+                ],
+                "upstreams": [
+                    {
+                        "id": "caretta:StatefulSet:caretta-vm",
+                        "status": "ok",
+                        "stats": [
+                            "📈 0 rps"
+                        ],
+                        "weight": 0
+                    },
+                    {
+                        "id": "external:ExternalService:grafana.com:443",
+                        "status": "ok",
+                        "stats": [
+                            "📈 0 rps"
+                        ],
+                        "weight": 0
+                    },
+                    {
+                        "id": "external:ExternalService:raw.githubusercontent.com",
+                        "status": "ok",
+                        "stats": [
+                            "📈 0 rps"
+                        ],
+                        "weight": 0
+                    },
+                    {
+                        "id": "external:ExternalService:external-http",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    }
+                ],
+                "downstreams": [
+                    {
+                        "id": "_:Unknown:kubelet",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    }
+                ]
+            },
+            {
+                "id": "default:Deployment:url-shorten-mongodb",
+                "custom": false,
+                "category": "application",
+                "labels": {
+                    "db": "mongodb",
+                    "ns": "default"
+                },
+                "status": "ok",
+                "icon": "mongodb",
+                "indicators": [
+                    {
+                        "status": "ok",
+                        "message": "SLO"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Instances"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "CPU"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Memory"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Logs"
+                    }
+                ],
+                "upstreams": [],
+                "downstreams": [
+                    {
+                        "id": "default:Deployment:url-shorten-service",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    }
+                ]
+            },
+            {
+                "id": "default:Deployment:compose-post-service",
+                "custom": false,
+                "category": "application",
+                "labels": {
+                    "ns": "default"
+                },
+                "status": "ok",
+                "icon": "",
+                "indicators": [
+                    {
+                        "status": "ok",
+                        "message": "Instances"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "CPU"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Memory"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Net"
+                    },
+                    {
+                        "status": "warning",
+                        "message": "Logs"
+                    }
+                ],
+                "upstreams": [
+                    {
+                        "id": "default:Deployment:text-service",
+                        "status": "ok",
+                        "stats": null,
+                        "weight": 0
+                    },
+                    {
+                        "id": "default:Deployment:media-service",
+                        "status": "ok",
+                        "stats": null,
+                        "weight": 0
+                    },
+                    {
+                        "id": "default:Deployment:unique-id-service",
+                        "status": "ok",
+                        "stats": null,
+                        "weight": 0
+                    },
+                    {
+                        "id": "default:Deployment:user-timeline-service",
+                        "status": "ok",
+                        "stats": null,
+                        "weight": 0
+                    },
+                    {
+                        "id": "default:Deployment:user-service",
+                        "status": "ok",
+                        "stats": null,
+                        "weight": 0
+                    },
+                    {
+                        "id": "default:Deployment:home-timeline-service",
+                        "status": "ok",
+                        "stats": null,
+                        "weight": 0
+                    },
+                    {
+                        "id": "default:Deployment:post-storage-service",
+                        "status": "ok",
+                        "stats": null,
+                        "weight": 0
+                    }
+                ],
+                "downstreams": [
+                    {
+                        "id": "default:Deployment:nginx-thrift",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    }
+                ]
+            },
+            {
+                "id": "default:Deployment:social-graph-mongodb",
+                "custom": false,
+                "category": "application",
+                "labels": {
+                    "db": "mongodb",
+                    "ns": "default"
+                },
+                "status": "ok",
+                "icon": "mongodb",
+                "indicators": [
+                    {
+                        "status": "ok",
+                        "message": "SLO"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Instances"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "CPU"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Memory"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Logs"
+                    }
+                ],
+                "upstreams": [],
+                "downstreams": [
+                    {
+                        "id": "default:Deployment:social-graph-service",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    }
+                ]
+            },
+            {
+                "id": "kube-system:StaticPods:etcd",
+                "custom": false,
+                "category": "control-plane",
+                "labels": {
+                    "ns": "kube-system"
+                },
+                "status": "ok",
+                "icon": "etcd",
+                "indicators": [
+                    {
+                        "status": "ok",
+                        "message": "SLO"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Instances"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "CPU"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Memory"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Logs"
+                    }
+                ],
+                "upstreams": [],
+                "downstreams": [
+                    {
+                        "id": "_:Unknown:kubelet",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    }
+                ]
+            },
+            {
+                "id": "default:Deployment:user-timeline-mongodb",
+                "custom": false,
+                "category": "application",
+                "labels": {
+                    "db": "mongodb",
+                    "ns": "default"
+                },
+                "status": "ok",
+                "icon": "mongodb",
+                "indicators": [
+                    {
+                        "status": "ok",
+                        "message": "SLO"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Instances"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "CPU"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Memory"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Logs"
+                    }
+                ],
+                "upstreams": [],
+                "downstreams": [
+                    {
+                        "id": "default:Deployment:user-timeline-service",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    }
+                ]
+            },
+            {
+                "id": "kube-system:StaticPods:kube-scheduler",
+                "custom": false,
+                "category": "control-plane",
+                "labels": {
+                    "ns": "kube-system"
+                },
+                "status": "ok",
+                "icon": "kubernetes",
+                "indicators": [
+                    {
+                        "status": "ok",
+                        "message": "Instances"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "CPU"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Memory"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Logs"
+                    }
+                ],
+                "upstreams": [],
+                "downstreams": [
+                    {
+                        "id": "_:Unknown:kubelet",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    }
+                ]
+            },
+            {
+                "id": "default:Deployment:post-storage-mongodb",
+                "custom": false,
+                "category": "application",
+                "labels": {
+                    "db": "mongodb",
+                    "ns": "default"
+                },
+                "status": "ok",
+                "icon": "mongodb",
+                "indicators": [
+                    {
+                        "status": "ok",
+                        "message": "SLO"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Instances"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "CPU"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Memory"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Logs"
+                    }
+                ],
+                "upstreams": [],
+                "downstreams": [
+                    {
+                        "id": "default:Deployment:post-storage-service",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    }
+                ]
+            },
+            {
+                "id": "default:Deployment:text-service",
+                "custom": false,
+                "category": "application",
+                "labels": {
+                    "ns": "default"
+                },
+                "status": "ok",
+                "icon": "",
+                "indicators": [
+                    {
+                        "status": "ok",
+                        "message": "Instances"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "CPU"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Memory"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Net"
+                    },
+                    {
+                        "status": "warning",
+                        "message": "Logs"
+                    }
+                ],
+                "upstreams": [
+                    {
+                        "id": "default:Deployment:url-shorten-service",
+                        "status": "ok",
+                        "stats": null,
+                        "weight": 0
+                    },
+                    {
+                        "id": "default:Deployment:user-mention-service",
+                        "status": "ok",
+                        "stats": null,
+                        "weight": 0
+                    }
+                ],
+                "downstreams": [
+                    {
+                        "id": "default:Deployment:compose-post-service",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    }
+                ]
+            },
+            {
+                "id": "default:Deployment:nginx-thrift",
+                "custom": false,
+                "category": "application",
+                "labels": {
+                    "ns": "default"
+                },
+                "status": "ok",
+                "icon": "nginx",
+                "indicators": [
+                    {
+                        "status": "ok",
+                        "message": "Instances"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "CPU"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Memory"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Net"
+                    },
+                    {
+                        "status": "ok",
+                        "message": "Logs"
+                    }
+                ],
+                "upstreams": [
+                    {
+                        "id": "default:Deployment:home-timeline-service",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    },
+                    {
+                        "id": "default:Deployment:user-timeline-service",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    },
+                    {
+                        "id": "default:Deployment:compose-post-service",
+                        "status": "unknown",
+                        "stats": null,
+                        "weight": 0
+                    }
+                ],
+                "downstreams": []
+            }
+        ],
+        "nodes": null,
+        "deployments": null,
+        "traces": null,
+        "logs": null,
+        "costs": null,
+        "risks": null,
+        "categories": [
+            "control-plane",
+            "monitoring"
+        ]
+    }
+}
