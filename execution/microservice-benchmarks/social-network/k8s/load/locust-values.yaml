@@ -7,8 +7,7 @@ nodeSelector:
   "kubernetes.io/hostname": k8s-master
 
 service:
-  type: NodePort
-  nodePort: 30006
+  type: ClusterIP
 
 tolerations:
   - effect: NoSchedule
