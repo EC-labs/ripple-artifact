@@ -9,7 +9,11 @@
             pkgs = import nixpkgs {
                 inherit system;
             };
-            execution = pkgs.callPackage ./execution { scripts = scripts.default; };
+            analysis = pkgs.callPackage ./analysis {};
+            execution = pkgs.callPackage ./execution {
+                scripts = scripts.default;
+                analysis = analysis.package;
+            };
             scripts = pkgs.callPackage ./scripts {};
             social-network = pkgs.callPackage ./execution/microservice-benchmarks/social-network {};
         in
@@ -18,6 +22,7 @@
                 inherit scripts;
                 inherit social-network;
                 execution = execution.packages;
+                analysis = analysis.package;
             };
 
             devShells.${system} = {

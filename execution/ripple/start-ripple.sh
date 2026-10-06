@@ -70,5 +70,12 @@ for vm in k8s-master k8s-worker1 k8s-worker2; do
     prism_files+=("${DATA_DIR}/${last_file}")
 done
 
-combine-dbs --dbs "${prism_files[0]},${prism_files[1]},${prism_files[2]}" --result-file "${DATA_DIR}/${run_type}-${microservice_benchmark}.db3"
+if [[ -f "${DATA_DIR}/${run_type}-${microservice_benchmark}.db3" ]]; then
+    rm "${DATA_DIR}/${run_type}-${microservice_benchmark}.db3" 
+fi
+
+combine-dbs \
+    --dbs "${prism_files[0]},${prism_files[1]},${prism_files[2]}" \
+    --result-file "${DATA_DIR}/${run_type}-${microservice_benchmark}.db3"
+
 rm "${prism_files[@]}"

@@ -51,8 +51,16 @@ start-ripple.sh "${microservice_benchmark}" "${run_type}"
 case "$run_type" in
     "k8s")
         stop-k8s.sh "${microservice_benchmark}"
+        ripple-analysis "${DATA_DIR}/k8s-${microservice_benchmark}.db3" True "${microservice_benchmark}"
         ;;
-    "internal"|"external")
+    "internal")
         stop-docker.sh "${microservice_benchmark}" "${run_type}"
+        ripple-analysis "${DATA_DIR}/internal-${microservice_benchmark}.db3" False "${microservice_benchmark}"
+        ;;
+    "external")
+        stop-docker.sh "${microservice_benchmark}" "${run_type}"
+        ripple-analysis "${DATA_DIR}/external-${microservice_benchmark}.db3" False "${microservice_benchmark}"
         ;;
 esac
+
+

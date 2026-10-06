@@ -49,3 +49,5 @@ user-timeline-service,nginx-thrift
 user-timeline-service,post-storage-service
 user-timeline-service,user-timeline-mongodb
 user-timeline-service,user-timeline-redis
+post-storage-service,post-storage-memcached
+post-storage-memcached,post-storage-service

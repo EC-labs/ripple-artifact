@@ -1,4 +1,4 @@
-{ pkgs, lib, stdenv, scripts, ... }:
+{ pkgs, lib, stdenv, scripts, analysis }:
 with builtins;
 let
     masterPublicIP = (fromJSON (readFile ../nixos/vars.json))."k8s-master".publicIP;
@@ -82,6 +82,7 @@ rec {
                     packages.microservice-benchmarks.scripts 
                     packages.ripple
                     coreutils
+                    analysis
                 ]}"
             '';
         };

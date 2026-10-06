@@ -1,4 +1,7 @@
+#!/usr/bin/env python3
+
 import sys
+import os
 import duckdb
 import pandas as pd
 
@@ -6,8 +9,17 @@ from pathlib import Path
 from jinja2 import Template
 
 
+SERVICE_MAP_QUERY = os.getenv(
+    "SERVICE_MAP_QUERY", 
+    str(Path(__file__).resolve().parent / "service-map.sql")
+)
+GROUND_TRUTH = os.getenv(
+    "GROUND_TRUTH", 
+    str(Path(__file__).resolve().parent / "gt")
+)
+
 def services(db, is_k8s: bool, microservice_benchmark: str):
-    template = Template((Path(__file__).resolve().parent / "service-map.sql").read_text())
+    template = Template((Path(SERVICE_MAP_QUERY)).read_text())
     if is_k8s:
         service_filter = f"(lsvc.namespace = '{microservice_benchmark}' AND rsvc.namespace = '{microservice_benchmark}')"
     else:
@@ -72,7 +84,7 @@ def compare(microservice_benchmark, service_map):
     conn = duckdb.connect(database=':memory:')
     
     results = []
-    gt_path = Path(__file__).resolve().parent / f"gt/{microservice_benchmark}.csv"
+    gt_path = Path(GROUND_TRUTH) / f"{microservice_benchmark}.csv"
     gt = conn.execute(f"""
         SELECT * FROM '{gt_path}'
     """).df()
